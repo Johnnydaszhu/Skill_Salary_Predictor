@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import re
 from flask_bootstrap import Bootstrap
+from wtforms import Form, SelectMultipleField
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -16,6 +17,8 @@ sel_features = ['rating', 'AI', 'AWS', 'Azure', 'Big-Data', 'C/C++', 'Data-Analy
                 'Natural-Language-Processing', 'NoSQL', 'Oracle', 'Pig', 'Python', 'R',
                 'SAS', 'SQL', 'Scala', 'Scripting', 'Spark', 'Tableau', 'TensorFlow']
 
+class LanguageForm(Form):
+    language = SelectMultipleField(u'Programming Language', choices=[('cpp', 'C++'), ('py', 'Python'), ('text', 'Plain Text')])
 
 @app.route('/')
 def home():
@@ -25,7 +28,8 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     rating = request.form['rating']
-    inputs_list = re.split(', |,| |、| 、', request.form['Skills list'])
+    inputs_list = request.form.getlist('check')
+    print(inputs_list)
 
     def NYC_salary_with_skills(rating, inputs_list):
         sample_list = [0] * (len(sel_features))
@@ -81,10 +85,10 @@ def predict():
         suggest_skills = pd.DataFrame(suggest_list_salary_list).sort_values('salary', ascending=False)
         suggest_skills = suggest_skills[suggest_skills['salary'] > 0]
         suggest_skills.columns = ['Skill', 'Salary increase by $']
-        return '${} ~ ${}'.format(salary_min, salary_max)
+        return ('${} ~ ${}'.format(salary_min, salary_max),inputs_list)
 
     output = NYC_salary_with_skills_and(rating, inputs_list)
-    return render_template('index2.html', prediction_text=format(output))
+    return render_template('index2.html', salary_prediction=format(output))
 
 
 if __name__ == "__main__":
