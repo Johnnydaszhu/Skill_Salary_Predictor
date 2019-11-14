@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+    
+</head>
+<body>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, '10cf08fa8ad54da7b12a51adaa792e9f')">Type A</button>
+            <button class="tablinks" onclick="showChart(event, '7a9a87d913b0485e8ab7dd3affc6f1ef')">Type B</button>
+            <button class="tablinks" onclick="showChart(event, '7152588fe6ae4578a2b6c069ce6e14ee')">Type C</button>
+    </div>
+
+    <div class="box">
+                <div id="10cf08fa8ad54da7b12a51adaa792e9f" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_10cf08fa8ad54da7b12a51adaa792e9f = echarts.init(
+            document.getElementById('10cf08fa8ad54da7b12a51adaa792e9f'), 'white', {renderer: 'canvas'});
+        var option_10cf08fa8ad54da7b12a51adaa792e9f = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "Skills Importance",
+            "data": [
+                0.203,
+                0.108,
+                0.102,
+                0.066,
+                0.061,
+                0.033,
+                0.025,
+                0.025,
+                0.021,
+                0.019
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Skills Importance"
+            ],
+            "selected": {
+                "Skills Importance": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "Sql",
+                "Tableau",
+                "R",
+                "Python",
+                "Excel",
+                "Sas",
+                "Azure",
+                "Oracle",
+                "Java",
+                "Saas"
+            ]
+        }
+    ],
+    "title": [
+        {
+            "text": "Type A Analyst"
+        }
+    ]
+};
+        chart_10cf08fa8ad54da7b12a51adaa792e9f.setOption(option_10cf08fa8ad54da7b12a51adaa792e9f);
+    </script>
+                <div id="7a9a87d913b0485e8ab7dd3affc6f1ef" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_7a9a87d913b0485e8ab7dd3affc6f1ef = echarts.init(
+            document.getElementById('7a9a87d913b0485e8ab7dd3affc6f1ef'), 'white', {renderer: 'canvas'});
+        var option_7a9a87d913b0485e8ab7dd3affc6f1ef = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "Skills Importance",
+            "data": [
+                0.258,
+                0.179,
+                0.087,
+                0.067,
+                0.059,
+                0.049,
+                0.042,
+                0.029,
+                0.023,
+                0.015
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Skills Importance"
+            ],
+            "selected": {
+                "Skills Importance": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "R",
+                "Excel",
+                "Go",
+                "Microsoft-Office",
+                "Visio",
+                "Accounting",
+                "Business-Analysis",
+                "Ci",
+                "Sharepoint",
+                "Software-Development"
+            ]
+        }
+    ],
+    "title": [
+        {
+            "text": "Type B Analyst"
+        }
+    ]
+};
+        chart_7a9a87d913b0485e8ab7dd3affc6f1ef.setOption(option_7a9a87d913b0485e8ab7dd3affc6f1ef);
+    </script>
+                <div id="7152588fe6ae4578a2b6c069ce6e14ee" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_7152588fe6ae4578a2b6c069ce6e14ee = echarts.init(
+            document.getElementById('7152588fe6ae4578a2b6c069ce6e14ee'), 'white', {renderer: 'canvas'});
+        var option_7152588fe6ae4578a2b6c069ce6e14ee = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "Skills Importance",
+            "data": [
+                0.158,
+                0.113,
+                0.085,
+                0.064,
+                0.064,
+                0.056,
+                0.048,
+                0.035,
+                0.035,
+                0.032
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Skills Importance"
+            ],
+            "selected": {
+                "Skills Importance": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "R",
+                "Business-Intelligence",
+                "Ai",
+                "Excel",
+                "Marketing",
+                "Power-Bi",
+                "Project-Management",
+                "Data-Management",
+                "Jira",
+                "Ui"
+            ]
+        }
+    ],
+    "title": [
+        {
+            "text": "Type C Analyst"
+        }
+    ]
+};
+        chart_7152588fe6ae4578a2b6c069ce6e14ee.setOption(option_7152588fe6ae4578a2b6c069ce6e14ee);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

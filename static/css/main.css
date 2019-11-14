@@ -435,7 +435,7 @@ figure {
   padding: 8em 0;
   text-align: center;
   color: #ffffff;
-  background: url(../img/backgrounds/parallax-4.jpg) fixed;
+  background-color: black ;
 }
 .counters::before {
   content: "";
@@ -471,11 +471,12 @@ figure {
   line-height: 2;
   margin-top: 0.875em;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 30em) {
   #counters {
     background-size: cover;
     height: auto;
     min-height: 100%;
+    width: 50%;
   }
   .counters {
     position: relative;
@@ -483,6 +484,10 @@ figure {
     padding: 4em;
   }
 }
+.row{
+  align-content: space-evenly;
+}
+
 
 /* ==================================
    Skills                   
