@@ -85,10 +85,11 @@ def predict():
         suggest_skills = pd.DataFrame(suggest_list_salary_list).sort_values('salary', ascending=False)
         suggest_skills = suggest_skills[suggest_skills['salary'] > 0]
         suggest_skills.columns = ['Skill', 'Salary increase by $']
-        return ('${} ~ ${}'.format(salary_min, salary_max),inputs_list)
+        return {'Min_Salary':salary_min,'Max_Salary':salary_max,'Suggest_Skills':suggest_skills}
 
-    output = NYC_salary_with_skills_and(rating, inputs_list)
-    return render_template('index2.html', salary_prediction=format(output))
+    salary_min = NYC_salary_with_skills_and(rating, inputs_list)['Min_Salary']
+    salary_max = NYC_salary_with_skills_and(rating, inputs_list)['Max_Salary']
+    return render_template('index2.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min))
 
 
 if __name__ == "__main__":

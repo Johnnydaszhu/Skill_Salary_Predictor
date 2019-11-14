@@ -83,6 +83,10 @@ figure {
   color: black;
 }
 
+.section{
+  margin-top: auto;
+}
+
 .section-header {
   margin: 4em 0;
 }
@@ -466,7 +470,6 @@ figure {
   font-size: 0.8em;
   line-height: 2;
   margin-top: 0.875em;
-  text-transform: uppercase;
 }
 @media only screen and (max-width: 40em) {
   #counters {
