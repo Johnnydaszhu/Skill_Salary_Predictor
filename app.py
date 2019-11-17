@@ -1,37 +1,30 @@
+from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
-from flask import Flask, request, jsonify, render_template
 import pickle
-import re
-from flask_bootstrap import Bootstrap
-from wtforms import Form, SelectMultipleField
 
 app = Flask(__name__)
-bootstrap = Bootstrap(app)
 
-xgb_model_min_loaded = pickle.load(open('ny_min_xgb_model_min.pickle', "rb"))
-xgb_model_max_loaded = pickle.load(open('ny_max_xgb_model_min.pickle', "rb"))
+xgb_model_min_loaded = pickle.load(open('static/ny_min_xgb_model_min.pickle', "rb"))
+xgb_model_max_loaded = pickle.load(open('static/ny_max_xgb_model_min.pickle', "rb"))
 sel_features = ['rating', 'AI', 'AWS', 'Azure', 'Big-Data', 'C/C++', 'Data-Analysis',
                 'Data-Warehouse', 'Hadoop', 'Hive', 'Java', 'Kafka', 'Linux', 'MATLAB',
                 'Machine-Learning', 'Microsoft-Office', 'Microsoft-SQL-Server',
                 'Natural-Language-Processing', 'NoSQL', 'Oracle', 'Pig', 'Python', 'R',
                 'SAS', 'SQL', 'Scala', 'Scripting', 'Spark', 'Tableau', 'TensorFlow']
 
-class LanguageForm(Form):
-    language = SelectMultipleField(u'Programming Language', choices=[('cpp', 'C++'), ('py', 'Python'), ('text', 'Plain Text')])
 
 @app.route('/')
 def home():
-    return render_template('index2.html')
+    return render_template('index.html')
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST','GET'])
 def predict():
-    rating = request.form['rating']
-    inputs_list = request.form.getlist('check')
-    print(inputs_list)
+    rating = request.form.get('rating')
+    inputs_list = request.form.getlist('skills_selected')
 
-    def NYC_salary_with_skills(rating, inputs_list):
+    def nyc_salary_with_skills(rating, inputs_list):
         sample_list = [0] * (len(sel_features))
         input_X = pd.DataFrame([sample_list],
                                columns=list(sel_features))
@@ -47,22 +40,22 @@ def predict():
     skill_money_list = []
     for skill in sel_features[1:]:
         skill_money['skill'] = skill
-        skill_money['salary'] = NYC_salary_with_skills(3.6, [skill])
+        skill_money['salary'] = nyc_salary_with_skills(3.6, [skill])
         skill_money_list.append(skill_money)
         skill_money = {}
     single_skill = pd.DataFrame(skill_money_list).sort_values('salary', ascending=False)
 
-    def NYC_salary_with_skills_and(rating, inputs_list):
+    def nyc_salary_with_skills_and(rating, inputs_list):
 
         sample_list = [0] * (len(sel_features))
-        input_X = pd.DataFrame([sample_list],
+        input_x = pd.DataFrame([sample_list],
                                columns=list(sel_features))
 
         for inputs in inputs_list:
-            if inputs in list(input_X.columns):
-                input_X[inputs] = 1
-        salary_min = int(xgb_model_min_loaded.predict(input_X[:1]))
-        salary_max = int(xgb_model_max_loaded.predict(input_X[:1]))
+            if inputs in list(input_x.columns):
+                input_x[inputs] = 1
+        salary_min = int(xgb_model_min_loaded.predict(input_x[:1]))
+        salary_max = int(xgb_model_max_loaded.predict(input_x[:1]))
 
         # suggest skill with more salary
         suggest_list = []
@@ -78,19 +71,20 @@ def predict():
                 all_list = []
                 all_list = inputs_list + [skill]
                 suggest_list_salary['skill'] = skill
-                suggest_list_salary['salary'] = int(np.subtract(NYC_salary_with_skills(rating, all_list),
-                                                                NYC_salary_with_skills(rating, inputs_list)).mean())
+                suggest_list_salary['salary'] = int(np.subtract(nyc_salary_with_skills(rating, all_list),
+                                                                nyc_salary_with_skills(rating, inputs_list)).mean())
                 suggest_list_salary_list.append(suggest_list_salary)
                 suggest_list_salary = {}
         suggest_skills = pd.DataFrame(suggest_list_salary_list).sort_values('salary', ascending=False)
         suggest_skills = suggest_skills[suggest_skills['salary'] > 0]
         suggest_skills.columns = ['Skill', 'Salary increase by $']
-        return {'Min_Salary':salary_min,'Max_Salary':salary_max,'Suggest_Skills':suggest_skills}
+        return {'Min_Salary': salary_min, 'Max_Salary': salary_max, 'Suggest_Skills': suggest_skills}
 
-    salary_min = NYC_salary_with_skills_and(rating, inputs_list)['Min_Salary']
-    salary_max = NYC_salary_with_skills_and(rating, inputs_list)['Max_Salary']
-    return render_template('index2.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min))
+    salary_min = int(nyc_salary_with_skills_and(rating, inputs_list)['Min_Salary'])
+    salary_max = int(nyc_salary_with_skills_and(rating, inputs_list)['Max_Salary'])
+    Suggest_Skills = nyc_salary_with_skills_and(rating, inputs_list)['Suggest_Skills']
+    return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
