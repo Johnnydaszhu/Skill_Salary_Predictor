@@ -1,8 +1,8 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
+import json
 import numpy as np
 import pandas as pd
 import pickle
-
 app = Flask(__name__)
 
 xgb_model_min_loaded = pickle.load(open('static/ny_min_xgb_model_min.pickle', "rb"))
@@ -75,15 +75,19 @@ def predict():
                                                                 nyc_salary_with_skills(rating, inputs_list)).mean())
                 suggest_list_salary_list.append(suggest_list_salary)
                 suggest_list_salary = {}
-        suggest_skills = pd.DataFrame(suggest_list_salary_list).sort_values('salary', ascending=False)
+        suggest_skills = pd.DataFrame(suggest_list_salary_list).sort_values('salary', ascending=True)
         suggest_skills = suggest_skills[suggest_skills['salary'] > 0]
-        suggest_skills.columns = ['Skill', 'Salary increase by $']
+        suggest_skills.columns = ['Skill', 'Salary_Increase']
         return {'Min_Salary': salary_min, 'Max_Salary': salary_max, 'Suggest_Skills': suggest_skills}
 
     salary_min = int(nyc_salary_with_skills_and(rating, inputs_list)['Min_Salary'])
     salary_max = int(nyc_salary_with_skills_and(rating, inputs_list)['Max_Salary'])
     Suggest_Skills = nyc_salary_with_skills_and(rating, inputs_list)['Suggest_Skills']
-    return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills))
+    Suggest_Skills_Skills = Suggest_Skills['Skill'].to_json(orient='records')
+    Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])
+    max_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
+    return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
+                           Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary))
 
 
 if __name__ == '__main__':
