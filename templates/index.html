@@ -92,9 +92,64 @@
         Max Salary: {{ Max_Salary }}<br>
         Min Salary: {{ Min_Salary }}<br>
         Suggest_Skills:{{ Suggest_Skills }}
-        </div>
+
+    </div>
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+    <div id="main" style="width:80%;height:400px; margin:1em  auto"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例',
+                left:'center'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量'],
+                x:'right',
+                y:'top'
+            },
+            yAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            xAxis: {},
+            visualMap: {
+                orient: 'horizontal',
+                left: 'center',
+                min: 10,
+                max: 40,
+                text: ['High Score', 'Low Score'],
+                // Map the score column to color
+                dimension: 0,
+                inRange: {
+                    color: ['#FFC47A', '#AB3514']
+                }
+            },
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20],
+
+            }]
+        };
+//          window.onresize = function () {  //适应页面
+//              myChartContainer();
+//              myChart.resize();
+//          }
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        window.onresize = function() {
+            myChart.resize();
+                };
+    </script>
 
 </div>
+
 
 
 
