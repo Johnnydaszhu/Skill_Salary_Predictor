@@ -1,5 +1,4 @@
-from flask import Flask, request, render_template, jsonify
-import json
+from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
 import pickle
@@ -82,12 +81,15 @@ def predict():
 
     salary_min = int(nyc_salary_with_skills_and(rating, inputs_list)['Min_Salary'])
     salary_max = int(nyc_salary_with_skills_and(rating, inputs_list)['Max_Salary'])
-    Suggest_Skills = nyc_salary_with_skills_and(rating, inputs_list)['Suggest_Skills']
+    Suggest_Skills = nyc_salary_with_skills_and(rating, inputs_list)['Suggest_Skills'][:3]
     Suggest_Skills_Skills = Suggest_Skills['Skill'].to_json(orient='records')
     Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])
     max_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
+    min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[-1]
+
     return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
-                           Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary))
+                           Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
+                           max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary))
 
 
 if __name__ == '__main__':
