@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="static/css/main.css">
+<link rel="stylesheet" href="/static/css/main.css">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
@@ -17,7 +17,9 @@
 
 <link rel="stylesheet" href="/static/css/floating-labels.css">
 <link rel="stylesheet" href="/static/css/main.css">
-<script src="static/js/echarts.min.js"></script>
+<script src="/static/js/echarts.min.js"></script>
+<script src="/static/js/ecStat.min.js"></script>
+
 
 </head>
 <body>
@@ -25,16 +27,29 @@
 <div class="div-centered">
 <form  action="{{ url_for('predict')}}"  method="POST" >
   <div class="text-center mb-4">
-    <img src="../static/stationery.png" class="img-fluid" alt="Responsive image">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    <img src="../static/stationery.png" class="img-fluid" alt="Responsive image" width="auto" height="auto">
+      <br>
     <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
-    <p>Please <strong style="color: crimson">Only</strong> select those skills that a job requires to maximize the accuracy</p>
+    <p>Please <strong style="color: crimson">Only</strong> select those skills that <br>a job requires to maximize the accuracy</p>
   </div>
 
     <section class="predictor">
          <!-- Main Input For Receiving Query to our ML -->
     <div class="text-center">
     <label class="mdb-main-label">Company Ratings:  </label>
-        <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1" data-width="55%" name="rating">
+        <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1" data-width="45%" name="rating">
                 <option  value="0" data-subtext="I have nothing to lose">0</option>
                 <option  value="1" data-subtext="Well...">1</option>
                 <option  value="2" data-subtext="It is Okay..">2</option>
@@ -75,8 +90,8 @@
         </optgroup>
         <optgroup label="Concept">
             <option  value="NoSQL">NoSQL</option>
-            <option  value="Machine-Learning">Machine-Learning</option>
-            <option  value="Natural-Language-Processing">Natural-Language-Processing</option>
+            <option  value="Machine Learning">Machine Learning</option>
+            <option  value="Natural Language Processing">Natural Language Processing</option>
         </optgroup>
     </select>
     </div>
@@ -96,7 +111,7 @@
 
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 
-    <div id="main" style="width:70%;height:400px; margin:1em  auto"></div>
+    <div id="main" style="width:100%;height:400px; margin:auto"></div>
 
     <script type="text/javascript">
 
@@ -112,33 +127,31 @@
             },
             tooltip: {},
             grid:{
+                containLabel: true
+            },
+            xAxis: {
+                data: {{ Suggest_Skills_Skills |safe}},
+                axisLabel:{
+                    interval:0,
+                    rotate:-10,
+                }
 
             },
-            yAxis: {
-                data: {{ Suggest_Skills_Skills|safe}}
+            yAxis: {splitLine: {
+                     show: false
+                  },
+                axisLabel:{formatter:'${value}'}
             },
-            xAxis: {},
-            visualMap: {
-                orient: 'horizontal',
-                left: 'center',
-                min: {{ min_Suggest_Skills_SkillsSalary|safe }},
-                max: {{max_Suggest_Skills_SkillsSalary|safe}},
-                text: ['High', 'Low'],
-                // Map the score column to color
-                dimension: 0,
-                inRange: {
-                    color: ['#FFC47A', '#AB3514']
-                }
-            },
+
             series: [{
                 type: 'bar',
                 data: {{ Suggest_Skills_SkillsSalary|safe}},
                 label: {
                 normal: {
                     show: true,
-                    position: 'right',
+                    position: 'top',
                     color:'black',
-                    formatter:"${c0}",
+                    formatter:'${c0}',
                 }
             },
             }]
@@ -149,6 +162,93 @@
             myChart.resize();
                 };
     </script>
+
+</div>
+
+{#<div id="main2" style="width:100%;height:400px; margin:1em  auto"></div>#}
+{##}
+{#    <script type="text/javascript">#}
+{##}
+{#        // 基于准备好的dom，初始化echarts实例#}
+{#        var myChart2 = echarts.init(document.getElementById('main2'));#}
+{##}
+{#        // 指定图表的配置项和数据#}
+{##}
+{#        option = {#}
+{#    title: {#}
+{#        text: '浏览器占比变化',#}
+{#        subtext: '纯属虚构',#}
+{#        top: 10,#}
+{#        left: 10#}
+{#    },#}
+{#    tooltip: {#}
+{#        trigger: 'item',#}
+{#        backgroundColor : 'rgba(0,0,250,0.2)'#}
+{#    },#}
+{#    legend: {#}
+{#        type: 'scroll',#}
+{#        bottom: 10,#}
+{#        data: (function (){#}
+{#            var list = [];#}
+{#            for (var i = 1; i <=28; i++) {#}
+{#                list.push(i + 2000 + '');#}
+{#            }#}
+{#            return list;#}
+{#        })()#}
+{#    },#}
+{#    visualMap: {#}
+{#        top: 'middle',#}
+{#        right: 10,#}
+{#        color: ['red', 'yellow'],#}
+{#        calculable: true#}
+{#    },#}
+{#    radar: {#}
+{#       indicator : [#}
+{#           { text: 'IE8-', max: 400},#}
+{#           { text: 'IE9+', max: 400},#}
+{#           { text: 'Safari', max: 400},#}
+{#           { text: 'Firefox', max: 400},#}
+{#           { text: 'Chrome', max: 400}#}
+{#        ]#}
+{#    },#}
+{#    series : (function (){#}
+{#        var series2 = [];#}
+{#        for (var i = 1; i <= 28; i++) {#}
+{#            series2.push({#}
+{#                name:'浏览器（数据纯属虚构）',#}
+{#                type: 'radar',#}
+{#                symbol: 'none',#}
+{#                lineStyle: {#}
+{#                    width: 1#}
+{#                },#}
+{#                emphasis: {#}
+{#                    areaStyle: {#}
+{#                        color: 'rgba(0,250,0,0.3)'#}
+{#                    }#}
+{#                },#}
+{#                data:[#}
+{#                  {#}
+{#                    value:[#}
+{#                        (40 - i) * 10,#}
+{#                        (38 - i) * 4 + 60,#}
+{#                        i * 5 + 10,#}
+{#                        i * 9,#}
+{#                        i * i /2#}
+{#                    ],#}
+{#                    name: i + 2000 + ''#}
+{#                  }#}
+{#                ]#}
+{#            });#}
+{#        }#}
+{#        return series2;#}
+{#    })()#}
+{#};#}
+{#        // 使用刚指定的配置项和数据显示图表。#}
+{#        myChart2.setOption(option);#}
+{#        window.onresize = function() {#}
+{#            myChart2.resize();#}
+{#                };#}
+{#    </script>#}
 
 </div>
 

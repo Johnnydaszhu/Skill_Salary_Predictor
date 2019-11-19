@@ -4,14 +4,19 @@ import pandas as pd
 import pickle
 app = Flask(__name__)
 
-xgb_model_min_loaded = pickle.load(open('static/ny_min_xgb_model_min.pickle', "rb"))
-xgb_model_max_loaded = pickle.load(open('static/ny_max_xgb_model_min.pickle', "rb"))
-sel_features = ['rating', 'AI', 'AWS', 'Azure', 'Big-Data', 'C/C++', 'Data-Analysis',
-                'Data-Warehouse', 'Hadoop', 'Hive', 'Java', 'Kafka', 'Linux', 'MATLAB',
-                'Machine-Learning', 'Microsoft-Office', 'Microsoft-SQL-Server',
-                'Natural-Language-Processing', 'NoSQL', 'Oracle', 'Pig', 'Python', 'R',
-                'SAS', 'SQL', 'Scala', 'Scripting', 'Spark', 'Tableau', 'TensorFlow']
+xgb_model_min_loaded = pickle.load(open('static/model/ny_min_xgb_NOV_18.pickle', "rb"))
+xgb_model_max_loaded = pickle.load(open('static/model/ny_max_xgb_NOV_18.pickle', "rb"))
 
+
+
+sel_features = ['rating','.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business Intelligence',
+                'C/C++', 'Data Analysis', 'Data Science', 'Data Warehouse', 'Excel',
+                'Git', 'HBase', 'Hadoop', 'Hive', 'Java', 'JavaScript', 'Kafka',
+                'Linux', 'MATLAB', 'Machine Learning', 'Microsoft Office',
+                'Microsoft SQL Server', 'MongoDB', 'MySQL', 'Natural Language Processing',
+                'NoSQL', 'Oracle', 'Perl', 'Pig', 'PostgreSQL', 'Project Management',
+                'Python', 'R', 'S3', 'SAS', 'SPSS', 'SQL', 'Scala', 'Scripting',
+                'Shell Scripting', 'Software Development', 'Spark', 'Tableau', 'TensorFlow']
 
 @app.route('/')
 def home():
