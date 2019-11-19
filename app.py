@@ -58,8 +58,9 @@ def predict():
         for inputs in inputs_list:
             if inputs in list(input_x.columns):
                 input_x[inputs] = 1
-        salary_min = int(xgb_model_min_loaded.predict(input_x[:1]))
-        salary_max = int(xgb_model_max_loaded.predict(input_x[:1]))
+        input_x['rating'] = float(rating)
+        salary_min = int(xgb_model_min_loaded.predict(input_x))
+        salary_max = int(xgb_model_max_loaded.predict(input_x))
 
         # suggest skill with more salary
         suggest_list = []
