@@ -27,6 +27,7 @@ def home():
 def predict():
     rating = request.form.get('rating')
     inputs_list = request.form.getlist('skills_selected')
+    print(inputs_list)
 
     def nyc_salary_with_skills(rating, inputs_list):
         sample_list = [0] * (len(sel_features))
@@ -95,7 +96,8 @@ def predict():
 
     return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
-                           max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary))
+                           max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
+                           inputs_list=format(inputs_list),rating=format(rating))
 
 
 if __name__ == '__main__':
