@@ -14,3 +14,4 @@ counterUp( el, {
     duration: 1000,
     delay: 16,
 } )
+

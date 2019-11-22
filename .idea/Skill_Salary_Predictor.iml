@@ -9,6 +9,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (Skill_Salary_Predictor)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="odometer" level="application" />
+    <orderEntry type="library" name="fullpage" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
