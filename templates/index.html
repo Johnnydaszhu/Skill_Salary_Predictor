@@ -131,7 +131,7 @@
     </div>
         <div class="text-center">
         <br>
-      <button class="btn btn-lg btn-primary" type="submit"  style="width: 200px;" onclick="showRest()">Submit</button>
+      <button class="btn btn-lg btn-primary" id="btnFetch" type="submit"  style="width: 200px;" onclick="showRest()" >Submit</button>
     </div>
     </section>
 </form>
@@ -221,6 +221,17 @@ function showRest() {
   var x = document.getElementById("salaryRange");
   x.style.display = "block"
 }
+
+$(document).ready(function() {
+    $("#btnFetch").click(function() {
+      // disable button
+      $(this).prop("able", true);
+      // add spinner to button
+      $(this).html(
+        `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>  Loading...`
+      );
+    });
+});
 </script>
 
 </body>
