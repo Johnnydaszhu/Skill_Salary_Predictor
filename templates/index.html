@@ -136,22 +136,24 @@
     </section>
 </form>
 
-     {{inputs_list}}
-        {{ rating }}
+
     <br>
-    <div class="text-center" id="salaryRange" style='display:none'>
+    <div class="text-center" >
         $<div id="odometer1" class="odometer"></div>
         <script>
                     setTimeout(function(){
             odometer1.innerHTML = {{Min_Salary}};
-        }, 2000);
+        }, 500);
         </script>
         ~ $<div id="odometer2" class="odometer"></div>
         <script>
                     setTimeout(function(){
             odometer2.innerHTML = {{Max_Salary}};
-        }, 2000);
-        </script><br>
+        }, 500);
+        </script>
+        <br>
+        {{inputs_list}}<br>
+        {{ rating }}<br>
 
 
         <br>
@@ -217,15 +219,8 @@
 </div>
 
 <script>
-function showRest() {
-  var x = document.getElementById("salaryRange");
-  x.style.display = "block"
-}
-
 $(document).ready(function() {
     $("#btnFetch").click(function() {
-      // disable button
-      $(this).prop("able", true);
       // add spinner to button
       $(this).html(
         `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>  Loading...`

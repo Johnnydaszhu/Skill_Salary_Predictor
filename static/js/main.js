@@ -12,7 +12,7 @@ const el = document.querySelector( '.counter' )
 // Start counting, do this on DOM ready or with Waypoints.
 counterUp( el, {
     duration: 1000,
-    delay: 16,
+    delay: 10,
 } )
 
 
