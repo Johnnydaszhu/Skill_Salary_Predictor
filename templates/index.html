@@ -136,7 +136,6 @@
     </section>
 </form>
 
-
     <br>
     <div class="text-center" >
         $<div id="odometer1" class="odometer"></div>
@@ -154,6 +153,11 @@
         <br>
         {{inputs_list}}<br>
         {{ rating }}<br>
+        <ul>
+        {% for input in inputs_list %}
+          <li>{{ input}}</li>
+        {% endfor %}
+        </ul>
 
 
         <br>
