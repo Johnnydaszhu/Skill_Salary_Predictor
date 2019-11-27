@@ -119,6 +119,7 @@ def predict():
                      42, 40, 26, 35, 26, 16, 18, 15,  9, 16, 12,  5,  4,
                       7,  3,  1,  3,  2,  3,  3,  0,  1,  0,  2,  1,  2,
                       1,  2,  1,  1,  0,  0,  0,  1,  0,  0,  1]
+    network_name = 'High Salary Skill Pairs'
 
 
 
@@ -128,7 +129,7 @@ def predict():
                            inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),
                            single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),
                            data_average_min=format(data_average_min),data_average_max=format(data_average_max),
-                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max)
+                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max,network_name=network_name)
 
 
 if __name__ == '__main__':
