@@ -74,7 +74,7 @@
         <br>
     <div class="text-center">
     <label class="mdb-main-label">Data Skills:  </label>
-    <select class="selectpicker 2" data-live-search="true" data-min-options="1" data-width="59%" multiple name="skills_selected" required>
+    <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3" data-width="59%" multiple name="skills_selected" data-actions-box="true" data-header="Pleas choose more than 3 skills">
         <optgroup label="Lanuage">
             <option  value="C/C++">C/C++</option>
             <option  value="Scripting">Scripting</option>
@@ -83,7 +83,7 @@
             <option  value="Java">Java</option>
             <option  value="JavaScript">JavaScript</option>
             <option  value="MATLAB">MATLAB</option>
-            <option  value="MySQL">MySQL</option>
+            <option  value="MySQL" selected>MySQL</option>
             <option  value="Perl">Perl</option>
             <option  value="Python">Python</option>
             <option  value="R">R</option>
@@ -102,7 +102,7 @@
             <option  value="Linux">Linux</option>
         </optgroup>
         <optgroup label="Software">
-            <option  value="Excel">Excel</option>
+            <option  value="Excel" selected>Excel</option>
             <option  value="HBase">Apache HBase</option>
             <option  value="Tableau">Tableau</option>
             <option  value="TensorFlow">TensorFlow</option>
@@ -151,13 +151,6 @@
         }, 500);
         </script>
         <br>
-        {{inputs_list}}<br>
-        {{ rating }}<br>
-        <ul>
-        {% for input in inputs_list %}
-          <li>{{ input}}</li>
-        {% endfor %}
-        </ul>
 
 
         <br>
@@ -167,18 +160,77 @@
 
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div class="text-center">
-    <div id="main" style="width:100%;height:400px; margin:auto"></div>
+    <div id="main 1" style="width:100%;height:400px; margin:auto"></div>
 
     <script type="text/javascript">
 
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
+        var myChart1 = echarts.init(document.getElementById('main 1'));
 
         // 指定图表的配置项和数据
 
         var option = {
             title: {
-                text: 'Salary Increase by adding one skill',
+                text: 'How Much For Each Skill Only?',
+                left: 'center',
+                top:-5.5
+            },
+            tooltip: {},
+            legend: {
+                data: ['Min Salary', 'Avg Salary'],
+                bottom: 1,
+            },
+            radar: {
+                // shape: 'circle',
+                name: {
+                    textStyle: {
+                        color: '#fff',
+                        backgroundColor: '#999',
+                        borderRadius: 3,
+                        padding: [3, 5]
+                   }
+                },
+                indicator:
+                   {{ single_skill_info_max | safe }}
+            },
+            series: [{
+                name: '预算 vs 开销（Budget vs spending）',
+                type: 'radar',
+                 areaStyle: {normal:  {type: 'default'}},
+                data : [
+                    {
+                        value : {{ single_skill_info_avg |safe}},
+                        name : 'Avg Salary'
+                    },
+                    {
+                        value: {{ single_skill_info_min |safe}},
+                        name : 'Min Salary'
+                    }
+                ]
+            }]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option);
+        window.onresize = function() {
+            myChart1.resize();
+                };
+    </script>
+    </div>
+<br>
+    <div id="main 2" style="width:100%;height:400px; margin:auto"></div>
+
+    <script type="text/javascript">
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart2 = echarts.init(document.getElementById('main 2'));
+
+        // 指定图表的配置项和数据
+
+        var option = {
+            title: {
+                text: 'What Skills might Increase the Salary?',
                 left:'center'
             },
             tooltip: {},
@@ -213,12 +265,14 @@
             }]
         };
         // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
+        myChart2.setOption(option);
         window.onresize = function() {
-            myChart.resize();
+            myChart2.resize();
                 };
     </script>
     </div>
+
+
 
 </div>
 

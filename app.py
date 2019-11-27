@@ -94,10 +94,20 @@ def predict():
     max_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
     min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[-1]
 
+    skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0)
+    single_skill_info = skill_info[skill_info['name'].isin(inputs_list)]
+    single_skill_info_max = single_skill_info[['name','Max']].to_dict('records')
+    single_skill_info_avg = list(single_skill_info['Avg'].values)
+    single_skill_info_min = list(single_skill_info['Min'].values)
+
+
+
+
     return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
-                           inputs_list=inputs_list,rating=format(rating))
+                           inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),
+                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min))
 
 
 if __name__ == '__main__':
