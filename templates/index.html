@@ -160,6 +160,78 @@
 
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div class="text-center">
+
+    <div id="main 3" style="width:100%;height:400px; margin:auto"></div>
+
+        <script type="text/javascript">
+            var myChart3 = echarts.init(document.getElementById('main 3'));
+
+            var option = {
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    legend: {
+                        data:['Min Salary', 'Max Salary']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis : [
+                        {
+                            type : 'value',
+                            axisLabel:{formatter:'${value}'},
+                            show:false
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'category',
+                            axisTick : {show: false},
+                            data : ['Data Analyst Average Annual Salary in NYC','Your Estimated Annual Salary'],
+
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'Max',
+                            type:'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    formatter:'${c0}'
+                                }
+                            },
+                            data:[91356, 47782]
+                        },
+                        {
+                            name:'Min',
+                            type:'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'inside'
+                                },
+                            },
+                            data:[-57498, -26983]
+                        }
+                    ]
+                };
+                    // 使用刚指定的配置项和数据显示图表。
+        myChart3.setOption(option);
+        window.onresize = function() {
+            myChart3.resize();
+                };
+
+        </script>
+
     <div id="main 1" style="width:100%;height:400px; margin:auto"></div>
 
     <script type="text/javascript">
@@ -175,7 +247,7 @@
                 left: 'center',
                 top:-5.5
             },
-            tooltip: {},
+            tooltip : {},
             legend: {
                 data: ['Min Salary', 'Avg Salary'],
                 bottom: 1,
@@ -194,9 +266,17 @@
                    {{ single_skill_info_max | safe }}
             },
             series: [{
-                name: '预算 vs 开销（Budget vs spending）',
+                name: 'Average Salary',
                 type: 'radar',
                  areaStyle: {normal:  {type: 'default'}},
+                label: {
+                normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter:'${c0}',
+
+                    }
+                },
                 data : [
                     {
                         value : {{ single_skill_info_avg |safe}},
@@ -271,38 +351,6 @@
                 };
     </script>
     </div>
-
-    <div id="gd"></div>
-  <script>
-  Plotly.d3.csv(
-	"static/data/dataforflask.csv",
-	function(err, rows) {
-		function unpack(rows, key) {
-			return rows.map(function(row) {
-				return row[key];
-			});
-		}
-
-		var data = [
-			{
-				type: "scattermapbox",
-				text: unpack(rows, "Globvalue"),
-				lon: unpack(rows, "Lng"),
-				lat: unpack(rows, "Lat"),
-				marker: { color: "fuchsia", size: 4 }
-			}
-		];
-
-		var layout = {
-			dragmode: "zoom",
-			mapbox: { style: "open-street-map", center: { lat: 38, lon: -90 }, zoom: 3 },
-			margin: { r: 0, t: 0, b: 0, l: 0 }
-		};
-
-		Plotly.newPlot("gd", data, layout);
-	}
-);
-  </script>
 </div>
 
 
