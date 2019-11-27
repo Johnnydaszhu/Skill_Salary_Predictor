@@ -78,14 +78,14 @@
         <optgroup label="Lanuage">
             <option  value="C/C++">C/C++</option>
             <option  value="Scripting">Scripting</option>
-            <option  value="SQL" selected>SQL</option>
+            <option  value="SQL" >SQL</option>
             <option  value="Scala">Scala</option>
             <option  value="Java">Java</option>
             <option  value="JavaScript">JavaScript</option>
             <option  value="MATLAB">MATLAB</option>
             <option  value="MySQL" selected>MySQL</option>
             <option  value="Perl">Perl</option>
-            <option  value="Python">Python</option>
+            <option  value="Python" selected>Python</option>
             <option  value="R">R</option>
         </optgroup>
         <optgroup label="Platform/Framework">
@@ -272,6 +272,38 @@
     </script>
     </div>
 
+    <div id="gd"></div>
+  <script>
+  Plotly.d3.csv(
+	"static/data/dataforflask.csv",
+	function(err, rows) {
+		function unpack(rows, key) {
+			return rows.map(function(row) {
+				return row[key];
+			});
+		}
+
+		var data = [
+			{
+				type: "scattermapbox",
+				text: unpack(rows, "Globvalue"),
+				lon: unpack(rows, "Lng"),
+				lat: unpack(rows, "Lat"),
+				marker: { color: "fuchsia", size: 4 }
+			}
+		];
+
+		var layout = {
+			dragmode: "zoom",
+			mapbox: { style: "open-street-map", center: { lat: 38, lon: -90 }, zoom: 3 },
+			margin: { r: 0, t: 0, b: 0, l: 0 }
+		};
+
+		Plotly.newPlot("gd", data, layout);
+	}
+);
+  </script>
+</div>
 
 
 </div>
