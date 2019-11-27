@@ -100,6 +100,8 @@ def predict():
     single_skill_info_avg = list(single_skill_info['Avg'].values)
     single_skill_info_min = list(single_skill_info['Min'].values)
 
+    data_average_min = 57498
+    data_average_max = 91356
 
 
 
@@ -107,7 +109,8 @@ def predict():
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),
-                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min))
+                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),
+                           data_average_min=format(data_average_min),data_average_max=format(data_average_max))
 
 
 if __name__ == '__main__':

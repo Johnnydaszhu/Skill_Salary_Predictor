@@ -74,7 +74,7 @@
         <br>
     <div class="text-center">
     <label class="mdb-main-label">Data Skills:  </label>
-    <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3" data-width="59%" multiple name="skills_selected" data-actions-box="true" data-header="Pleas choose more than 3 skills">
+    <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3" data-width="59%" multiple name="skills_selected" data-header="Pleas choose more than 3 skills">
         <optgroup label="Lanuage">
             <option  value="C/C++">C/C++</option>
             <option  value="Scripting">Scripting</option>
@@ -138,23 +138,22 @@
 
     <br>
     <div class="text-center" >
-        $<div id="odometer1" class="odometer"></div>
-        <script>
-                    setTimeout(function(){
-            odometer1.innerHTML = {{Min_Salary}};
-        }, 500);
-        </script>
-        ~ $<div id="odometer2" class="odometer"></div>
-        <script>
-                    setTimeout(function(){
-            odometer2.innerHTML = {{Max_Salary}};
-        }, 500);
-        </script>
-        <br>
+{#        $<div id="odometer1" class="odometer"></div>#}
+{#        <script>#}
+{#                    setTimeout(function(){#}
+{#            odometer1.innerHTML = {{Min_Salary}};#}
+{#        }, 500);#}
+{#        </script>#}
+{#        ~ $<div id="odometer2" class="odometer"></div>#}
+{#        <script>#}
+{#                    setTimeout(function(){#}
+{#            odometer2.innerHTML = {{Max_Salary}};#}
+{#        }, 500);#}
+{#        </script>#}
+{#        <br>#}
 
 
-        <br>
-        <br>
+
 {#        <span style="display: inline-block; width: 32%"><span>$</span><span class="counter">43,753</span></span>#}
     </div>
 
@@ -167,6 +166,11 @@
             var myChart3 = echarts.init(document.getElementById('main 3'));
 
             var option = {
+                    title: {
+                    text: 'How much for those selected skills?',
+                    left: 'center',
+                    top:-5.5
+                },
                     tooltip : {
                         trigger: 'axis',
                         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
@@ -193,7 +197,8 @@
                         {
                             type : 'category',
                             axisTick : {show: false},
-                            data : ['Data Analyst Average Annual Salary in NYC','Your Estimated Annual Salary'],
+                            show:true,
+                            data : ['NYC Average','Your Estimated'],
 
                         }
                     ],
@@ -208,7 +213,7 @@
                                     formatter:'${c0}'
                                 }
                             },
-                            data:[91356, 47782]
+                            data:[{{ data_average_max }}, {{Max_Salary}}]
                         },
                         {
                             name:'Min',
@@ -220,7 +225,7 @@
                                     position: 'inside'
                                 },
                             },
-                            data:[-57498, -26983]
+                            data:[-{{ data_average_min }}, -{{Min_Salary}}]
                         }
                     ]
                 };
@@ -265,6 +270,7 @@
                 indicator:
                    {{ single_skill_info_max | safe }}
             },
+
             series: [{
                 name: 'Average Salary',
                 type: 'radar',
@@ -321,7 +327,7 @@
                 data: {{ Suggest_Skills_Skills |safe}},
                 axisLabel:{
                     interval:0,
-                    rotate:-10,
+                    rotate:40,
                 }
 
             },
