@@ -103,6 +103,23 @@ def predict():
     data_average_min = 57498
     data_average_max = 91356
 
+    hist_x = [ 30000,  33860,  37720,  41580,  45440,  49300,  53160,
+                     57020,  60880,  64740,  68600,  72460,  76320,  80180,
+                     84040,  87900,  91760,  95620,  99480, 103340, 107200,
+                    111060, 114920, 118780, 122640, 126500, 130360, 134220,
+                    138080, 141940, 145800, 149660, 153520, 157380, 161240,
+                    165100, 168960, 172820, 176680, 180540, 184400, 188260,
+                    192120, 195980, 199840, 203700, 207560, 211420, 215280,
+                    219140, 223000]
+    hist_min = [ 3, 17, 41, 46, 72, 78, 49, 36, 28, 28, 14, 21,  5,
+                      9,  6,  6,  5,  4,  3,  2,  3,  0,  3,  2,  0,  1,
+                      2,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,
+                      0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]
+    hist_max = [ 0,  0,  0,  0,  0,  2, 11,  8, 18, 28, 31, 38, 51,
+                     42, 40, 26, 35, 26, 16, 18, 15,  9, 16, 12,  5,  4,
+                      7,  3,  1,  3,  2,  3,  3,  0,  1,  0,  2,  1,  2,
+                      1,  2,  1,  1,  0,  0,  0,  1,  0,  0,  1]
+
 
 
     return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
@@ -110,7 +127,8 @@ def predict():
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),
                            single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),
-                           data_average_min=format(data_average_min),data_average_max=format(data_average_max))
+                           data_average_min=format(data_average_min),data_average_max=format(data_average_max),
+                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max)
 
 
 if __name__ == '__main__':
