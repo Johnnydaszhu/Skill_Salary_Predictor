@@ -10,22 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NFMT56K');</script>
-    <!-- End Google Tag Manager -->
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153150408-1"></script>
     <script>
@@ -54,13 +38,6 @@
 
 </head>
 <body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFMT56K"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <div class="container-fluid">
 
@@ -157,7 +134,22 @@
         </section>
     </form>
     <br>
-
+    <div class="text-center">
+                $<div id="odometer1" class="odometer"></div>
+                <script>
+                            setTimeout(function(){
+                    odometer1.innerHTML = {{Min_Salary}};
+                }, 500);
+                </script>
+                ~ $<div id="odometer2" class="odometer"></div>
+                <script>
+                            setTimeout(function(){
+                    odometer2.innerHTML = {{Max_Salary}};
+                }, 500);
+                </script>
+                <br>
+        <br>
+    </div>
 
     <!-- Echarts Viz -->
     <div class="text-center " >
@@ -182,7 +174,8 @@
                             fontSize: '15'
                         }
                     },
-                    tooltip: {},
+                    tooltip: {
+                    },
                     legend: {
                         data: ['Min Salary', 'Avg Salary'],
                         bottom: 10,
@@ -245,8 +238,8 @@
                 var myChart4 = echarts.init(document.getElementById('main 4'));
 
                 var xAxisData = {{ hist_x }};
-                var data1 = {{hist_min}};
-                var data2 ={{hist_max}};
+                var data2 = {{hist_min}};
+                var data1 ={{hist_max}};
 
 
                 var option = {
@@ -260,7 +253,7 @@
                         }
                     },
                     legend: {
-                        data: ['min', 'max'],
+                        data: ['min','max'],
                         align: 'right',
                         bottom: 2
                     },
@@ -272,7 +265,9 @@
                             },
                         }
                     },
-                    tooltip: {},
+                    tooltip: {
+                        formatter: '${b0}',
+                    },
                     grid: {
                         containLabel: false
                     },
@@ -290,14 +285,14 @@
                     series: [{
                         name: 'min',
                         type: 'bar',
-                        data: data1,
+                        data: data2,
                         animationDelay: function (idx) {
                             return idx * 10;
                         }
                     }, {
                         name: 'max',
                         type: 'bar',
-                        data: data2,
+                        data: data1,
                         animationDelay: function (idx) {
                             return idx * 10 + 100;
                         }
@@ -336,10 +331,12 @@
                         trigger: 'axis',
                         axisPointer: {            // 坐标轴指示器，坐标轴触发有效
                             type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                        }
+                        },
+                        formatter: 'Your Estimate: ${c0}<br />NYC Average: ${c1}'
                     },
                     legend: {
-                        data: ['Min Salary', 'Max Salary']
+                        data: ['Min', 'Max'],
+                        bottom: 2
                     },
                     grid: {
                         left: '3%',
@@ -374,7 +371,7 @@
                                     formatter: '${c0}'
                                 }
                             },
-                            data: [{{ data_average_max }}, {{Max_Salary}}]
+                            data: [{{ data_average_max }},{{Max_Salary}}]
                         },
                         {
                             name: 'Min',
@@ -386,7 +383,7 @@
                                     position: 'inside'
                                 },
                             },
-                            data: [-{{ data_average_min }}, -{{Min_Salary}}]
+                            data: [{{ data_average_min }},{{Min_Salary}}]
                         }
                     ]
                 };
