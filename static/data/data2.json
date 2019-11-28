@@ -1,15 +1,15 @@
 {
   "nodes": [{
-    "label": "Machine Learning",
-    "x": -206.98411560058594,
-    "y": 236.37876892089844,
-    "id": "Machine Learning",
+    "label": "Hadoop",
+    "x": -47.64916229248047,
+    "y": -228.60406494140625,
+    "id": "Hadoop",
     "attributes": {
       "type": "Source; Target",
-      "frequency": "4"
+      "frequency": "20"
     },
-    "color": "rgb(235,237,239)",
-    "size": 10.833333015441895
+    "color": "rgb(225,153,152)",
+    "size": 30.0
   }, {
     "label": "TensorFlow",
     "x": 273.3109130859375,
@@ -20,139 +20,7 @@
       "frequency": "10"
     },
     "color": "rgb(231,205,207)",
-    "size": 13.333333015441895
-  }, {
-    "label": "Pig",
-    "x": -37.3817138671875,
-    "y": 207.0277862548828,
-    "id": "Pig",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "4"
-    },
-    "color": "rgb(235,237,239)",
-    "size": 10.833333015441895
-  }, {
-    "label": "Oracle",
-    "x": -88.74688720703125,
-    "y": 285.69677734375,
-    "id": "Oracle",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "4"
-    },
-    "color": "rgb(235,237,239)",
-    "size": 10.833333015441895
-  }, {
-    "label": "AI",
-    "x": 114.66964721679688,
-    "y": -139.3612823486328,
-    "id": "AI",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "24"
-    },
-    "color": "rgb(222,131,130)",
-    "size": 19.166667938232422
-  }, {
-    "label": "Data Analysis",
-    "x": -127.73876190185547,
-    "y": -93.53738403320312,
-    "id": "Data Analysis",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "10"
-    },
-    "color": "rgb(231,205,207)",
-    "size": 13.333333015441895
-  }, {
-    "label": "MATLAB",
-    "x": -199.0360870361328,
-    "y": -204.22637939453125,
-    "id": "MATLAB",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "14"
-    },
-    "color": "rgb(228,184,185)",
-    "size": 15.0
-  }, {
-    "label": "Natural Language Processing",
-    "x": 30.98747444152832,
-    "y": 88.83736419677734,
-    "id": "Natural Language Processing",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "6"
-    },
-    "color": "rgb(234,226,229)",
-    "size": 11.666666984558105
-  }, {
-    "label": "HBase",
-    "x": -64.68192291259766,
-    "y": 116.81657409667969,
-    "id": "HBase",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "6"
-    },
-    "color": "rgb(234,226,229)",
-    "size": 11.666666984558105
-  }, {
-    "label": "Microsoft SQL Server",
-    "x": -226.6657257080078,
-    "y": 58.959259033203125,
-    "id": "Microsoft SQL Server",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "38"
-    },
-    "color": "rgb(213,58,53)",
-    "size": 25.0
-  }, {
-    "label": "Kafka",
-    "x": -125.86592864990234,
-    "y": 193.26846313476562,
-    "id": "Kafka",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "4"
-    },
-    "color": "rgb(235,237,239)",
-    "size": 10.833333015441895
-  }, {
-    "label": "Tableau",
-    "x": 211.3964385986328,
-    "y": 27.005443572998047,
-    "id": "Tableau",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "26"
-    },
-    "color": "rgb(221,121,119)",
-    "size": 20.0
-  }, {
-    "label": "MySQL",
-    "x": 63.11967849731445,
-    "y": -7.018968105316162,
-    "id": "MySQL",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "8"
-    },
-    "color": "rgb(233,216,217)",
-    "size": 12.5
-  }, {
-    "label": "Scripting",
-    "x": -50.526180267333984,
-    "y": 10.620942115783691,
-    "id": "Scripting",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "10"
-    },
-    "color": "rgb(231,205,207)",
-    "size": 13.333333015441895
+    "size": 18.88888931274414
   }, {
     "label": "SAS",
     "x": 218.95570373535156,
@@ -163,18 +31,40 @@
       "frequency": "10"
     },
     "color": "rgb(231,205,207)",
-    "size": 13.333333015441895
+    "size": 18.88888931274414
   }, {
-    "label": "Hadoop",
-    "x": -47.64916229248047,
-    "y": -228.60406494140625,
-    "id": "Hadoop",
+    "label": "MySQL",
+    "x": 63.11967849731445,
+    "y": -7.018968105316162,
+    "id": "MySQL",
     "attributes": {
       "type": "Source; Target",
-      "frequency": "20"
+      "frequency": "8"
     },
-    "color": "rgb(225,153,152)",
-    "size": 17.5
+    "color": "rgb(233,216,217)",
+    "size": 16.666667938232422
+  }, {
+    "label": "Oracle",
+    "x": -88.74688720703125,
+    "y": 285.69677734375,
+    "id": "Oracle",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "4"
+    },
+    "color": "rgb(235,237,239)",
+    "size": 12.222222328186035
+  }, {
+    "label": "Kafka",
+    "x": -125.86592864990234,
+    "y": 193.26846313476562,
+    "id": "Kafka",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "4"
+    },
+    "color": "rgb(235,237,239)",
+    "size": 12.222222328186035
   }, {
     "label": "Big Data",
     "x": 280.0472717285156,
@@ -187,38 +77,16 @@
     "color": "rgb(237,248,251)",
     "size": 10.0
   }, {
-    "label": "Spark",
-    "x": -16.07875633239746,
-    "y": -93.66060638427734,
-    "id": "Spark",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "8"
-    },
-    "color": "rgb(233,216,217)",
-    "size": 12.5
-  }, {
-    "label": "R",
-    "x": -257.4456481933594,
-    "y": -102.70281219482422,
-    "id": "R",
-    "attributes": {
-      "type": "Source; Target",
-      "frequency": "4"
-    },
-    "color": "rgb(235,237,239)",
-    "size": 10.833333015441895
-  }, {
-    "label": "Hive",
-    "x": 83.03394317626953,
-    "y": -293.7156066894531,
-    "id": "Hive",
+    "label": "Data Analysis",
+    "x": -127.73876190185547,
+    "y": -93.53738403320312,
+    "id": "Data Analysis",
     "attributes": {
       "type": "Source; Target",
       "frequency": "10"
     },
     "color": "rgb(231,205,207)",
-    "size": 13.333333015441895
+    "size": 18.88888931274414
   }, {
     "label": "SQL",
     "x": 117.30269622802734,
@@ -229,33 +97,242 @@
       "frequency": "38"
     },
     "color": "rgb(213,58,53)",
-    "size": 25.0
+    "size": 50.0
+  }, {
+    "label": "HBase",
+    "x": -64.68192291259766,
+    "y": 116.81657409667969,
+    "id": "HBase",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "6"
+    },
+    "color": "rgb(234,226,229)",
+    "size": 14.44444465637207
+  }, {
+    "label": "Spark",
+    "x": -16.07875633239746,
+    "y": -93.66060638427734,
+    "id": "Spark",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "8"
+    },
+    "color": "rgb(233,216,217)",
+    "size": 16.666667938232422
+  }, {
+    "label": "Pig",
+    "x": -37.3817138671875,
+    "y": 207.0277862548828,
+    "id": "Pig",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "4"
+    },
+    "color": "rgb(235,237,239)",
+    "size": 12.222222328186035
+  }, {
+    "label": "Hive",
+    "x": 83.03394317626953,
+    "y": -293.7156066894531,
+    "id": "Hive",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "10"
+    },
+    "color": "rgb(231,205,207)",
+    "size": 18.88888931274414
+  }, {
+    "label": "Tableau",
+    "x": 211.3964385986328,
+    "y": 27.005443572998047,
+    "id": "Tableau",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "26"
+    },
+    "color": "rgb(221,121,119)",
+    "size": 36.66666793823242
+  }, {
+    "label": "Scripting",
+    "x": -50.526180267333984,
+    "y": 10.620942115783691,
+    "id": "Scripting",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "10"
+    },
+    "color": "rgb(231,205,207)",
+    "size": 18.88888931274414
+  }, {
+    "label": "AI",
+    "x": 114.66964721679688,
+    "y": -139.3612823486328,
+    "id": "AI",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "24"
+    },
+    "color": "rgb(222,131,130)",
+    "size": 34.44444274902344
+  }, {
+    "label": "R",
+    "x": -257.4456481933594,
+    "y": -102.70281219482422,
+    "id": "R",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "4"
+    },
+    "color": "rgb(235,237,239)",
+    "size": 12.222222328186035
+  }, {
+    "label": "Natural Language Processing",
+    "x": 30.98747444152832,
+    "y": 88.83736419677734,
+    "id": "Natural Language Processing",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "6"
+    },
+    "color": "rgb(234,226,229)",
+    "size": 14.44444465637207
+  }, {
+    "label": "MATLAB",
+    "x": -199.0360870361328,
+    "y": -204.22637939453125,
+    "id": "MATLAB",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "14"
+    },
+    "color": "rgb(228,184,185)",
+    "size": 23.33333396911621
+  }, {
+    "label": "Machine Learning",
+    "x": -206.98411560058594,
+    "y": 236.37876892089844,
+    "id": "Machine Learning",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "4"
+    },
+    "color": "rgb(235,237,239)",
+    "size": 12.222222328186035
+  }, {
+    "label": "Microsoft SQL Server",
+    "x": -226.6657257080078,
+    "y": 58.959259033203125,
+    "id": "Microsoft SQL Server",
+    "attributes": {
+      "type": "Source; Target",
+      "frequency": "38"
+    },
+    "color": "rgb(213,58,53)",
+    "size": 50.0
   }],
   "edges": [{
+    "source": "Big Data",
+    "target": "Tableau",
+    "id": "72",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
     "source": "Hadoop",
-    "target": "TensorFlow",
-    "id": "8",
+    "target": "AI",
+    "id": "2",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "AI",
+    "target": "MATLAB",
+    "id": "95",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Tableau",
+    "target": "HBase",
+    "id": "11",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Hadoop",
+    "target": "Data Analysis",
+    "id": "40",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
     "source": "Microsoft SQL Server",
-    "target": "Tableau",
-    "id": "36",
+    "target": "AI",
+    "id": "47",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
-    "source": "MATLAB",
-    "target": "Hadoop",
-    "id": "35",
+    "source": "Hadoop",
+    "target": "Scripting",
+    "id": "98",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
     "source": "SQL",
-    "target": "Kafka",
-    "id": "67",
+    "target": "Hive",
+    "id": "82",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
+    "target": "Oracle",
+    "id": "96",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Hadoop",
+    "target": "Tableau",
+    "id": "97",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Hadoop",
+    "target": "SQL",
+    "id": "44",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Microsoft SQL Server",
+    "target": "TensorFlow",
+    "id": "73",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "AI",
+    "target": "SAS",
+    "id": "111",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "MySQL",
+    "target": "Microsoft SQL Server",
+    "id": "74",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "R",
+    "target": "Microsoft SQL Server",
+    "id": "46",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
@@ -267,9 +344,23 @@
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
-    "source": "AI",
+    "source": "Hadoop",
+    "target": "TensorFlow",
+    "id": "8",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
+    "target": "TensorFlow",
+    "id": "89",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Tableau",
     "target": "Hive",
-    "id": "15",
+    "id": "56",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
@@ -282,274 +373,8 @@
     "size": 2.0
   }, {
     "source": "Tableau",
-    "target": "HBase",
-    "id": "11",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "SQL",
-    "target": "Oracle",
-    "id": "96",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Spark",
     "target": "AI",
-    "id": "61",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "SQL",
-    "target": "Machine Learning",
-    "id": "126",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Tableau",
-    "target": "SQL",
-    "id": "1",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "AI",
-    "target": "MySQL",
-    "id": "53",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Hadoop",
-    "target": "Data Analysis",
-    "id": "40",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "R",
-    "target": "Microsoft SQL Server",
-    "id": "46",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Big Data",
-    "target": "Tableau",
-    "id": "72",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Hadoop",
-    "target": "SQL",
-    "id": "44",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Natural Language Processing",
-    "target": "SQL",
-    "id": "21",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "MATLAB",
-    "target": "Microsoft SQL Server",
-    "id": "60",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Microsoft SQL Server",
-    "target": "TensorFlow",
-    "id": "73",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Pig",
-    "target": "SQL",
-    "id": "23",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Microsoft SQL Server",
-    "target": "Oracle",
-    "id": "71",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Tableau",
-    "target": "SAS",
-    "id": "32",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Microsoft SQL Server",
-    "target": "Hive",
-    "id": "66",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "MATLAB",
-    "target": "SAS",
-    "id": "10",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Microsoft SQL Server",
-    "target": "AI",
-    "id": "47",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Spark",
-    "target": "SQL",
-    "id": "59",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Microsoft SQL Server",
-    "target": "SQL",
-    "id": "42",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Scripting",
-    "target": "Tableau",
-    "id": "122",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Data Analysis",
-    "target": "AI",
-    "id": "5",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "SQL",
-    "target": "SAS",
-    "id": "29",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Hadoop",
-    "target": "Tableau",
-    "id": "97",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "SQL",
-    "target": "HBase",
-    "id": "18",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Microsoft SQL Server",
-    "target": "Pig",
-    "id": "14",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "TensorFlow",
-    "target": "Tableau",
-    "id": "93",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Data Analysis",
-    "target": "Microsoft SQL Server",
-    "id": "12",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "TensorFlow",
-    "target": "AI",
-    "id": "20",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Hadoop",
-    "target": "Scripting",
-    "id": "98",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "MySQL",
-    "target": "Microsoft SQL Server",
-    "id": "74",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "HBase",
-    "target": "Microsoft SQL Server",
-    "id": "26",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Natural Language Processing",
-    "target": "Tableau",
-    "id": "13",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "AI",
-    "target": "MATLAB",
-    "id": "95",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Spark",
-    "target": "Microsoft SQL Server",
-    "id": "22",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "SQL",
-    "target": "Data Analysis",
-    "id": "55",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Machine Learning",
-    "target": "Microsoft SQL Server",
-    "id": "16",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Microsoft SQL Server",
-    "target": "SAS",
-    "id": "62",
+    "id": "33",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
@@ -561,86 +386,37 @@
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
-    "source": "Spark",
-    "target": "Hadoop",
-    "id": "80",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Hive",
-    "target": "Hadoop",
-    "id": "69",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "AI",
-    "target": "SAS",
-    "id": "111",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Tableau",
+    "source": "Microsoft SQL Server",
     "target": "Hive",
-    "id": "56",
+    "id": "66",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
     "source": "Natural Language Processing",
-    "target": "Microsoft SQL Server",
-    "id": "9",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "MATLAB",
     "target": "SQL",
-    "id": "24",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "SQL",
-    "target": "TensorFlow",
-    "id": "89",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Hadoop",
-    "target": "AI",
-    "id": "2",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "SQL",
-    "target": "R",
-    "id": "30",
-    "attributes": {},
-    "color": "rgb(130,130,130)",
-    "size": 2.0
-  }, {
-    "source": "Data Analysis",
-    "target": "MATLAB",
-    "id": "17",
+    "id": "21",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
     "source": "Tableau",
-    "target": "AI",
-    "id": "33",
+    "target": "MATLAB",
+    "id": "43",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
-    "source": "Scripting",
-    "target": "AI",
-    "id": "31",
+    "source": "MATLAB",
+    "target": "SAS",
+    "id": "10",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "MATLAB",
+    "target": "Hadoop",
+    "id": "35",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
@@ -653,15 +429,232 @@
     "size": 2.0
   }, {
     "source": "SQL",
+    "target": "Kafka",
+    "id": "67",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
+    "target": "Data Analysis",
+    "id": "55",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Microsoft SQL Server",
+    "target": "Pig",
+    "id": "14",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Microsoft SQL Server",
+    "target": "Oracle",
+    "id": "71",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Microsoft SQL Server",
+    "target": "SAS",
+    "id": "62",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Spark",
+    "target": "SQL",
+    "id": "59",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Natural Language Processing",
+    "target": "Microsoft SQL Server",
+    "id": "9",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Hive",
+    "target": "Hadoop",
+    "id": "69",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
+    "target": "R",
+    "id": "30",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
+    "target": "SAS",
+    "id": "29",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
+    "target": "HBase",
+    "id": "18",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Natural Language Processing",
+    "target": "Tableau",
+    "id": "13",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "AI",
+    "target": "Hive",
+    "id": "15",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Pig",
+    "target": "SQL",
+    "id": "23",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Data Analysis",
+    "target": "MATLAB",
+    "id": "17",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "MATLAB",
+    "target": "Microsoft SQL Server",
+    "id": "60",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
     "target": "MySQL",
     "id": "34",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
+    "source": "AI",
+    "target": "MySQL",
+    "id": "53",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
     "source": "Tableau",
-    "target": "MATLAB",
-    "id": "43",
+    "target": "SAS",
+    "id": "32",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "SQL",
+    "target": "Machine Learning",
+    "id": "126",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "MATLAB",
+    "target": "SQL",
+    "id": "24",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Data Analysis",
+    "target": "AI",
+    "id": "5",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Data Analysis",
+    "target": "Microsoft SQL Server",
+    "id": "12",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Scripting",
+    "target": "Tableau",
+    "id": "122",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Microsoft SQL Server",
+    "target": "Kafka",
+    "id": "38",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Microsoft SQL Server",
+    "target": "Tableau",
+    "id": "36",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Spark",
+    "target": "Microsoft SQL Server",
+    "id": "22",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "TensorFlow",
+    "target": "Tableau",
+    "id": "93",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "TensorFlow",
+    "target": "AI",
+    "id": "20",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "HBase",
+    "target": "Microsoft SQL Server",
+    "id": "26",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Scripting",
+    "target": "AI",
+    "id": "31",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Spark",
+    "target": "Hadoop",
+    "id": "80",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Tableau",
+    "target": "SQL",
+    "id": "1",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
@@ -673,16 +666,23 @@
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
-    "source": "SQL",
-    "target": "Hive",
-    "id": "82",
+    "source": "Machine Learning",
+    "target": "Microsoft SQL Server",
+    "id": "16",
+    "attributes": {},
+    "color": "rgb(130,130,130)",
+    "size": 2.0
+  }, {
+    "source": "Spark",
+    "target": "AI",
+    "id": "61",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0
   }, {
     "source": "Microsoft SQL Server",
-    "target": "Kafka",
-    "id": "38",
+    "target": "SQL",
+    "id": "42",
     "attributes": {},
     "color": "rgb(130,130,130)",
     "size": 2.0

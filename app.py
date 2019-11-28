@@ -23,7 +23,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/predict', methods=['POST','GET'])
+@app.route('/viz', methods=['POST','GET'])
 def predict():
     rating = request.form.get('rating')
     inputs_list = request.form.getlist('skills_selected')
@@ -119,17 +119,16 @@ def predict():
                      42, 40, 26, 35, 26, 16, 18, 15,  9, 16, 12,  5,  4,
                       7,  3,  1,  3,  2,  3,  3,  0,  1,  0,  2,  1,  2,
                       1,  2,  1,  1,  0,  0,  0,  1,  0,  0,  1]
-    network_name = 'High Salary Skill Pairs'
 
 
 
-    return render_template('index.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
+    return render_template('viz.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),
                            single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),
                            data_average_min=format(data_average_min),data_average_max=format(data_average_max),
-                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max,network_name=network_name)
+                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max)
 
 
 if __name__ == '__main__':

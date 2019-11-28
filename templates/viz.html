@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NYC Data Analyst Salary Predictor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NFMT56K');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153150408-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-153150408-1');
+    </script>
+
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/floating-labels.css">
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/ecStat.min.js"></script>
+    <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-minimal.css"/>
+    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+
+
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFMT56K"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="container-fluid">
+
+    <form action="{{ url_for('predict') }}" method="POST">
+        <div class="text-center mb-4">
+            <a href="/">
+                <img src="../static/stationery2.png" class="img" alt="Responsive image" width="60%" height="60%"
+                     title="Back to Homepage">
+            </a>
+            <br>
+            <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
+            <p>Please <strong style="color: crimson">Only</strong> select those skills that <br>a job requires to
+                maximize the accuracy</p>
+        </div>
+
+        <section class="predictor">
+            <!-- Main Input For Receiving Query to our ML -->
+            <div class="text-center">
+                <label class="mdb-main-label">Company Ratings: </label>
+                <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1"
+                        data-width="45%" name="rating">
+                    <option value="0" data-subtext="I have nothing to lose">0</option>
+                    <option value="1" data-subtext="Well...">1</option>
+                    <option value="2" data-subtext="It is Okay..">2</option>
+                    <option value="3.6" data-subtext="Glassdoor Median" selected>3.6</option>
+                    <option value="4" data-subtext="Great!">4</option>
+                    <option value="5" data-subtext="Dream came true">5</option>
+                </select>
+            </div>
+            <br>
+            <div class="text-center">
+                <label class="mdb-main-label">Data Skills: </label>
+                <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
+                        data-width="59%" multiple name="skills_selected" data-header="Pleas choose more than 3 skills">
+                    <optgroup label="Lanuage">
+                        <option value="C/C++">C/C++</option>
+                        <option value="Scripting">Scripting</option>
+                        <option value="SQL">SQL</option>
+                        <option value="Scala">Scala</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="MATLAB">MATLAB</option>
+                        <option value="MySQL" selected>MySQL</option>
+                        <option value="Perl">Perl</option>
+                        <option value="Python" selected>Python</option>
+                        <option value="R">R</option>
+                    </optgroup>
+                    <optgroup label="Platform/Framework">
+                        <option value=".Net">.NET Framework</option>
+                        <option value="AWS">AWS</option>
+                        <option value="Azure">Azure</option>
+                        <option value="Git">Git</option>
+                        <option value="Spark">Apache Spark</option>
+                        <option value="Shell Scripting">Shell Scripting</option>
+                        <option value="S3">Amazon S3</option>
+                        <option value="PostgreSQL">PostgreSQL</option>
+                        <option value="Pig">Apache Pig</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="Linux">Linux</option>
+                    </optgroup>
+                    <optgroup label="Software">
+                        <option value="Excel" selected>Excel</option>
+                        <option value="HBase">Apache HBase</option>
+                        <option value="Tableau">Tableau</option>
+                        <option value="TensorFlow">TensorFlow</option>
+                        <option value="Hadoop">Apache Hadoop</option>
+                        <option value="Hive">Apache Hive</option>
+                        <option value="SPSS">SPSS</option>
+                        <option value="SAS">SAS</option>
+                        <option value="Oracle">Oracle</option>
+                        <option value="Microsoft Office">Microsoft Office</option>
+                        <option value="Kafka">Apache Kafka</option>
+                        <option value="Microsoft SQL Server">Microsoft SQL Server</option>
+                    </optgroup>
+                    <optgroup label="Concept">
+                        <option value="AI">AI</option>
+                        <option value="Big Data">Big Data</option>
+                        <option value="Business Intelligence">Business Intelligence</option>
+                        <option value="Data Analysis">Data Analysis</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Data Warehouse">Data Warehouse</option>
+                        <option value="Project Management">Project Management</option>
+                        <option value="NoSQL">NoSQL</option>
+                        <option value="Natural Language Processing">Natural Language Processing</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="text-center">
+                <br>
+                <button class="btn btn-lg btn-primary" id="btnFetch" type="submit" style="width: 200px;" onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
+                </button>
+            </div>
+        </section>
+    </form>
+    <br>
+
+
+    <!-- Echarts Viz -->
+    <div class="text-center " >
+
+        <div class="card mb-4 shadow-sm" style="background-color: #F6F6F6">
+            <div id="main 1" style="width:100%;height:500px; margin:auto"></div>
+
+            <script type="text/javascript">
+
+                // 基于准备好的dom，初始化echarts实例
+                var myChart1 = echarts.init(document.getElementById('main 1'));
+
+                // 指定图表的配置项和数据
+
+                var option = {
+                    title: {
+                        text: 'How Much For Each Skill Only?',
+                        left: 'center',
+                        top: 10,
+                        textStyle: {
+                            fontWeight: '20',
+                            fontSize: '15'
+                        }
+                    },
+                    tooltip: {},
+                    legend: {
+                        data: ['Min Salary', 'Avg Salary'],
+                        bottom: 10,
+                    },
+                    radar: {
+                        // shape: 'circle',
+                        nameGap: 45,
+                        center: ['50%', '50%'],
+                        radius: '55%',
+                        name: {
+                            textStyle: {
+                                color: '#fff',
+                                backgroundColor: '#999',
+                                borderRadius: 3,
+                                padding: [3, 5]
+                            }
+                        },
+                        indicator:
+                        {{ single_skill_info_max | safe }}
+                    },
+
+                    series: [{
+                        name: 'Average Salary',
+                        type: 'radar',
+                        areaStyle: {normal: {type: 'default'}},
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'inside',
+                                formatter: '${c0}',
+
+                            }
+                        },
+                        data: [
+                            {
+                                value: {{ single_skill_info_avg |safe}},
+                                name: 'Avg Salary'
+                            },
+                            {
+                                value: {{ single_skill_info_min |safe}},
+                                name: 'Min Salary'
+                            }
+                        ]
+                    }]
+                };
+
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart1.setOption(option);
+                window.onresize = function () {
+                    myChart1.resize();
+                };
+            </script>
+        </div>
+
+        <div class="card mb-4 shadow-sm " style="background-color: #F6F6F6" >
+            <div id="main 4" style="width:100%;height:400px; margin:auto"></div>
+
+            <script type="text/javascript">
+                var myChart4 = echarts.init(document.getElementById('main 4'));
+
+                var xAxisData = {{ hist_x }};
+                var data1 = {{hist_min}};
+                var data2 ={{hist_max}};
+
+
+                var option = {
+                    title: {
+                        text: 'NYC Data Analyst Salary Range in Dataset',
+                        left: 'center',
+                        top: 10,
+                        textStyle: {
+                            fontWeight: '20',
+                            fontSize: '15'
+                        }
+                    },
+                    legend: {
+                        data: ['min', 'max'],
+                        align: 'right',
+                        bottom: 2
+                    },
+                    toolbox: {
+                        y: 'bottom',
+                        feature: {
+                            magicType: {
+                                type: ['stack', 'tiled']
+                            },
+                        }
+                    },
+                    tooltip: {},
+                    grid: {
+                        containLabel: false
+                    },
+                    xAxis: {
+                        data: xAxisData,
+                        silent: false,
+                        axisLabel: {formatter: '${value}'},
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    yAxis: {
+                        show: false
+                    },
+                    series: [{
+                        name: 'min',
+                        type: 'bar',
+                        data: data1,
+                        animationDelay: function (idx) {
+                            return idx * 10;
+                        }
+                    }, {
+                        name: 'max',
+                        type: 'bar',
+                        data: data2,
+                        animationDelay: function (idx) {
+                            return idx * 10 + 100;
+                        }
+                    }],
+                    animationEasing: 'elasticOut',
+                    animationDelayUpdate: function (idx) {
+                        return idx * 5;
+                    }
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart4.setOption(option);
+                window.onresize = function () {
+                    myChart4.resize();
+                };
+            </script>
+        </div>
+
+        <div class="card mb-4 shadow-sm" style="background-color: #F6F6F6" >
+            <div id="main 3" style="width:100%;height:400px; margin:auto"></div>
+
+            <script type="text/javascript">
+                var myChart3 = echarts.init(document.getElementById('main 3'));
+
+                var option = {
+                    title: {
+                        text: 'How much for those selected skills?',
+                        left: 'center',
+                        top: 10,
+                        textStyle: {
+                            fontWeight: '20',
+                            fontSize: '15'
+                        }
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    legend: {
+                        data: ['Min Salary', 'Max Salary']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: [
+                        {
+                            type: 'value',
+                            axisLabel: {formatter: '${value}'},
+                            show: false
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'category',
+                            axisTick: {show: false},
+                            show: true,
+                            data: ['NYC Average', 'Your Estimated'],
+
+                        }
+                    ],
+                    series: [
+                        {
+                            name: 'Max',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    formatter: '${c0}'
+                                }
+                            },
+                            data: [{{ data_average_max }}, {{Max_Salary}}]
+                        },
+                        {
+                            name: 'Min',
+                            type: 'bar',
+                            stack: '总量',
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'inside'
+                                },
+                            },
+                            data: [-{{ data_average_min }}, -{{Min_Salary}}]
+                        }
+                    ]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart3.setOption(option);
+                window.onresize = function () {
+                    myChart3.resize();
+                };
+
+            </script>
+        </div>
+
+
+
+        <div class="card mb-4 shadow-sm" style="background-color: #F6F6F6">
+            <div id="main 2" style="width:100%;height:400px; margin:auto"></div>
+
+            <script type="text/javascript">
+
+                // 基于准备好的dom，初始化echarts实例
+                var myChart2 = echarts.init(document.getElementById('main 2'));
+
+                // 指定图表的配置项和数据
+
+                var option = {
+                    title: {
+                        text: 'What Skills might Increase the Salary?',
+                        left: 'center',
+                        top: 10,
+                        textStyle: {
+                            fontWeight: '20',
+                            fontSize: '15',
+
+                        }
+                    },
+                    tooltip: {
+                        formatter: '${c0}'
+                    },
+                    grid: {
+                        containLabel: false
+                    },
+                    xAxis: {
+                        data: {{ Suggest_Skills_Skills |safe}},
+                        axisLabel: {
+                            interval: 0,
+                            rotate: 10,
+                        }
+
+                    },
+                    yAxis: {
+                        show: false
+                    },
+
+                    series: [{
+                        type: 'bar',
+                        data: {{ Suggest_Skills_SkillsSalary|safe}},
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'top',
+                                color: 'black',
+                                formatter: '${c0}',
+                            }
+                        },
+                    }]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart2.setOption(option);
+                window.onresize = function () {
+                    myChart2.resize();
+                };
+            </script>
+        </div>
+
+        <div class="card mb-4 shadow-sm " style="background-color: #F6F6F6">
+            <div id="main 5" style="width:100%;height:400px; margin:auto"></div>
+
+            <script type="text/javascript">
+
+                var myChart5 = echarts.init(document.getElementById('main 5'));
+
+                myChart5.showLoading();
+                $.getJSON('static/data/data2.json', function (json) {
+                    myChart5.hideLoading();
+
+                    myChart5.setOption(option = {
+                        title: {
+                            text: 'High Salary Skill Pairs',
+                            left: 'center',
+                            top: 10,
+                            textStyle: {
+                                fontWeight: '20',
+                                fontSize: '15',
+                            }
+                        },
+
+                        series: [
+                            {
+                                type: 'graph',
+                                layout: 'none',
+                                // progressiveThreshold: 700,
+                                data: json.nodes.map(function (node) {
+                                    return {
+                                        x: node.x,
+                                        y: node.y,
+                                        id: node.id,
+                                        name: node.label,
+                                        symbolSize: node.frequency,
+                                        itemStyle: {}
+                                    };
+                                }),
+                                edges: json.edges.map(function (edge) {
+                                    return {
+                                        source: edge.source,
+                                        target: edge.target
+                                    };
+                                }),
+                                label: {
+                                    show: false,
+                                    emphasis: {
+                                        position: 'right',
+                                        show: true
+                                    }
+                                },
+                                roam: false,
+                                focusNodeAdjacency: true,
+                                lineStyle: {
+                                    normal: {
+                                        width: 0.5,
+                                        curveness: 0.3,
+                                        opacity: 0.4
+                                    }
+                                }
+                            }
+                        ]
+                    }, true);
+                });
+                window.onresize = function () {
+                    myChart5.resize();
+                };
+
+            </script>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#btnFetch").click(function () {
+                // add spinner to button
+                $(this).html(
+                    `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>  Loading...`
+                );
+
+            });
+
+        });
+    </script>
+</div>
+
+</body>
+
+</html>

@@ -5,7 +5,7 @@ body {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 20%;
+  padding-bottom: 2px;
   background-color: #F5F5F5;
 }
 
