@@ -95,10 +95,13 @@ def predict():
     min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[-1]
 
     skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0)
-    single_skill_info = skill_info[skill_info['name'].isin(inputs_list)]
-    single_skill_info_max = single_skill_info[['name','Max']].to_dict('records')
+    single_skill_info = skill_info[skill_info['skill'].isin(inputs_list)]
+    single_skill_info_max = single_skill_info[['skill','Max']].to_dict('records')
     single_skill_info_avg = list(single_skill_info['Avg'].values)
     single_skill_info_min = list(single_skill_info['Min'].values)
+    single_skill_info_ratio = list(single_skill_info['Ratio'].values)
+    single_skill_info_avg_ratio = np.array(single_skill_info[['Avg','Ratio','skill',]]).tolist()
+    skill_info_avg_ratio = np.array(skill_info[['Avg','Ratio','skill',]]).tolist()
 
     data_average_min = 57498
     data_average_max = 91356
@@ -126,7 +129,8 @@ def predict():
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),
-                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),
+                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),single_skill_info_ratio=format(single_skill_info_ratio),
+                           single_skill_info_avg_ratio=format(single_skill_info_avg_ratio),skill_info_avg_ratio=format(skill_info_avg_ratio),
                            data_average_min=format(data_average_min),data_average_max=format(data_average_max),
                            hist_x=hist_x,hist_min=hist_min,hist_max=hist_max)
 

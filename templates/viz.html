@@ -56,7 +56,7 @@
         <section class="predictor">
             <!-- Main Input For Receiving Query to our ML -->
             <div class="text-center">
-                <label class="mdb-main-label">Company Ratings: </label>
+                <label class="mdb-main-label">Company Ratings: </label><br>
                 <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1"
                         data-width="45%" name="rating">
                     <option value="0" data-subtext="I have nothing to lose">0</option>
@@ -69,7 +69,7 @@
             </div>
             <br>
             <div class="text-center">
-                <label class="mdb-main-label">Data Skills: </label>
+                <label class="mdb-main-label">Data Skills: </label><br>
                 <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
                         data-width="59%" multiple name="skills_selected" data-header="Pleas choose more than 3 skills">
                     <optgroup label="Lanuage">
@@ -458,18 +458,85 @@
             </script>
         </div>
 
+
         <div class="card mb-4 shadow-sm " style="background-color: #F6F6F6">
             <div id="main 5" style="width:100%;height:400px; margin:auto"></div>
+            <script>
+                var myChart = echarts.init(document.getElementById('main 5'));
+
+    option = {
+        title: {
+                        text: 'How much for those selected skills?',
+                        left: 'center',
+                        top: 10,
+                        textStyle: {
+                            fontWeight: '20',
+                            fontSize: '15'
+                        }
+                    },
+    xAxis: {
+        scale: false,
+        axisLabel: {formatter: '${value}'},
+
+    },
+    yAxis: {
+        scale: false,
+        axisLabel: {formatter: '{value}%'},
+    },
+
+    series: [{
+        type: 'effectScatter',
+        symbolSize: 15,
+
+        data: {{ single_skill_info_avg_ratio |safe}},
+
+        label: {
+            show: true,
+                formatter: function (param) {
+                    return param.data[2];
+                },
+                position: 'right',
+            emphasis: {
+                show: true,
+                formatter: function (param) {
+                    return param.data[2];
+                },
+                position: 'right'
+            }
+        },
+    }, {
+        type: 'scatter',
+        data: {{ skill_info_avg_ratio| safe}},
+        label: {
+            emphasis: {
+                show: true,
+                formatter: function (param) {
+                    return param.data[2];
+                },
+                position: 'right'
+            }
+        },
+    }]
+};
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+        </div>
+
+        <div class="card mb-4 shadow-sm " style="background-color: #F6F6F6">
+            <div id="main 6" style="width:100%;height:400px; margin:auto"></div>
 
             <script type="text/javascript">
 
-                var myChart5 = echarts.init(document.getElementById('main 5'));
+                var myChart6 = echarts.init(document.getElementById('main 6'));
 
-                myChart5.showLoading();
+                myChart6.showLoading();
                 $.getJSON('static/data/data2.json', function (json) {
-                    myChart5.hideLoading();
+                    myChart6.hideLoading();
 
-                    myChart5.setOption(option = {
+                    myChart6.setOption(option = {
                         title: {
                             text: 'High Salary Skill Pairs',
                             left: 'center',
@@ -483,46 +550,63 @@
                         series: [
                             {
                                 type: 'graph',
-                                layout: 'none',
+                                layout: 'force',
+                                animation: false,
                                 // progressiveThreshold: 700,
-                                data: json.nodes.map(function (node) {
-                                    return {
-                                        x: node.x,
-                                        y: node.y,
-                                        id: node.id,
-                                        name: node.label,
-                                        symbolSize: node.frequency,
-                                        itemStyle: {}
-                                    };
-                                }),
                                 edges: json.edges.map(function (edge) {
                                     return {
                                         source: edge.source,
                                         target: edge.target
                                     };
                                 }),
-                                label: {
-                                    show: false,
-                                    emphasis: {
-                                        position: 'right',
-                                        show: true
-                                    }
-                                },
+                                data: json.nodes.map(function (node) {
+                                    return {
+                                        x: node.x,
+                                        y: node.y,
+                                        id: node.id,
+                                        name: node.label,
+                                        symbolSize: node.size,
+                                        itemStyle: {
+                                            normal:node.color
+                                        }
+                                    };
+                                }),
+                                type: 'graph',
+                                layout: 'force',
                                 roam: false,
+                                edgeSymbol: ['arrow'],
+                                edgeLabel: {
+
+                                },
+                                force: {
+                                    repulsion: 1000,
+                                    edgeLength: [50, 500],
+                                    gravity:0.5
+                                },
+                                draggable: true,
                                 focusNodeAdjacency: true,
                                 lineStyle: {
                                     normal: {
                                         width: 0.5,
-                                        curveness: 0.3,
-                                        opacity: 0.4
+                                        curveness:0.3,
+
+
                                     }
-                                }
+                                },
+
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        textStyle: {}
+                                    }
+                                },
+
                             }
                         ]
                     }, true);
                 });
                 window.onresize = function () {
-                    myChart5.resize();
+                    myChart6.resize();
                 };
 
             </script>
