@@ -88,7 +88,7 @@ def predict():
 
     salary_min = int(nyc_salary_with_skills_and(rating, inputs_list)['Min_Salary'])
     salary_max = int(nyc_salary_with_skills_and(rating, inputs_list)['Max_Salary'])
-    Suggest_Skills = nyc_salary_with_skills_and(rating, inputs_list)['Suggest_Skills'][:6]
+    Suggest_Skills = nyc_salary_with_skills_and(rating, inputs_list)['Suggest_Skills']
     Suggest_Skills_Skills = Suggest_Skills['Skill'].to_json(orient='records')
     Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])
     max_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
