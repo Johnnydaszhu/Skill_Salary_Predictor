@@ -1,5 +1,7 @@
 html,
-
+body {
+  height: 100%;
+}
 body {
   display: -ms-flexbox;
   display: flex;
@@ -7,6 +9,7 @@ body {
   align-items: center;
   padding-bottom: 2px;
   background-color: #F5F5F5;
+    justify-content: center;
 }
 
 

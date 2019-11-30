@@ -3,7 +3,7 @@
 <head>
     <title>NYC Data Analyst Salary Predictor</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -51,9 +51,28 @@
     <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-minimal.css"/>
     <script src="http://github.hubspot.com/odometer/odometer.js"></script>
 
+    <style>
+        body {
+            height: 100%;
+        }
 
+        body {
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: flex;
+            -ms-flex-align: center;
+            -ms-flex-pack: center;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
-<body>
+<body class="text-center">
 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
@@ -62,7 +81,7 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="container-fluid">
+<div class="container-fluid ">
 
     <form action="{{ url_for('predict') }}" method="POST">
         <div class="text-center mb-4">
@@ -76,12 +95,12 @@
                 maximize the accuracy</p>
         </div>
 
-        <section class="predictor">
+        <section class="predictor ">
             <!-- Main Input For Receiving Query to our ML -->
             <div class="text-center">
                 <label class="mdb-main-label">Company Ratings: </label><br>
-                <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1"
-                        data-width="50%" name="rating">
+                <select class="selectpicker 1 " data-header="How people think about this company?" data-max-options="1"
+                         name="rating">
                     <option value="0" data-subtext="I have nothing to lose">0</option>
                     <option value="1" data-subtext="Well...">1</option>
                     <option value="2" data-subtext="It is Okay..">2</option>
@@ -92,9 +111,9 @@
             </div>
             <br>
             <div class="text-center">
-                <label class="mdb-main-label">Data Skills: </label><br>
+                <label class="mdb-main-label ">Data Skills: </label><br>
                 <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
-                        data-width="50%" multiple name="skills_selected" data-header="Pleas choose more than 3">
+                         multiple name="skills_selected" data-header="Pleas choose more than 3">
                     <optgroup label="Lanuage">
                         <option value="C/C++">C/C++</option>
                         <option value="Scripting">Scripting</option>
@@ -151,7 +170,8 @@
             </div>
             <div class="text-center">
                 <br>
-                <button class="btn btn-lg btn-primary" id="btnFetch" type="submit" style="width: 200px;" onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
+                <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit" style="width: 200px;"
+                        onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
                 </button>
             </div>
         </section>

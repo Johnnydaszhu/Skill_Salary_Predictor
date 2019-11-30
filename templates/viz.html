@@ -42,7 +42,7 @@
     </style>
 
 </head>
-<body>
+<body class="text-center">
 
 <div class="container-fluid">
 
@@ -133,7 +133,7 @@
             </div>
             <div class="text-center">
                 <br>
-                <button class="btn btn-lg btn-primary" id="btnFetch" type="submit" style="width: 200px;"
+                <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit" style="width: 200px;"
                         onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
                 </button>
             </div>
@@ -156,7 +156,7 @@
     <!-- Echarts Viz -->
     <div class="text-center ">
 
-        <div class="card mb-4 shadow-sm " style="background-color: #F6F6F6">
+        <div class="-1card mb-4 shadow p " style="background-color: #F6F6F6">
             <div id="main 4" style="width:100%;height:400px; margin:auto"></div>
 
             <script type="text/javascript">
@@ -240,7 +240,7 @@
                 };
             </script>
         </div>
-        <div class="card mb-4 shadow-sm" style="background-color: #F6F6F6">
+        <div class="card mb-4 shadow p1 p-1" style="background-color: #F6F6F6">
             <div id="main 1" style="width:100%;height:500px; margin:auto"></div>
 
             <script type="text/javascript">
@@ -324,7 +324,7 @@
             </script>
         </div>
 
-        <div class="card mb-4 shadow-sm" style="background-color: #F6F6F6">
+        <div class="card mb-4 shadow p1 p-1" style="background-color: #F6F6F6">
             <div id="main 8" style="width:100%;height:400px; margin:auto"></div>
 
             <script type="text/javascript">
@@ -457,7 +457,7 @@
             </script>
         </div>
 
-        <div class="card mb-4 shadow-sm " style="background-color: #F6F6F6">
+        <div class="card mb-4 shadow p1 p-1 " style="background-color: #F6F6F6">
             <div id="main 5" style="width:100%;height:400px; margin:auto"></div>
             <script>
                 var app = {}
@@ -550,7 +550,7 @@
             </script>
         </div>
 
-        <div class="card mb-4 shadow-sm " style="background-color: #F6F6F6">
+        <div class="card mb-4 shadow p1 p-1 " style="background-color: #F6F6F6">
             <div id="main 6" style="width:100%;height:400px; margin:auto"></div>
 
             <script type="text/javascript">
@@ -576,6 +576,7 @@
                             {
                                 type: 'graph',
                                 layout: 'force',
+                                bottom:1,
                                 animation: false,
                                 // progressiveThreshold: 700,
                                 edges: json.edges.map(function (edge) {
@@ -602,9 +603,9 @@
                                 edgeSymbol: ['arrow'],
                                 edgeLabel: {},
                                 force: {
-                                    repulsion: 1000,
-                                    edgeLength: [50, 500],
-                                    gravity: 0.5
+                                    repulsion: 3000,
+                                    edgeLength: [100, 500],
+                                    gravity: 0
                                 },
                                 draggable: true,
                                 focusNodeAdjacency: true,
