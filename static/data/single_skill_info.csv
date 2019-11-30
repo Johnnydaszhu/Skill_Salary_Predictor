@@ -1,4 +1,4 @@
-,skill,Avg,Max,Min,count,Ratio
+,name,avg,max,min,count,Ratio
 0,Data Science,90594,114840,66348,249,0.56
 1,Microsoft SQL Server,85452,105383,65521,476,1.07
 2,AI,82311,99178,65444,479,1.07
