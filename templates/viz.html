@@ -181,6 +181,7 @@
                         align: 'right',
                         bottom: 2
                     },
+
                     toolbox: {
                         y: 'bottom',
                         feature: {
@@ -204,7 +205,7 @@
                         }
                     },
                     yAxis: {
-                        show: false
+                        show: false,
                     },
                     series: [{
                         name: 'min',
@@ -371,6 +372,11 @@
                     series: [ {
                         name: 'Min Salary',
                         type: 'bar',
+                        markLine : {
+                data : [
+                    {type : 'average', name: 'average'}
+                ]
+            },
                         data: {{ single_skill_info_min|safe}},
                         label: {
                             normal: {
@@ -378,6 +384,7 @@
                                 position: 'top',
                                 color: 'black',
                                 formatter: '${c0}',
+
                             }
                         },
                         },{
