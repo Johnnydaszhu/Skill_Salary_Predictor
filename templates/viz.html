@@ -259,13 +259,17 @@
                             fontSize: '15'
                         }
                     },
-
                     radar: {
                         // shape: 'circle',
                         nameGap: 5,
                         center: ['50%', '50%'],
                         radius: '40%',
                         name: {
+                            formatter: function (value, indicator) {
+                                let text =   value + '\n'+ '$'+ indicator.num
+                                return text
+
+                            },
                             textStyle: {
                                 color: '#fff',
                                 backgroundColor: '#5f5f5f',
@@ -278,10 +282,9 @@
                         indicator: (function () {
                             var names = {{Suggest_Skills_Skills | safe}};
                             var res = []
-                            for (i of names) {
-                                res.push({text: i, max: 35000});
-                            }
-                            return res;
+                            var myArray = {{ Suggest_Skills_SkillsSalary|safe}};
+                            names.forEach((a, i) => res.push({text: a, num:myArray[i], max: 35000}));
+                            return res
                         })(),
                     },
 
@@ -458,7 +461,7 @@
             <div id="main 4" style="width:100%;height:400px; margin:auto; background-color: #F6F6F6" class="card mb-4 shadow p-1 "></div>
             <script>
                 var app = {}
-                var myChart = echarts.init(document.getElementById('main 4'));
+                var myChart4 = echarts.init(document.getElementById('main 4'));
 
                 option = {
                     tooltip: {
@@ -518,34 +521,34 @@
                 };
 
 
-                myChart.setOption(option);
-
+                myChart4.setOption(option);
+                window.onresize = function () {
+                    myChart4.resize();
+                };
                 app.currentIndex = -1;
                 setInterval(function () {
                     var dataLen = option.series[0].data.length;
                     // 取消之前高亮的图形
-                    myChart.dispatchAction({
+                    myChart4.dispatchAction({
                         type: 'downplay',
                         seriesIndex: 0,
                         dataIndex: app.currentIndex
                     });
                     app.currentIndex = (app.currentIndex + 1) % dataLen;
                     // 高亮当前图形
-                    myChart.dispatchAction({
+                    myChart4.dispatchAction({
                         type: 'highlight',
                         seriesIndex: 0,
                         dataIndex: app.currentIndex
                     });
                     // 显示 tooltip
-                    myChart.dispatchAction({
+                    myChart4.dispatchAction({
                         type: 'showTip',
                         seriesIndex: 0,
                         dataIndex: app.currentIndex
                     });
-                }, 4000);
-                window.onresize = function () {
-                    myChart.resize();
-                };
+                }, 3500);
+
 
 
             </script>
