@@ -178,7 +178,7 @@
                         }
                     },
                     legend: {
-                        name:['Min','Max'],
+                        name: ['Min', 'Max'],
                         data: ['min', 'max'],
                         align: 'right',
                         bottom: 2
@@ -208,18 +208,14 @@
                     },
                     yAxis: {
                         show: true,
-                        name: 'Frequency in Dataset',
+                        name: 'Frequency',
 
                     },
                     series: [{
                         name: 'min',
                         type: 'bar',
                         data: data2,
-                        markPoint: {
-                            data: [
-                                {name: '年最高', value: {{Max_Salary | safe}}, xAxis: 138080, yAxis: 80},
-                            ]
-                        },
+
                         animationDelay: function (idx) {
                             return idx * 10;
                         }
@@ -283,7 +279,7 @@
                             var names = {{Suggest_Skills_Skills | safe}};
                             var res = []
                             for (i of names) {
-                                res.push({text: i , max: 25000});
+                                res.push({text: i, max: 25000});
                             }
                             return res;
                         })(),
@@ -305,11 +301,11 @@
                             {
                                 value: {{ Suggest_Skills_SkillsSalary|safe}},
                                 name: 'Avg Salary',
-                                label:{
+                                label: {
                                     normal: {
-                                        color:'#C23531',
-                                        position:'outside',
-                                        fontSize:14,
+                                        color: '#C23531',
+                                        position: 'outside',
+                                        fontSize: 14,
                                         backgroundColor: 'white'
 
                                     }
@@ -335,7 +331,7 @@
 
 
                 var myChart = echarts.init(document.getElementById('main 8'));
-                var app ={}
+                var app = {}
 
                 var option = {
                     title: {
@@ -349,15 +345,15 @@
                         }
                     },
                     tooltip: {
-                                textStyle: {
-                                    align: 'left'
-                                },
-                                trigger: 'axis',
-                                axisPointer: {
-                                    type: 'shadow'
-                                },
-                                formatter: '<strong>{b0}</strong><br>Max: ${c0}<br />Min: ${c1}'
-                            },
+                        textStyle: {
+                            align: 'left'
+                        },
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow'
+                        },
+                        formatter: '<strong>{b0}</strong><br>Max: ${c0}<br />Min: ${c1}'
+                    },
                     legend: {
 
                         bottom: 10,
@@ -378,10 +374,15 @@
 
                     },
 
-                    series: [ {
+                    series: [{
                         name: 'Min',
                         type: 'bar',
                         markLine: {
+                            precision: 0,
+                            label: {
+                                position: 'start',
+                                formatter: '${c}',
+                            },
                             data: [
                                 {type: 'average', name: 'average'}
                             ]
@@ -394,13 +395,19 @@
                                 color: 'black',
                                 formatter: '${c0}',
 
+
                             }
                         },
-                        },{
-                        barGap:'0%',
+                    }, {
+                        barGap: '0%',
                         name: 'Max',
                         type: 'bar',
                         markLine: {
+                            precision: 0,
+                            label: {
+                                position: 'start',
+                                formatter: '${c}',
+                            },
                             data: [
                                 {type: 'average', name: 'average'}
                             ]
@@ -503,19 +510,19 @@
                         symbolSize: 8,
                         data: {{ skill_info_avg_ratio| safe}},
 
-                    },{
+                    }, {
                         type: 'effectScatter',
                         symbolSize: 10,
 
                         data: {{ single_skill_info_avg_ratio |safe}},
 
 
-                    }, ]
+                    },]
                 };
 
 
                 myChart.setOption(option);
-               app.currentIndex = -1;
+                app.currentIndex = -1;
                 setInterval(function () {
                     var dataLen = option.series[0].data.length;
                     // 取消之前高亮的图形
@@ -538,8 +545,6 @@
                         dataIndex: app.currentIndex
                     });
                 }, 4000);
-
-
 
 
             </script>
