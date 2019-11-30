@@ -42,7 +42,7 @@
     </style>
 
 </head>
-<body class="text-center">
+<body>
 
 <div class="container-fluid">
 
@@ -156,11 +156,11 @@
     <!-- Echarts Viz -->
     <div class="text-center ">
 
-        <div class="-1card mb-4 shadow p " style="background-color: #F6F6F6">
-            <div id="main 4" style="width:100%;height:400px; margin:auto"></div>
+        <div class="card mb-4 shadow p-1 " style="background-color: #F6F6F6">
+            <div id="main 1" style="width:100%;height:400px; margin:auto"></div>
 
             <script type="text/javascript">
-                var myChart4 = echarts.init(document.getElementById('main 4'));
+                var myChart = echarts.init(document.getElementById('main 1'));
 
                 var xAxisData = {{ hist_x }};
                 var data2 = {{hist_min}};
@@ -234,20 +234,20 @@
                 };
 
 
-                myChart4.setOption(option);
+                myChart.setOption(option);
                 window.onresize = function () {
-                    myChart4.resize();
+                    myChart.resize();
                 };
             </script>
         </div>
-        <div class="card mb-4 shadow p1 p-1" style="background-color: #F6F6F6">
-            <div id="main 1" style="width:100%;height:500px; margin:auto"></div>
+        <div class="card mb-4 shadow p-1" style="background-color: #F6F6F6">
+            <div id="main 2" style="width:100%;height:500px; margin:auto"></div>
 
             <script type="text/javascript">
 
 
-                var myChart1 = echarts.init(document.getElementById('main 1'));
-
+                var myChart = echarts.init(document.getElementById('main 2'));
+                
 
                 var option = {
 
@@ -315,22 +315,23 @@
                         ]
                     }]
                 };
-
-
-                myChart1.setOption(option);
+                 myChart.setOption(option);
                 window.onresize = function () {
-                    myChart1.resize();
+                    myChart.resize();
                 };
+
+
+                
             </script>
         </div>
 
-        <div class="card mb-4 shadow p1 p-1" style="background-color: #F6F6F6">
-            <div id="main 8" style="width:100%;height:400px; margin:auto"></div>
+        <div class="card mb-4 shadow p-1" style="background-color: #F6F6F6">
+            <div id="main 3" style="width:100%;height:400px; margin:auto"></div>
 
             <script type="text/javascript">
 
 
-                var myChart = echarts.init(document.getElementById('main 8'));
+                var myChart = echarts.init(document.getElementById('main 3'));
                 var app = {}
 
                 var option = {
@@ -425,11 +426,7 @@
                     }
                     ]
                 };
-
                 myChart.setOption(option);
-                window.onresize = function () {
-                    myChart.resize();
-                };
                 app.currentIndex = -1;
                 setInterval(function () {
                     var dataLen = option.series[0].data.length;
@@ -453,6 +450,7 @@
                         dataIndex: app.currentIndex
                     });
                 }, 4000);
+
                 window.onresize = function () {
                     myChart.resize();
                 };
@@ -460,11 +458,11 @@
             </script>
         </div>
 
-        <div class="card mb-4 shadow p1 p-1 " style="background-color: #F6F6F6">
-            <div id="main 5" style="width:100%;height:400px; margin:auto"></div>
+        <div class="card mb-4 shadow p-1 " style="background-color: #F6F6F6">
+            <div id="main 4" style="width:100%;height:400px; margin:auto"></div>
             <script>
                 var app = {}
-                var myChart = echarts.init(document.getElementById('main 5'));
+                var myChart = echarts.init(document.getElementById('main 4'));
 
                 option = {
                     tooltip: {
@@ -556,18 +554,21 @@
             </script>
         </div>
 
-        <div class="card mb-4 shadow p1 p-1 " style="background-color: #F6F6F6">
-            <div id="main 6" style="width:100%;height:400px; margin:auto"></div>
+        <div class="card mb-4 shadow p-1 " style="background-color: #F6F6F6">
+            <div id="main 5" style="width:100%;height:400px; margin:auto"></div>
 
             <script type="text/javascript">
 
-                var myChart6 = echarts.init(document.getElementById('main 6'));
+                var myChart = echarts.init(document.getElementById('main 5'));
 
-                myChart6.showLoading();
+                myChart.showLoading();
                 $.getJSON('static/data/data2.json', function (json) {
-                    myChart6.hideLoading();
+                    myChart.hideLoading();
+                    window.onresize = function () {
+                    myChart.resize();
+                };
 
-                    myChart6.setOption(option = {
+                    myChart.setOption(option = {
                         title: {
                             text: 'High Salary Skill Pairs',
                             left: 'center',
@@ -635,9 +636,7 @@
                         ]
                     }, true);
                 });
-                window.onresize = function () {
-                    myChart6.resize();
-                };
+
 
             </script>
         </div>
