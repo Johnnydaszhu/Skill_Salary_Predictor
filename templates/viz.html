@@ -525,9 +525,6 @@
 
 
                 myChart.setOption(option);
-                window.onresize = function () {
-                    myChart.resize();
-                };
                 app.currentIndex = -1;
                 setInterval(function () {
                     var dataLen = option.series[0].data.length;
@@ -551,6 +548,9 @@
                         dataIndex: app.currentIndex
                     });
                 }, 4000);
+                window.onresize = function () {
+                    myChart.resize();
+                };
 
 
             </script>
