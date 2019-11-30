@@ -322,12 +322,12 @@
             <script type="text/javascript">
 
 
-                var myChart2 = echarts.init(document.getElementById('main 8'));
-
+                var myChart = echarts.init(document.getElementById('main 8'));
+                var app ={}
 
                 var option = {
                     title: {
-                        text: 'How Much For Each Skill Only?',
+                        text: 'How Much For One Skill Only?',
                         left: 'center',
                         top: 10,
                         textStyle: {
@@ -337,11 +337,14 @@
                         }
                     },
                     tooltip: {
+                                textStyle: {
+                                    align: 'left'
+                                },
                                 trigger: 'axis',
                                 axisPointer: {
                                     type: 'shadow'
                                 },
-                                formatter: 'Max: ${c0}<br />Min: ${c1}'
+                                formatter: '<strong>{b0}</strong><br>Max: ${c0}<br />Min: ${c1}'
                             },
                     legend: {
 
@@ -363,21 +366,7 @@
 
                     },
 
-                    series: [{
-                        barGap:'0%',
-                        name: 'Max Salary',
-                        type: 'bar',
-                        data: {{ single_skill_info_max2|safe}},
-                        label: {
-                            normal: {
-                                show: true,
-                                position: 'top',
-                                color: 'black',
-                                formatter: '${c0}',
-                            }
-                        },
-                    },
-                        {
+                    series: [ {
                         name: 'Min Salary',
                         type: 'bar',
                         data: {{ single_skill_info_min|safe}},
@@ -389,14 +378,52 @@
                                 formatter: '${c0}',
                             }
                         },
-                        }
+                        },{
+                        barGap:'0%',
+                        name: 'Max Salary',
+                        type: 'bar',
+                        data: {{ single_skill_info_max2|safe}},
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'top',
+                                color: 'black',
+                                formatter: '${c0}',
+
+                            }
+                        },
+                    }
                     ]
                 };
 
-                myChart2.setOption(option);
+                myChart.setOption(option);
                 window.onresize = function () {
-                    myChart2.resize();
+                    myChart.resize();
                 };
+                app.currentIndex = -1;
+                setInterval(function () {
+                    var dataLen = option.series[0].data.length;
+                    // 取消之前高亮的图形
+                    myChart.dispatchAction({
+                        type: 'downplay',
+                        seriesIndex: 0,
+                        dataIndex: app.currentIndex
+                    });
+                    app.currentIndex = (app.currentIndex + 1) % dataLen;
+                    // 高亮当前图形
+                    myChart.dispatchAction({
+                        type: 'highlight',
+                        seriesIndex: 0,
+                        dataIndex: app.currentIndex
+                    });
+                    // 显示 tooltip
+                    myChart.dispatchAction({
+                        type: 'showTip',
+                        seriesIndex: 0,
+                        dataIndex: app.currentIndex
+                    });
+                }, 4000);
+
             </script>
         </div>
 
