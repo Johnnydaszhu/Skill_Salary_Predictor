@@ -86,7 +86,7 @@
     <form action="{{ url_for('predict') }}" method="POST">
         <div class="text-center mb-4">
             <a href="/">
-                <img src="../static/stationery2.png" class="img" alt="Responsive image" width="60%" height="60%"
+                <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image" width="60%" height="60%"
                      title="Back to Homepage">
             </a>
             <br>
@@ -178,7 +178,7 @@
     </form>
     <br>
     <script>
-
+            $(".animated").addClass("delay-1s");
         $(document).ready(function () {
             $("#btnFetch").click(function () {
                 // add spinner to button
