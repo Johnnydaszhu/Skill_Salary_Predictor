@@ -97,21 +97,21 @@
             <!-- Main Input For Receiving Query to our ML -->
             <div class="text-center">
                 <label class="mdb-main-label">Company Ratings: </label><br>
-                <select class="selectpicker 1 " data-header="How people think about this company?" data-max-options="1"
-                         name="rating">
-                    <option value="0" data-subtext="I have nothing to lose">0</option>
-                    <option value="1" data-subtext="Well...">1</option>
-                    <option value="2" data-subtext="It is Okay..">2</option>
-                    <option value="3.6" data-subtext="Dataset Median" selected>3.6</option>
-                    <option value="4" data-subtext="Great!">4</option>
-                    <option value="5" data-subtext="Dream came true">5</option>
+                <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1"
+                        data-width="50%" name="rating" required>
+                    <option value="0" >0 - I have nothing to lose</option>
+                    <option value="1" >1 - "Well...</option>
+                    <option value="2" >2 - It is Okay..</option>
+                    <option value="3"  selected>3 - Dataset Median</option>
+                    <option value="4" >4 - Great!</option>
+                    <option value="5" >5 - Dream came true</option>
                 </select>
             </div>
             <br>
             <div class="text-center">
                 <label class="mdb-main-label ">Data Skills: </label><br>
                 <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
-                         multiple name="skills_selected" data-header="Pleas choose more than 3" required>
+                        data-width="50%" multiple name="skills_selected" data-header="Pleas choose more than 3" required>
                     <optgroup label="Lanuage">
                         <option value="C/C++">C/C++</option>
                         <option value="Scripting">Scripting</option>
@@ -120,9 +120,9 @@
                         <option value="Java">Java</option>
                         <option value="JavaScript">JavaScript</option>
                         <option value="MATLAB">MATLAB</option>
-                        <option value="MySQL" selected>MySQL</option>
+                        <option value="MySQL" >MySQL</option>
                         <option value="Perl">Perl</option>
-                        <option value="Python" selected>Python</option>
+                        <option value="Python" >Python</option>
                         <option value="R">R</option>
                     </optgroup>
                     <optgroup label="Platform/Framework">
@@ -141,7 +141,7 @@
                     <optgroup label="Software">
                         <option value="Excel">Excel</option>
                         <option value="HBase">Apache HBase</option>
-                        <option value="Tableau" selected>Tableau</option>
+                        <option value="Tableau" >Tableau</option>
                         <option value="TensorFlow">TensorFlow</option>
                         <option value="Hadoop">Apache Hadoop</option>
                         <option value="Hive">Apache Hive</option>

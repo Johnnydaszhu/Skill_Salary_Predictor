@@ -37,19 +37,20 @@
 
     <style>
         .odometer .odometer-inside:before {
-            content: "Max Salary:  $"
+            content: "$"
         }
     </style>
 
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="container-fluid" name="viz_conn">
 
     <form action="{{ url_for('predict') }}" method="POST">
         <div class="text-center mb-4">
             <a href="/">
-                <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image" width="60%" height="60%"
+                <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image"
+                     width="60%" height="60%"
                      title="Back to Homepage">
             </a>
             <br>
@@ -62,21 +63,22 @@
             <!-- Main Input For Receiving Query to our ML -->
             <div class="text-center">
                 <label class="mdb-main-label">Company Ratings: </label><br>
-                <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1"
-                        data-width="50%" name="rating">
-                    <option value="0" data-subtext="I have nothing to lose">0</option>
-                    <option value="1" data-subtext="Well...">1</option>
-                    <option value="2" data-subtext="It is Okay..">2</option>
-                    <option value="3.6" data-subtext="Dataset Median" selected>3.6</option>
-                    <option value="4" data-subtext="Great!">4</option>
-                    <option value="5" data-subtext="Dream came true">5</option>
+                <select class="selectpicker 1" data-max-options="1"
+                        data-width="50%" name="rating" required>
+                    <option value="0">0 - I have nothing to lose</option>
+                    <option value="1">1 - "Well...</option>
+                    <option value="2">2 - It is Okay..</option>
+                    <option value="3" selected>3 - Dataset Median</option>
+                    <option value="4">4 - Great!</option>
+                    <option value="5">5 - Dream came true</option>
                 </select>
             </div>
             <br>
             <div class="text-center">
                 <label class="mdb-main-label">Data Skills: </label><br>
                 <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
-                        data-width="50%" multiple name="skills_selected" data-header="Pleas choose more than 3" required>
+                        data-width="50%" multiple name="skills_selected" data-header="Pleas choose more than 3"
+                        required>
                     <optgroup label="Lanuage">
                         <option value="C/C++">C/C++</option>
                         <option value="Scripting">Scripting</option>
@@ -85,9 +87,9 @@
                         <option value="Java">Java</option>
                         <option value="JavaScript">JavaScript</option>
                         <option value="MATLAB">MATLAB</option>
-                        <option value="MySQL" selected>MySQL</option>
+                        <option value="MySQL">MySQL</option>
                         <option value="Perl">Perl</option>
-                        <option value="Python" selected>Python</option>
+                        <option value="Python">Python</option>
                         <option value="R">R</option>
                     </optgroup>
                     <optgroup label="Platform/Framework">
@@ -104,9 +106,9 @@
                         <option value="Linux">Linux</option>
                     </optgroup>
                     <optgroup label="Software">
-                        <option value="Excel" >Excel</option>
+                        <option value="Excel">Excel</option>
                         <option value="HBase">Apache HBase</option>
-                        <option value="Tableau" selected>Tableau</option>
+                        <option value="Tableau">Tableau</option>
                         <option value="TensorFlow">TensorFlow</option>
                         <option value="Hadoop">Apache Hadoop</option>
                         <option value="Hive">Apache Hive</option>
@@ -133,7 +135,8 @@
             </div>
             <div class="text-center">
                 <br>
-                <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit" style="width: 200px;"
+                <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
+                        style="width: 200px;"
                         onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
                 </button>
             </div>
@@ -146,497 +149,512 @@
         <div id="odometer2" class="odometer"></div>
         <script>
             setTimeout(function () {
-                odometer2.innerHTML = {{Max_Salary}};
+                odometer2.innerHTML = {{Min_Salary}};
             }, 500);
         </script>
+        <div id="odometer1" class="odometer"></div>
+        <script>
+            setTimeout(function () {
+                odometer1.innerHTML = {{Max_Salary}};
+            }, 600);
+        </script>
         <br>
+
         <br>
     </div>
 
+     <!-- Explain -->
+    <div class="card mb-4 shadow-sm" style="width:100%;height: 100%;" style="background-color: #F6F6F6">
+            <div class="card-header shadow-sm rounded"><strong>About this Project</strong></div>
+            <div class="card-body">
+                <p class="card-text">
+                    Hi, <br>
+                    <br>
+                    Thank you for your visit!<br>
+                    Generally speaking, this website could predict the range of salary for a Data Analyst job base on the skills that required.<br>
+                    It also tell you what skills you might need to learn to boost your salary.<br>
+                    The predicting model is XGBoost, a Machine Learning model that deployed by Flask and Python.<br>
+                    Every time your click the submit button, the serve would run the Machine Learning and that is why it is slow.
+            </div>
+    </div>
     <!-- Echarts Viz -->
     <div class="text-center ">
 
-            <div id="main 1" style="width:100%;height:400px; margin:auto" class="card mb-4 shadow p-1 " style="background-color: #F6F6F6"></div>
+        <div class="card mb-4 shadow-sm" style="width:100%;height: 100%;" style="background-color: #F6F6F6">
+            <div class="card-header shadow-sm rounded"><strong>NYC Data Analyst Salary Range in Dataset</strong></div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <div id="main 1" style="width:100%;height:400px; margin:auto" style="background-color: #F6F6F6"></div>
 
-            <script type="text/javascript">
-                var myChart = echarts.init(document.getElementById('main 1'));
+                <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('main 1'));
 
-                var xAxisData = {{ hist_x }};
-                var data2 = {{hist_min}};
-                var data1 ={{hist_max}};
+                    var xAxisData = {{ hist_x }};
+                    var data2 = {{hist_min}};
+                    var data1 ={{hist_max}};
 
 
-                var option = {
-                    title: {
-                        text: 'NYC Data Analyst Salary Range in Dataset',
-                        left: 'center',
-                        top: 10,
-                        textStyle: {
-                            fontWeight: '20',
-                            fontSize: '15'
-                        }
-                    },
-                    legend: {
-                        name: ['Min', 'Max'],
-                        data: ['min', 'max'],
-                        align: 'right',
-                        bottom: 2
-                    },
-
-                    toolbox: {
-                        y: 'bottom',
-                        feature: {
-                            magicType: {
-                                type: ['stack', 'tiled']
-                            },
-                        }
-                    },
-                    tooltip: {
-                        formatter: '${b0}',
-                    },
-                    grid: {
-                        containLabel: false
-                    },
-                    xAxis: {
-                        data: xAxisData,
-                        silent: false,
-                        axisLabel: {formatter: '${value}'},
-                        splitLine: {
+                    var option = {
+                        title: {
                             show: false
+                        },
+                        legend: {
+                            name: ['Min', 'Max'],
+                            data: ['min', 'max'],
+                            align: 'right',
+                            bottom: 2
+                        },
+
+                        toolbox: {
+                            y: 'bottom',
+                            feature: {
+                                magicType: {
+                                    type: ['stack', 'tiled']
+                                },
+                            }
+                        },
+                        tooltip: {
+                            formatter: '${b0}',
+                        },
+                        grid: {
+                            containLabel: false
+                        },
+                        xAxis: {
+                            data: xAxisData,
+                            silent: false,
+                            axisLabel: {formatter: '${value}'},
+                            splitLine: {
+                                show: false
+                            }
+                        },
+                        yAxis: {
+                            show: true,
+                            name: 'Frequency',
+
+                        },
+                        series: [{
+                            name: 'min',
+                            type: 'bar',
+                            data: data2,
+
+                            animationDelay: function (idx) {
+                                return idx * 10;
+                            }
+                        }, {
+                            name: 'max',
+                            type: 'bar',
+                            data: data1,
+                            animationDelay: function (idx) {
+                                return idx * 10 + 100;
+                            }
+                        }],
+                        animationEasing: 'elasticOut',
+                        animationDelayUpdate: function (idx) {
+                            return idx * 5;
                         }
-                    },
-                    yAxis: {
-                        show: true,
-                        name: 'Frequency',
-
-                    },
-                    series: [{
-                        name: 'min',
-                        type: 'bar',
-                        data: data2,
-
-                        animationDelay: function (idx) {
-                            return idx * 10;
-                        }
-                    }, {
-                        name: 'max',
-                        type: 'bar',
-                        data: data1,
-                        animationDelay: function (idx) {
-                            return idx * 10 + 100;
-                        }
-                    }],
-                    animationEasing: 'elasticOut',
-                    animationDelayUpdate: function (idx) {
-                        return idx * 5;
-                    }
-                };
+                    };
 
 
-                myChart.setOption(option);
-                window.onresize = function () {
-                    myChart.resize();
-                };
-            </script>
+                    myChart.setOption(option);
+                    window.onresize = function () {
+                        myChart.resize();
+                    };
+                </script>
+            </div>
+        </div>
 
 
-            <div id="main 2" style="width:100%;height:500px; margin:auto" class="card mb-4 shadow p-1 " style="background-color: #F6F6F6"></div>
+        <div class="card mb-4 shadow-sm" style="width:100%;" style="background-color: #F6F6F6">
+            <div class="card-header shadow-sm rounded"><strong>Top 3 Skill to Increase Salary</strong></div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div id="main 2" style="width:100%;height:300px; margin:auto" style="background-color: #F6F6F6"></div>
 
-            <script type="text/javascript">
+                <script type="text/javascript">
 
 
-                var myChart = echarts.init(document.getElementById('main 2'));
-                
+                    var myChart = echarts.init(document.getElementById('main 2'));
 
-                var option = {
 
-                    title: {
-                        text: 'Top 3 Skill to Increase Salary',
-                        left: 'center',
-                        top: 10,
-                        textStyle: {
-                            fontWeight: '20',
-                            fontSize: '15'
-                        }
-                    },
-                    radar: {
-                        // shape: 'circle',
-                        nameGap: 5,
-                        center: ['50%', '50%'],
-                        radius: '40%',
-                        name: {
-                            formatter: function (value, indicator) {
-                                let text =   value + '\n'+ '$'+ indicator.num
-                                return text
+                    var option = {
+                        radar: {
+                            // shape: 'circle',
+                            nameGap: 5,
+                            center: ['50%', '50%'],
+                            radius: '40%',
+                            name: {
+                                formatter: function (value, indicator) {
+                                    let text = value + '\n' + '$' + indicator.num
+                                    return text
 
+                                },
+                                textStyle: {
+                                    color: '#fff',
+                                    backgroundColor: '#5f5f5f',
+                                    borderRadius: 3,
+                                    padding: [3, 5],
+                                    fontSize: '10',
+
+                                }
                             },
-                            textStyle: {
-                                color: '#fff',
-                                backgroundColor: '#5f5f5f',
-                                borderRadius: 3,
-                                padding: [3, 5],
-                                fontSize:'10',
-
-                            }
+                            indicator: (function () {
+                                var names = {{Suggest_Skills_Skills | safe}};
+                                var res = []
+                                var myArray = {{ Suggest_Skills_SkillsSalary|safe}};
+                                names.forEach((a, i) => res.push({
+                                    text: a,
+                                    num: myArray[i],
+                                    max: {{max_Suggest_Skills_SkillsSalary | safe}}
+                                }));
+                                return res
+                            })(),
                         },
-                        indicator: (function () {
-                            var names = {{Suggest_Skills_Skills | safe}};
-                            var res = []
-                            var myArray = {{ Suggest_Skills_SkillsSalary|safe}};
-                            names.forEach((a, i) => res.push({text: a, num:myArray[i], max: 35000}));
-                            return res
-                        })(),
-                    },
 
-                    series: [{
-                        name: 'Average Salary',
-                        type: 'radar',
-                        areaStyle: {normal: {type: 'default'}},
-                        label: {
-                            normal: {
-                                show: false,
-                                position: 'inside',
-                                formatter: '+${c0}',
+                        series: [{
+                            name: 'Average Salary',
+                            type: 'radar',
+                            areaStyle: {normal: {type: 'default'}},
+                            label: {
+                                normal: {
+                                    show: false,
+                                    position: 'inside',
+                                    formatter: '+${c0}',
 
-                            }
-                        },
-                        data: [
-                            {
-                                value: {{ Suggest_Skills_SkillsSalary|safe}},
-                                name: 'Avg Salary',
-                                label: {
-                                    normal: {
-                                        color: '#C23531',
-                                        position: 'outside',
-                                        fontSize: 14,
-                                        backgroundColor: 'white'
+                                }
+                            },
+                            data: [
+                                {
+                                    value: {{ Suggest_Skills_SkillsSalary|safe}},
+                                    name: 'Avg Salary',
+                                    label: {
+                                        normal: {
+                                            color: '#C23531',
+                                            position: 'outside',
+                                            fontSize: 14,
+                                            backgroundColor: 'white'
 
+                                        }
                                     }
                                 }
-                            }
 
-                        ]
-                    }]
-                };
-                 myChart.setOption(option);
-                window.onresize = function () {
-                    myChart.resize();
-                };
-
-
-                
-            </script>
-
-            <div id="main 3" style="width:100%;height:400px; margin:auto" class="card mb-4 shadow p-1 " style="background-color: #F6F6F6"></div>
-
-            <script type="text/javascript">
-
-
-                var myChart = echarts.init(document.getElementById('main 3'));
-                var app = {}
-
-                var option = {
-                    title: {
-                        text: 'How Much For One Skill Only?',
-                        left: 'center',
-                        top: 10,
-                        textStyle: {
-                            fontWeight: '20',
-                            fontSize: '15',
-
-                        }
-                    },
-                    tooltip: {
-                        textStyle: {
-                            align: 'left'
-                        },
-                        trigger: 'axis',
-                        axisPointer: {
-                            type: 'shadow'
-                        },
-                        formatter: '<strong>{b0}</strong><br>Max: ${c0}<br />Min: ${c1}'
-                    },
-                    legend: {
-
-                        bottom: 10,
-                    },
-                    grid: {
-                        containLabel: false
-                    },
-                    xAxis: {
-                        data: {{ single_skill_info_names |safe}},
-                        axisLabel: {
-                            interval: 0,
-                            rotate: 10,
-                        }
-
-                    },
-                    yAxis: {
-                        show: false,
-
-                    },
-
-                    series: [{
-                        name: 'Min',
-                        type: 'bar',
-                        markLine: {
-                            precision: 0,
-                            label: {
-                                position: 'start',
-                                formatter: '${c}',
-                            },
-                            data: [
-                                {type: 'average', name: 'average'}
                             ]
-                        },
-                        data: {{ single_skill_info_min|safe}},
-                        label: {
-                            normal: {
-                                show: true,
-                                position: 'top',
-                                color: 'black',
-                                formatter: '${c0}',
-
-
-                            }
-                        },
-                    }, {
-                        barGap: '0%',
-                        name: 'Max',
-                        type: 'bar',
-                        markLine: {
-                            precision: 0,
-                            label: {
-                                position: 'start',
-                                formatter: '${c}',
-                            },
-                            data: [
-                                {type: 'average', name: 'average'}
-                            ]
-                        },
-                        data: {{ single_skill_info_max2|safe}},
-                        label: {
-                            normal: {
-                                show: true,
-                                position: 'top',
-                                color: 'black',
-                                formatter: '${c0}',
-
-                            }
-                        },
-                    }
-                    ]
-                };
-                myChart.setOption(option);
-                app.currentIndex = -1;
-                setInterval(function () {
-                    var dataLen = option.series[0].data.length;
-                    // 取消之前高亮的图形
-                    myChart.dispatchAction({
-                        type: 'downplay',
-                        seriesIndex: 0,
-                        dataIndex: app.currentIndex
-                    });
-                    app.currentIndex = (app.currentIndex + 1) % dataLen;
-                    // 高亮当前图形
-                    myChart.dispatchAction({
-                        type: 'highlight',
-                        seriesIndex: 0,
-                        dataIndex: app.currentIndex
-                    });
-                    // 显示 tooltip
-                    myChart.dispatchAction({
-                        type: 'showTip',
-                        seriesIndex: 0,
-                        dataIndex: app.currentIndex
-                    });
-                }, 4000);
-
-                window.onresize = function () {
-                    myChart.resize();
-                };
-
-            </script>
-
-            <div id="main 4" style="width:100%;height:400px; margin:auto; background-color: #F6F6F6" class="card mb-4 shadow p-1 "></div>
-            <script>
-                var app = {}
-                var myChart4 = echarts.init(document.getElementById('main 4'));
-
-                option = {
-                    tooltip: {
-                        trigger: 'item',
-                        textStyle: {
-                            align: 'left'
-                        },
-                        formatter: function (params) {
-                            var s = '';
-                            s += params.name;
-                            var values = params.value.toString().split(",");
-                            s += '<strong>Average Salary:</strong> $' + values[0];
-                            s += '<br><strong>Ratio</strong>: ' + values[1] + '%';
-                            s += '<br><strong>Skill</strong>: ' + values[2];
-                            return s;
-                        }
-
-                    },
-                    title: {
-                        text: 'How much for those selected skills?',
-                        left: 'center',
-                        top: 10,
-                        textStyle: {
-                            fontWeight: '20',
-                            fontSize: '15'
-                        }
-                    },
-                    xAxis: {
-                        scale: true,
-                        axisLabel: {formatter: '${value}'},
-                        name: 'Salary for One skill',
-                        nameGap: 30,
-                        nameLocation: 'middle',
-                        splitNumber: 3,
-
-                    },
-                    yAxis: {
-                        scale: true,
-                        axisLabel: {formatter: '{value}%'},
-                        name: 'Ratio in jobs',
-
-                    },
-
-                    series: [{
-                        type: 'scatter',
-                        symbolSize: 8,
-                        data: {{ skill_info_avg_ratio| safe}},
-
-                    }, {
-                        type: 'effectScatter',
-                        symbolSize: 10,
-
-                        data: {{ single_skill_info_avg_ratio |safe}},
-
-
-                    },]
-                };
-
-
-                myChart4.setOption(option);
-                window.onresize = function () {
-                    myChart4.resize();
-                };
-                app.currentIndex = -1;
-                setInterval(function () {
-                    var dataLen = option.series[0].data.length;
-                    // 取消之前高亮的图形
-                    myChart4.dispatchAction({
-                        type: 'downplay',
-                        seriesIndex: 0,
-                        dataIndex: app.currentIndex
-                    });
-                    app.currentIndex = (app.currentIndex + 1) % dataLen;
-                    // 高亮当前图形
-                    myChart4.dispatchAction({
-                        type: 'highlight',
-                        seriesIndex: 0,
-                        dataIndex: app.currentIndex
-                    });
-                    // 显示 tooltip
-                    myChart4.dispatchAction({
-                        type: 'showTip',
-                        seriesIndex: 0,
-                        dataIndex: app.currentIndex
-                    });
-                }, 3500);
-
-
-
-            </script>
-
-            <div class="card mb-4 shadow p-1 " id="main 5" style="width:100%;height:400px;background-color: #F6F6F6; margin:auto"></div>
-
-            <script type="text/javascript">
-
-                var myChart = echarts.init(document.getElementById('main 5'));
-
-                myChart.showLoading();
-                $.getJSON('static/data/data2.json', function (json) {
-                    myChart.hideLoading();
+                        }]
+                    };
+                    myChart.setOption(option);
                     window.onresize = function () {
-                    myChart.resize();
-                };
+                        myChart.resize();
+                    };
 
-                    myChart.setOption(option = {
-                        title: {
-                            text: 'High Salary Skill Pairs',
-                            left: 'center',
-                            top: 10,
+
+                </script>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm" style="width:100%;" style="background-color: #F6F6F6">
+            <div class="card-header shadow-sm rounded"><strong>How Much For One Skill Only?</strong></div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div id="main 3" style="width:100%;height:400px; margin:auto" style="background-color: #F6F6F6"></div>
+
+                <script type="text/javascript">
+
+
+                    var myChart = echarts.init(document.getElementById('main 3'));
+                    var app = {}
+
+                    var option = {
+
+                        tooltip: {
                             textStyle: {
-                                fontWeight: '20',
-                                fontSize: '15',
+                                align: 'left'
+                            },
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            },
+                            formatter: '<strong>{b0}</strong><br>Max: ${c0}<br />Min: ${c1}'
+                        },
+                        legend: {
+
+                            bottom: 10,
+                        },
+                        grid: {
+                            containLabel: false
+                        },
+                        xAxis: {
+                            data: {{ single_skill_info_names |safe}},
+                            axisLabel: {
+                                interval: 0,
+                                rotate: 10,
                             }
+
+                        },
+                        yAxis: {
+                            show: false,
+
                         },
 
-                        series: [
-                            {
-                                type: 'graph',
-                                layout: 'force',
-                                bottom:1,
-                                animation: false,
-                                // progressiveThreshold: 700,
-                                edges: json.edges.map(function (edge) {
-                                    return {
-                                        source: edge.source,
-                                        target: edge.target
-                                    };
-                                }),
-                                data: json.nodes.map(function (node) {
-                                    return {
-                                        x: node.x,
-                                        y: node.y,
-                                        id: node.id,
-                                        name: node.label,
-                                        symbolSize: node.size,
-                                        itemStyle: {
-                                            normal: node.color
-                                        }
-                                    };
-                                }),
-                                type: 'graph',
-                                layout: 'force',
-                                roam: false,
-                                edgeSymbol: ['arrow'],
-                                edgeLabel: {},
-                                force: {
-                                    repulsion: 3000,
-                                    edgeLength: [100, 500],
-                                    gravity: 0.3
-                                },
-                                draggable: true,
-                                focusNodeAdjacency: true,
-                                lineStyle: {
-                                    normal: {
-                                        width: 0.5,
-                                        curveness: 0.3,
-
-
-                                    }
-                                },
-
+                        series: [{
+                            name: 'Min',
+                            type: 'bar',
+                            markLine: {
+                                precision: 0,
                                 label: {
-                                    normal: {
-                                        show: true,
-                                        textStyle: {}
-                                    }
+                                    position: 'start',
+                                    formatter: '${c}',
                                 },
+                                data: [
+                                    {type: 'average', name: 'average'}
+                                ]
+                            },
+                            data: {{ single_skill_info_min|safe}},
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'top',
+                                    color: 'black',
+                                    formatter: '${c0}',
 
-                            }
+
+                                }
+                            },
+                        }, {
+                            barGap: '0%',
+                            name: 'Max',
+                            type: 'bar',
+                            markLine: {
+                                precision: 0,
+                                label: {
+                                    position: 'start',
+                                    formatter: '${c}',
+                                },
+                                data: [
+                                    {type: 'average', name: 'average'}
+                                ]
+                            },
+                            data: {{ single_skill_info_max2|safe}},
+                            label: {
+                                normal: {
+                                    show: true,
+                                    position: 'top',
+                                    color: 'black',
+                                    formatter: '${c0}',
+
+                                }
+                            },
+                        }
                         ]
-                    }, true);
-                });
+                    };
+                    myChart.setOption(option);
+                    app.currentIndex = -1;
+                    setInterval(function () {
+                        var dataLen = option.series[0].data.length;
+                        // 取消之前高亮的图形
+                        myChart.dispatchAction({
+                            type: 'downplay',
+                            seriesIndex: 0,
+                            dataIndex: app.currentIndex
+                        });
+                        app.currentIndex = (app.currentIndex + 1) % dataLen;
+                        // 高亮当前图形
+                        myChart.dispatchAction({
+                            type: 'highlight',
+                            seriesIndex: 0,
+                            dataIndex: app.currentIndex
+                        });
+                        // 显示 tooltip
+                        myChart.dispatchAction({
+                            type: 'showTip',
+                            seriesIndex: 0,
+                            dataIndex: app.currentIndex
+                        });
+                    }, 4000);
+
+                    window.onresize = function () {
+                        myChart.resize();
+                    };
+
+                </script>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm" style="width:100%;" style="background-color: #F6F6F6">
+            <div class="card-header shadow-sm rounded"><strong>How Data skills that really matters for salary?</strong></div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div id="main 4" style="width:100%;height:400px; margin:auto;" style="background-color: #F6F6F6"></div>
+                <script>
+                    var app = {}
+                    var myChart4 = echarts.init(document.getElementById('main 4'));
+
+                    option = {
+                        tooltip: {
+                            trigger: 'item',
+                            textStyle: {
+                                align: 'left'
+                            },
+                            formatter: function (params) {
+                                var s = '';
+                                s += params.name;
+                                var values = params.value.toString().split(",");
+                                s += '<strong>Average Salary:</strong> $' + values[0];
+                                s += '<br><strong>Ratio</strong>: ' + values[1] + '%';
+                                s += '<br><strong>Skill</strong>: ' + values[2];
+                                return s;
+                            }
+
+                        },
+
+                        xAxis: {
+                            scale: true,
+                            axisLabel: {formatter: '${value}'},
+                            name: 'Salary for One skill',
+                            nameGap: 30,
+                            nameLocation: 'middle',
+                            splitNumber: 3,
+
+                        },
+                        yAxis: {
+                            scale: true,
+                            axisLabel: {formatter: '{value}%'},
+                            name: 'Ratio in jobs',
+
+                        },
+
+                        series: [{
+                            type: 'scatter',
+                            symbolSize: 8,
+                            data: {{ skill_info_avg_ratio| safe}},
+
+                        }, {
+                            type: 'effectScatter',
+                            symbolSize: 10,
+
+                            data: {{ single_skill_info_avg_ratio |safe}},
 
 
-            </script>
+                        },]
+                    };
+
+
+                    myChart4.setOption(option);
+                    window.onresize = function () {
+                        myChart4.resize();
+                    };
+                    app.currentIndex = -1;
+                    setInterval(function () {
+                        var dataLen = option.series[0].data.length;
+                        // 取消之前高亮的图形
+                        myChart4.dispatchAction({
+                            type: 'downplay',
+                            seriesIndex: 0,
+                            dataIndex: app.currentIndex
+                        });
+                        app.currentIndex = (app.currentIndex + 1) % dataLen;
+                        // 高亮当前图形
+                        myChart4.dispatchAction({
+                            type: 'highlight',
+                            seriesIndex: 0,
+                            dataIndex: app.currentIndex
+                        });
+                        // 显示 tooltip
+                        myChart4.dispatchAction({
+                            type: 'showTip',
+                            seriesIndex: 0,
+                            dataIndex: app.currentIndex
+                        });
+                    }, 3500);
+                </script>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm" style="width:100%;" style="background-color: #F6F6F6">
+            <div class="card-header shadow-sm rounded"><strong>High Salary Skill Pairs</strong></div>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div id="main 5" style="width:100%;height:400px; margin:auto" style="background-color: #F6F6F6"></div>
+
+                <script type="text/javascript">
+
+                    var myChart = echarts.init(document.getElementById('main 5'));
+
+                    myChart.showLoading();
+                    $.getJSON('static/data/data2.json', function (json) {
+                        myChart.hideLoading();
+                        window.onresize = function () {
+                            myChart.resize();
+                        };
+
+                        myChart.setOption(option = {
+
+                            series: [
+                                {
+                                    type: 'graph',
+                                    layout: 'force',
+                                    bottom: 1,
+                                    animation: false,
+                                    // progressiveThreshold: 700,
+                                    edges: json.edges.map(function (edge) {
+                                        return {
+                                            source: edge.source,
+                                            target: edge.target
+                                        };
+                                    }),
+                                    data: json.nodes.map(function (node) {
+                                        return {
+                                            x: node.x,
+                                            y: node.y,
+                                            id: node.id,
+                                            name: node.label,
+                                            symbolSize: node.size,
+                                            itemStyle: {
+                                                normal: node.color
+                                            }
+                                        };
+                                    }),
+                                    type: 'graph',
+                                    layout: 'force',
+                                    roam: false,
+                                    edgeSymbol: ['arrow'],
+                                    edgeLabel: {},
+                                    force: {
+                                        repulsion: 3000,
+                                        edgeLength: [100, 500],
+                                        gravity: 0.3
+                                    },
+                                    draggable: true,
+                                    focusNodeAdjacency: true,
+                                    lineStyle: {
+                                        normal: {
+                                            width: 0.5,
+                                            curveness: 0.3,
+
+
+                                        }
+                                    },
+
+                                    label: {
+                                        normal: {
+                                            show: true,
+                                            textStyle: {}
+                                        }
+                                    },
+
+                                }
+                            ]
+                        }, true);
+                    });
+
+
+                </script>
+            </div>
+        </div>
 
     </div>
 

@@ -23,7 +23,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/viz', methods=['POST','GET'])
+@app.route('/viz#viz_conn', methods=['POST','GET'])
 def predict():
     rating = request.form.get('rating')
     inputs_list = request.form.getlist('skills_selected')
@@ -91,8 +91,8 @@ def predict():
     Suggest_Skills = nyc_salary_with_skills_and(rating, inputs_list)['Suggest_Skills']
     Suggest_Skills_Skills = Suggest_Skills['Skill'].to_json(orient='records')
     Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])
-    max_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
-    min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[-1]
+    min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
+    max_Suggest_Skills_SkillsSalary = round(list(Suggest_Skills['Salary_Increase'])[-1],0)
 
     skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0)
     single_skill_info = skill_info[skill_info['name'].isin(inputs_list)]
