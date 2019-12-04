@@ -84,17 +84,17 @@
     <form action="{{ url_for('predict') }}" method="POST">
         <div class="text-center mb-4">
             <a href="/">
-                <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image" width="60%" height="60%"
+                <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image"
+                     width="60%" height="60%"
                      title="Back to Homepage">
             </a>
             <br>
             <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
-<p>
-                This website could predict the range of<br>
-                salary for a <a style="color: crimson">Data Analyst</a> job <br>
-                base on the <a style="color: crimson">skills</a> that required.<br><br>
-                It could also recommend some skills for you<br>
-                Please <strong style="color: crimson">Only</strong> select those skills that <br><strong style="color: crimson">One</strong> job requires to
+            <p>
+                Use Machine Learning to predict salary base on <strong style="color: crimson"> <br>
+                Data Analyst skills</strong>
+                in job description!<br><br>
+                Please <strong style="color: crimson">Only</strong> select the skills that <br>One job requires to
                 maximize the accuracy
             </p>
         </div>
@@ -105,19 +105,20 @@
                 <label class="mdb-main-label">Company Ratings: </label><br>
                 <select class="selectpicker 1" data-header="How people think about this company?" data-max-options="1"
                         data-width="50%" name="rating" required>
-                    <option value="0" >0 - I have nothing to lose</option>
-                    <option value="1" >1 - "Well...</option>
-                    <option value="2" >2 - It is Okay..</option>
-                    <option value="3"  selected>3 - Dataset Median</option>
-                    <option value="4" >4 - Great!</option>
-                    <option value="5" >5 - Dream came true</option>
+                    <option value="0">0 - I have nothing to lose</option>
+                    <option value="1">1 - "Well...</option>
+                    <option value="2">2 - It is Okay..</option>
+                    <option value="3" selected>3 - Dataset Median</option>
+                    <option value="4">4 - Great!</option>
+                    <option value="5">5 - Dream came true</option>
                 </select>
             </div>
             <br>
             <div class="text-center">
                 <label class="mdb-main-label ">Data Skills: </label><br>
                 <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
-                        data-width="50%" multiple name="skills_selected" data-header="Pleas choose more than 3" required>
+                        data-width="50%" multiple name="skills_selected" data-header="Pleas choose more than 3"
+                        required>
                     <optgroup label="language">
                         <option value="C/C++">C/C++</option>
                         <option value="Scripting">Scripting</option>
@@ -126,7 +127,7 @@
                         <option value="Java">Java</option>
                         <option value="JavaScript">JavaScript</option>
                         <option value="MATLAB">MATLAB</option>
-                        <option value="MySQL" >MySQL</option>
+                        <option value="MySQL">MySQL</option>
                         <option value="Perl">Perl</option>
                         <option value="Python" selected>Python</option>
                         <option value="R">R</option>
@@ -146,7 +147,7 @@
                         <option value="Cassandra">Cassandra</option>
                         <option value="Excel">Excel</option>
                         <option value="HBase">Apache HBase</option>
-                        <option value="Tableau" >Tableau</option>
+                        <option value="Tableau">Tableau</option>
                         <option value="TensorFlow">TensorFlow</option>
                         <option value="Hadoop">Apache Hadoop</option>
                         <option value="Hive">Apache Hive</option>
@@ -173,7 +174,8 @@
             </div>
             <div class="text-center">
                 <br>
-                <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit" style="width: 200px;"
+                <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
+                        style="width: 200px;"
                         onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
                 </button>
             </div>
@@ -181,7 +183,7 @@
     </form>
     <br>
     <script>
-            $(".animated").addClass("delay-1s");
+        $(".animated").addClass("delay-1s");
         $(document).ready(function () {
             $("#btnFetch").click(function () {
                 // add spinner to button
