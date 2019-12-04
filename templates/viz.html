@@ -60,10 +60,10 @@
                 <div class="card-header shadow-sm rounded"><strong>Choose and Predict: </strong></div>
                 <div class="card-body">
                     <p>
-                        Use Machine Learning to predict salary base on <strong style="color: crimson"> <br>
+                        Use Machine Learning to predict salary base on <strong style="color: crimson">
                         Data Analyst skills</strong>
                         in job description!<br><br>
-                        Please <strong style="color: crimson">Only</strong> select the skills that <br>One job requires
+                        Please <strong style="color: crimson">Only</strong> select the skills thatOne job requires
                         to
                         maximize the accuracy
                     </p>
@@ -86,7 +86,8 @@
                     <br>
                     <div class="text-center">
                         <label class="mdb-main-label">Data Skills: </label><br>
-                        <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
+                        <select class="selectpicker 2" data-live-search="false" data-max-options="6"
+                                data-min-options="3"
                                 data-width="50%" multiple name="skills_selected" title="Pleas choose more than 3"
                                 required>
                             <optgroup label="Language">
@@ -160,7 +161,7 @@
     <div class="card mb-4 shadow-sm" style="width:100%;height: 100%;" style="background-color: #F6F6F6">
         <div class="card-header shadow-sm rounded"><strong>Getting Started</strong></div>
         <div class="card-body">
-            <p class="card-text">
+            <p class="card-text ">
                 Company Rating: <strong style="color: crimson">{{ rating }}</strong><br>
                 Paired skills selected:
                 {% for inputs_list_element in inputs_list |join(' ,') %}
@@ -173,26 +174,26 @@
 
             <div class="text-center">
                 <div id="odometer2" class="odometer"></div>
-            <script>
-                setTimeout(function () {
-                    odometer2.innerHTML = {{Min_Salary}};
-                }, 500);
-            </script>
-            <strong>~</strong>
-            <div id="odometer1" class="odometer"></div>
-            <script>
-                setTimeout(function () {
-                    odometer1.innerHTML = {{Max_Salary}};
-                }, 600);
-            </script>
+                <script>
+                    setTimeout(function () {
+                        odometer2.innerHTML = {{Min_Salary}};
+                    }, 500);
+                </script>
+                <strong>~</strong>
+                <div id="odometer1" class="odometer"></div>
+                <script>
+                    setTimeout(function () {
+                        odometer1.innerHTML = {{Max_Salary}};
+                    }, 600);
+                </script>
 
             </div>
-            <div class="text-right">
+            <div class="text-center">
                 <br>
                 <a class="btn btn-dark shadow-sm btn-sm" data-toggle="collapse" href="#collapseExample" role="button"
-               aria-expanded="false" aria-controls="collapseExample">
-                More Tech
-            </a>
+                   aria-expanded="false" aria-controls="collapseExample">
+                    More Tech
+                </a>
             </div>
             <br>
 
@@ -317,7 +318,8 @@
         </div>
         <div class="card-body">
             <p class="card-text">
-                A histogram to show how minimum and maximum <strong style="color: crimson">salary distribute</strong> in our dataset.
+                A histogram to show how minimum and maximum <strong style="color: crimson">salary distribute</strong> in
+                our dataset.
             </p>
             <div id="main 1" style="width:100%;height:400px; margin:auto"
                  style="background-color: #F6F6F6"></div>
@@ -516,7 +518,8 @@
         <div class="card-header shadow-sm rounded"><strong>Top 6 Skill to Increase Salary</strong></div>
         <div class="card-body">
             <p class="card-text">
-                This is the most exciting part, find out the <strong style="color: crimson">next skill to learn</strong> to boost your salary! Notice, the salary
+                This is the most exciting part, find out the <strong style="color: crimson">next skill to learn</strong>
+                to boost your salary! Notice, the salary
                 here means how much you could increase by learning that skill. But don't add them all.
             </p>
             <div id="main 2" style="width:100%;height:300px; margin:auto"
@@ -613,7 +616,8 @@
         </div>
         <div class="card-body">
             <p class="card-text">
-                This is a grand picture of how each skill matters in predicting salary among the <strong style="color: crimson">top 46</strong> skills. Simply saying, the
+                This is a grand picture of how each skill matters in predicting salary among the <strong
+                    style="color: crimson">top 46</strong> skills. Simply saying, the
                 higher importance score, the greater this skill would impact the salary prediction.
             </p>
             <div id="main 4" style="width:100%;height:400px; margin:auto;"
@@ -711,8 +715,8 @@
         <div class="card-header shadow-sm rounded"><strong>What a high paid skill pair looks like? </strong></div>
         <div class="card-body">
             <p class="card-text">
-                    This network graph shows how those high paid skills related.
-                    Fun fact: You could <strong style="color: crimson">draw</strong> the skill to see it more clear.
+                This network graph shows how those high paid skills related.
+                Fun fact: You could <strong style="color: crimson">draw</strong> the skill to see it more clear.
             </p>
             <div id="main 5" style="width:100%;height:400px; margin:auto"
                  style="background-color: #F6F6F6"></div>
@@ -769,7 +773,7 @@
                                 force: {
                                     repulsion: 1000,
                                     edgeLength: [100, 500],
-                                    gravity: 0.6
+                                    gravity: 0.4
                                 },
                                 draggable: true,
                                 focusNodeAdjacency: true,

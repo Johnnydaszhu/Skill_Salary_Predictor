@@ -81,7 +81,7 @@
 
 <div class="container-fluid ">
 
-     <form action="{{ url_for('predict') }}" method="POST">
+    <form action="{{ url_for('predict') }}" method="POST">
         <div class="text-center mb-4">
             <a href="/">
                 <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image"
@@ -91,13 +91,13 @@
             <br>
             <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
             <div class="card mb-4 shadow-sm text-left" style="width:100%;" style="background-color: #F6F6F6">
-                <div class="card-header shadow-sm rounded"><strong>Choose and Predict: </strong></div>
+                <div class="card-header shadow-sm rounded "><strong>Choose and Predict: </strong></div>
                 <div class="card-body">
                     <p>
-                        Use Machine Learning to predict salary base on <strong style="color: crimson"> <br>
+                        Use Machine Learning to predict salary base on <strong style="color: crimson">
                         Data Analyst skills</strong>
                         in job description!<br><br>
-                        Please <strong style="color: crimson">Only</strong> select the skills that <br>One job requires
+                        Please <strong style="color: crimson">Only</strong> select the skills that One job requires
                         to
                         maximize the accuracy
                     </p>
@@ -120,7 +120,8 @@
                     <br>
                     <div class="text-center">
                         <label class="mdb-main-label">Data Skills: </label><br>
-                        <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
+                        <select class="selectpicker 2" data-live-search="false" data-max-options="6"
+                                data-min-options="3"
                                 data-width="50%" multiple name="skills_selected" title="Pleas choose more than 3"
                                 required>
                             <optgroup label="Language">
