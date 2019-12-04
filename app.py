@@ -23,7 +23,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/viz', methods=['POST','GET'])
+@app.route('/viz#allviz', methods=['POST','GET'])
 def predict():
     rating = request.form.get('rating')
     inputs_list = request.form.getlist('skills_selected')

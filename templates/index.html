@@ -81,7 +81,7 @@
 
 <div class="container-fluid ">
 
-    <form action="{{ url_for('predict') }}" method="POST">
+    <form action="{{ url_for('predict',_anchor='allviz') }}" method="POST">
         <div class="text-center mb-4">
             <a href="/">
                 <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image"
@@ -90,9 +90,7 @@
             </a>
             <br>
             <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
-            <div class="card mb-4 shadow-sm text-left" style="width:100%;" style="background-color: #F6F6F6">
-                <div class="card-header shadow-sm rounded "><strong>Choose and Predict: </strong></div>
-                <div class="card-body">
+
                     <p>
                         Use Machine Learning to predict salary base on <strong style="color: crimson">
                         Data Analyst skills</strong>
@@ -101,7 +99,7 @@
                         to
                         maximize the accuracy
                     </p>
-                </div>
+
 
                 <section class="predictor">
                     <!-- Main Input For Receiving Query to our ML -->
@@ -182,12 +180,16 @@
                         <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
                                 style="width: 200px;"
                                 onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
-                        </button>
+                        </button>&nbsp
+                        <img src="static/info.svg" width="20" height="20" title="Try Python, Tableau and MySql" data-toggle="tooltip">
                     </div>
                 </section>
     </form>
     <br>
     <script>
+        $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
         $(".animated").addClass("delay-1s");
         $(document).ready(function () {
             $("#btnFetch").click(function () {

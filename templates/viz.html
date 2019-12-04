@@ -46,7 +46,6 @@
 
 <div class="container-fluid">
 
-
     <form action="{{ url_for('predict') }}" method="POST">
         <div class="text-center mb-4">
             <a href="/">
@@ -148,15 +147,19 @@
                         <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
                                 style="width: 200px;"
                                 onclick="document.getElementById('my_id').style.display = 'block' ;">Re-Submit
-                        </button>
+                        </button>&nbsp
+                        <img src="static/info.svg" width="20" height="20" title="Try Python, Tableau and MySql" data-toggle="tooltip">
                     </div>
                 </section>
     </form>
     <br>
 </div>
 </div>
+
+
+
 <!-- Echarts Viz -->
-<div class="text-left">
+<div class="text-left" id="allviz">
 
     <div class="card mb-4 shadow-sm" style="width:100%;height: 100%;" style="background-color: #F6F6F6">
         <div class="card-header shadow-sm rounded"><strong>Getting Started</strong></div>
@@ -808,6 +811,17 @@
 
 
 <script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$(document).ready(function() {
+    $("#div1Link").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#allviz").offset().top }, {duration: 500,easing: "swing"});
+            return false;
+    });
+});
+
 
     $(document).ready(function () {
         $("#btnFetch").click(function () {
