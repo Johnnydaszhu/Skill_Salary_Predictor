@@ -105,8 +105,15 @@ def predict():
     single_skill_info_avg_importance = np.array(single_skill_info[['avg','importance','name',]]).tolist()
     skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
 
-    data_average_min = 57498
-    data_average_max = 91356
+    dataforflask = pd.read_csv('static/data/2019-12-3NYC_df_noloc.csv')
+    data_average_min = dataforflask['min'].mean
+    data_average_max = dataforflask['max'].mean
+
+    prediction_com = pd.read_csv('static/data/prediction_com.csv')
+    y_min = np.array(prediction_com[['index','y_min']]).tolist()
+    y_pred_min = np.array(prediction_com[['index','y_pred_min']]).tolist()
+    y_max = np.array(prediction_com[['index','y_max']]).tolist()
+    y_pred_max = np.array(prediction_com[['index','y_pred_max']]).tolist()
 
     hist_x = [14000., 16270., 18540., 20810., 23080., 25350., 27620.,
               29890., 32160., 34430., 36700., 38970., 41240., 43510.,
@@ -150,7 +157,8 @@ def predict():
                            single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),single_skill_info_importance=format(single_skill_info_importance),
                            single_skill_info_avg_importance=format(single_skill_info_avg_importance),skill_info_avg_importance=format(skill_info_avg_importance),single_skill_info_names=format(single_skill_info_names),
                            data_average_min=format(data_average_min),data_average_max=format(data_average_max),
-                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max)
+                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max,
+                           y_pred_min=format(y_pred_min),y_min=format(y_min),y_max=format(y_max),y_pred_max=format(y_pred_max))
 
 
 if __name__ == '__main__':

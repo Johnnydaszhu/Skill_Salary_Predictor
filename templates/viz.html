@@ -55,8 +55,14 @@
             </a>
             <br>
             <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
-            <p>Please <strong style="color: crimson">Only</strong> select those skills that <br>a job requires to
-                maximize the accuracy</p>
+            <p>
+                This website could predict the range of<br>
+                salary for a <a style="color: crimson">Data Analyst</a> job <br>
+                base on the <a style="color: crimson">skills</a> that required.<br><br>
+                It could also recommend some skills for you<br>
+                Please <strong style="color: crimson">Only</strong> select those skills that <br><strong style="color: crimson">One</strong> job requires to
+                maximize the accuracy
+            </p>
         </div>
 
         <section class="predictor">
@@ -167,15 +173,114 @@
             <div class="card-header shadow-sm rounded"><strong>About this Project</strong></div>
             <div class="card-body">
                 <p class="card-text">
-                    Hi, <br>
+                    Hi there, <br>
                     <br>
-                    Thank you for your visit!<br>
-                    Generally speaking, this website could predict the range of salary for a Data Analyst job base on the skills that required.<br>
-                    It also tell you what skills you might need to learn to boost your salary.<br>
+                    The skills you just selected:
+                    {% for inputs_list_element in inputs_list |join(' ,') %}
+                        <strong style="color: crimson">{{ inputs_list_element  }} </strong>
+                    {% endfor %}
+                <br>
+                    And you rated the company as: <strong style="color: crimson">{{ rating }}</strong><br>
+
                     The predicting model is XGBoost, a Machine Learning model that deployed by Flask and Python.<br>
-                    Every time your click the submit button, the serve would run the Machine Learning and that is why it is slow.
+                    Every time your click the submit button, the serve would run the Machine Learning and that is why it is slow.<br>
+                    The graph below in this card views is showing the gap between predicted salary between the actual one.<br>
+
+                </p>
+                <div id="main 0" style="width:100%;height:400px; margin:auto;" style="background-color: #F6F6F6"></div>
+                <script>
+                    var myChart0 = echarts.init(document.getElementById('main 0'));
+
+                    option = {
+                        xAxis: {
+                            scale: true,
+                            axisLabel: {formatter: '{value}'},
+                            name: 'Salary ranks per job',
+                            nameGap: 30,
+                            nameLocation: 'middle',
+                            splitNumber: 5,
+
+                        },
+                        grid:{
+                            left:'15%',
+                            right:'5%'
+                        },
+                        yAxis: {
+                            scale: true,
+                            axisLabel: {formatter: '${value}'},
+                            name: 'Min Salary',
+
+                        },
+
+                        series: [ {
+                            type: 'scatter',
+                            symbolSize: 8,
+
+                            data: {{ y_pred_min |safe}},
+                        },{
+                            type: 'scatter',
+                            symbolSize: 8,
+                            data: {{ y_min| safe}},
+
+                        }]
+                    };
+
+
+                    myChart0.setOption(option);
+                    window.onresize = function () {
+                        myChart0.resize();
+                    };
+                    </script>
+            <br>
+            <div id="main 01" style="width:100%;height:400px; margin:auto;" style="background-color: #F6F6F6"></div>
+                <script>
+                    var myChart0 = echarts.init(document.getElementById('main 01'));
+
+                    option = {
+                        xAxis: {
+                            scale: true,
+                            axisLabel: {formatter: '{value}'},
+                            name: 'Salary ranks per job',
+                            nameGap: 30,
+                            nameLocation: 'middle',
+                            splitNumber: 5,
+
+                        },
+                        grid:{
+                            left:'15%',
+                            right:'5%'
+                        },
+                        yAxis: {
+                            scale: true,
+                            axisLabel: {formatter: '${value}'},
+                            name: 'Max Salary',
+
+                        },
+
+                        series: [ {
+                            type: 'scatter',
+                            symbolSize: 8,
+
+                            data: {{ y_pred_max |safe}},
+                        },{
+                            type: 'scatter',
+                            symbolSize: 8,
+                            data: {{ y_max| safe}},
+
+                        }]
+                    };
+
+
+                    myChart0.setOption(option);
+                    window.onresize = function () {
+                        myChart0.resize();
+                    };
+                    </script>
             </div>
+
     </div>
+
+
     <!-- Echarts Viz -->
     <div class="text-center ">
 
@@ -625,13 +730,13 @@
                                     force: {
                                         repulsion: 2500,
                                         edgeLength: [100, 500],
-                                        gravity: 0.3
+                                        gravity: 0
                                     },
                                     draggable: true,
                                     focusNodeAdjacency: true,
                                     lineStyle: {
                                         normal: {
-                                            width: 0.3,
+                                            width: 0.7,
                                             curveness: 1,
 
 
