@@ -94,7 +94,7 @@ def predict():
     min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
     max_Suggest_Skills_SkillsSalary = round(list(Suggest_Skills['Salary_Increase'])[-1],0)
 
-    skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0)
+    skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0).round(3)
     single_skill_info = skill_info[skill_info['name'].isin(inputs_list)]
     single_skill_info_names = list(single_skill_info['name'])
     single_skill_info_max = single_skill_info[['name','max']].to_dict('records')
