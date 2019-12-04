@@ -4,26 +4,26 @@ import pandas as pd
 import pickle
 app = Flask(__name__)
 
-xgb_model_min_loaded = pickle.load(open('static/model/ny_min_xgb_NOV_18.pickle', "rb"))
-xgb_model_max_loaded = pickle.load(open('static/model/ny_max_xgb_NOV_18.pickle', "rb"))
+xgb_model_min_loaded = pickle.load(open('static/model/min_xgb.pickle', "rb"))
+xgb_model_max_loaded = pickle.load(open('static/model/max_xgb.pickle', "rb"))
 
 
 
-sel_features = ['rating','.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business Intelligence',
-                'C/C++', 'Data Analysis', 'Data Science', 'Data Warehouse', 'Excel',
-                'Git', 'HBase', 'Hadoop', 'Hive', 'Java', 'JavaScript', 'Kafka',
-                'Linux', 'MATLAB', 'Machine Learning', 'Microsoft Office',
-                'Microsoft SQL Server', 'MongoDB', 'MySQL', 'Natural Language Processing',
-                'NoSQL', 'Oracle', 'Perl', 'Pig', 'PostgreSQL', 'Project Management',
-                'Python', 'R', 'S3', 'SAS', 'SPSS', 'SQL', 'Scala', 'Scripting',
-                'Shell Scripting', 'Software Development', 'Spark', 'Tableau', 'TensorFlow']
+sel_features = ['rating', '.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business Intelligence',
+'C/C++', 'Cassandra', 'Data Analysis', 'Data Science', 'Data Warehouse', 'Excel',
+'Git', 'HBase', 'Hadoop', 'Hive', 'Java', 'JavaScript', 'Kafka',
+'Linux', 'MATLAB', 'Machine Learning', 'Microsoft Office',
+'Microsoft SQL Server', 'MongoDB', 'MySQL', 'Natural Language Processing',
+'NoSQL', 'Oracle', 'Perl', 'Pig', 'PostgreSQL', 'Project Management',
+'Python', 'R', 'S3', 'SAS', 'SPSS', 'SQL', 'Scala', 'Scripting',
+'Shell Scripting', 'Software Development', 'Spark', 'Tableau', 'TensorFlow']
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
-@app.route('/viz#viz_conn', methods=['POST','GET'])
+@app.route('/viz', methods=['POST','GET'])
 def predict():
     rating = request.form.get('rating')
     inputs_list = request.form.getlist('skills_selected')
@@ -38,7 +38,7 @@ def predict():
             if inputs in list(input_X.columns):
                 input_X[inputs] = 1
         input_X['rating'] = float(rating)
-        salary = (int(xgb_model_min_loaded.predict(input_X[:1])), int(xgb_model_max_loaded.predict(input_X[:1])))
+        salary = (int(xgb_model_min_loaded.predict(input_X)), int(xgb_model_max_loaded.predict(input_X)))
         return salary
 
     skill_money = {}
@@ -101,38 +101,54 @@ def predict():
     single_skill_info_avg = list(single_skill_info['avg'].values)
     single_skill_info_min = list(single_skill_info['min'].values)
     single_skill_info_max2 = list(single_skill_info['max'].values)
-    single_skill_info_ratio = list(single_skill_info['Ratio'].values)
-    single_skill_info_avg_ratio = np.array(single_skill_info[['avg','Ratio','name',]]).tolist()
-    skill_info_avg_ratio = np.array(skill_info[['avg','Ratio','name',]]).tolist()
+    single_skill_info_importance = list(single_skill_info['importance'].values)
+    single_skill_info_avg_importance = np.array(single_skill_info[['avg','importance','name',]]).tolist()
+    skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
 
     data_average_min = 57498
     data_average_max = 91356
 
-    hist_x = [ 30000,  33860,  37720,  41580,  45440,  49300,  53160,
-                     57020,  60880,  64740,  68600,  72460,  76320,  80180,
-                     84040,  87900,  91760,  95620,  99480, 103340, 107200,
-                    111060, 114920, 118780, 122640, 126500, 130360, 134220,
-                    138080, 141940, 145800, 149660, 153520, 157380, 161240,
-                    165100, 168960, 172820, 176680, 180540, 184400, 188260,
-                    192120, 195980, 199840, 203700, 207560, 211420, 215280,
-                    219140, 223000]
-    hist_min = [ 3, 17, 41, 46, 72, 78, 49, 36, 28, 28, 14, 21,  5,
-                      9,  6,  6,  5,  4,  3,  2,  3,  0,  3,  2,  0,  1,
-                      2,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,
-                      0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]
-    hist_max = [ 0,  0,  0,  0,  0,  2, 11,  8, 18, 28, 31, 38, 51,
-                     42, 40, 26, 35, 26, 16, 18, 15,  9, 16, 12,  5,  4,
-                      7,  3,  1,  3,  2,  3,  3,  0,  1,  0,  2,  1,  2,
-                      1,  2,  1,  1,  0,  0,  0,  1,  0,  0,  1]
-
+    hist_x = [14000., 16270., 18540., 20810., 23080., 25350., 27620.,
+              29890., 32160., 34430., 36700., 38970., 41240., 43510.,
+              45780., 48050., 50320., 52590., 54860., 57130., 59400.,
+              61670., 63940., 66210., 68480., 70750., 73020., 75290.,
+              77560., 79830., 82100., 84370., 86640., 88910., 91180.,
+              93450., 95720., 97990., 100260., 102530., 104800., 107070.,
+              109340., 111610., 113880., 116150., 118420., 120690., 122960.,
+              125230., 127500., 129770., 132040., 134310., 136580., 138850.,
+              141120., 143390., 145660., 147930., 150200., 152470., 154740.,
+              157010., 159280., 161550., 163820., 166090., 168360., 170630.,
+              172900., 175170., 177440., 179710., 181980., 184250., 186520.,
+              188790., 191060., 193330., 195600., 197870., 200140., 202410.,
+              204680., 206950., 209220., 211490., 213760., 216030., 218300.,
+              220570., 222840., 225110., 227380., 229650., 231920., 234190.,
+              236460., 238730., 241000.]
+    hist_min = [  1.,   0.,   0.,   0.,   1.,   1.,   1.,   2.,   8.,  12.,  23.,
+          50.,  35.,  50., 115.,  68.,  73.,  52.,  62.,  41.,  39.,  21.,
+          31.,  26.,  12.,  20.,  19.,   8.,   3.,   9.,   8.,   3.,   7.,
+           5.,   2.,   3.,   2.,   4.,   2.,   4.,   1.,   2.,   0.,   1.,
+           3.,   1.,   0.,   2.,   0.,   0.,   1.,   2.,   0.,   0.,   0.,
+           0.,   0.,   0.,   0.,   0.,   0.,   0.,   1.,   1.,   0.,   0.,
+           0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,
+           0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,
+           0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,
+           0.]
+    hist_max = [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+          0.,  0.,  1.,  1.,  1., 11.,  4., 10., 11., 22., 16., 16., 44.,
+         29., 28., 42., 45., 49., 44., 34., 41., 33., 34., 38., 37., 17.,
+         10., 31., 18., 18., 16., 26.,  9.,  9.,  6.,  8.,  4., 11.,  5.,
+          7.,  3.,  6.,  5.,  4.,  2.,  4.,  0.,  4.,  1.,  4.,  0.,  0.,
+          1.,  2.,  0.,  0.,  2.,  2.,  1.,  0.,  2.,  1.,  2.,  0.,  1.,
+          0.,  1.,  0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.,
+          0.,  1.,  0.,  0.,  1.,  0.,  0.,  0.,  1.]
 
 
     return render_template('viz.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),single_skill_info_max2=format(single_skill_info_max2),
-                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),single_skill_info_ratio=format(single_skill_info_ratio),
-                           single_skill_info_avg_ratio=format(single_skill_info_avg_ratio),skill_info_avg_ratio=format(skill_info_avg_ratio),single_skill_info_names=format(single_skill_info_names),
+                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),single_skill_info_importance=format(single_skill_info_importance),
+                           single_skill_info_avg_importance=format(single_skill_info_avg_importance),skill_info_avg_importance=format(skill_info_avg_importance),single_skill_info_names=format(single_skill_info_names),
                            data_average_min=format(data_average_min),data_average_max=format(data_average_max),
                            hist_x=hist_x,hist_min=hist_min,hist_max=hist_max)
 

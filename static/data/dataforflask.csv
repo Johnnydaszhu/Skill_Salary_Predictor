@@ -1,497 +1,497 @@
 ,rating,title,location,min,max,datepost,lat,lng,skills
-0,3.5,Data Analyst,"Edison, NJ",49000,76000,26d,40.5187154,-74.4120953,"['Python', 'SQL', 'R', 'Tableau']"
-1,3.7,Data Analyst,"New York, NY",53000,86000,18d,40.7127753,-74.0059728,"['SQL', 'R', 'Spark', 'Big Data', 'AWS']"
-2,2.8,Big Data Analyst / Engineer,"New York, NY",43000,70000,11d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Hadoop', 'Tableau', 'Hive', 'SAS', 'Big Data', 'Linux']"
-3,2.7,"Data Analyst II (SQL, Tableau)","New York, NY",52000,86000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'Oracle']"
-4,2.8,Risk Data Analyst,"New York, NY",43000,70000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-5,2.8,Senior Data Analyst,"New York, NY",65000,101000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'SAS']"
-6,3.2,"Senior Manager I, Data Analyst","Hoboken, NJ",129000,182000,26d,40.7439905,-74.0323626,['R']
-7,4.6,Data Quality Analyst,"Red Bank, NJ",41000,66000,8d,40.347054299999996,-74.0643065,"['SQL', 'R']"
-8,3.2,Data Analyst,"Hackensack, NJ",51000,81000,13d,40.8859325,-74.0434736,"['SQL', 'R']"
-9,4.2,Data Operations Analyst,"New York, NY",53000,78000,14d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-10,4.5,Data Analyst,"New York, NY",60000,95000,26d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-11,3.5,Business Data Analyst,"New York, NY",48000,74000,24hr,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-12,4.0,FGP Data Analyst,"New York, NY",50000,74000,4d,40.7127753,-74.0059728,"['R', 'Tableau']"
-13,3.2,Data Governance Business Analyst,"Hoboken, NJ",55000,87000,3d,40.7439905,-74.0323626,['R']
-14,3.3,Business and Data Analyst,"Port Chester, NY",47000,77000,21d,41.0017643,-73.66568339999998,"['R', 'Tableau']"
-15,3.6,Entry Level Data Analyst (Machine Learning Engineer),"Jersey City, NJ",37000,61000,2d,40.7177545,-74.0431435,"['Python', 'SQL', 'R', 'Big Data', 'Scala', 'NoSQL']"
-16,3.1,Junior Data Analyst,"New York, NY",43000,71000,5d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-17,4.6,Data Analyst/Data Scientist (2020 Start) - Analytics - Multioffice,"New York, NY",53000,85000,12d,40.7127753,-74.0059728,"['Python', 'SQL', 'Machine Learning', 'R', 'Java', 'Tableau', 'SAS', 'Natural Language Processing']"
-18,3.6,"Data Analyst, Royalties and Accounting - Entertainment and Media Industry Opportunity","New York, NY",59000,96000,13d,40.7127753,-74.0059728,"['Python', 'SQL', 'Tableau']"
-19,3.8,"Data Analyst, Business Intelligence","New York, NY",49000,78000,17d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-20,4.0,Data Analyst,"New York, NY",51000,75000,24d,40.7127753,-74.0059728,"['R', 'SAS', 'Microsoft Office']"
-21,3.6,DATA ANALYST PATIENT EXPERIENCE,"New York, NY",51000,77000,24hr,40.7127753,-74.0059728,"['SQL', 'R']"
-22,3.7,Data Analyst Entry Level,"New York, NY",34000,56000,13d,40.7127753,-74.0059728,['R']
-23,3.9,Hotel Program Operations and Data Analyst,"Parsippany, NJ",48000,80000,6d,40.865286499999996,-74.41738769999998,['R']
-24,3.7,Data Analyst - Account Analytics,"New York, NY",44000,71000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Hadoop', 'Spark', 'Hive', 'AWS', 'Pig']"
-25,3.8,Data Analyst - NetOps,"New York, NY",58000,85000,15d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'C/C++']"
-26,4.4,"Product Analyst, Data Science","New York, NY",56000,92000,13d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'MATLAB']"
-27,3.8,Data Analyst NetOps,"New York, NY",58000,85000,13d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'C/C++']"
-28,3.5,Data Analyst,"New York, NY",58000,95000,7d,40.7127753,-74.0059728,['R']
-29,2.8,Data Analyst - Personal Shopping,"New York, NY",44000,71000,3d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-30,3.2,"Senior Manager I, Data Analyst","Hoboken, NJ",129000,182000,26d,40.7439905,-74.0323626,['R']
-31,2.8,Data Analyst - Personal Shopping,"New York, NY",44000,71000,3d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-32,3.2,Data Analyst,"Hackensack, NJ",51000,81000,13d,40.8859325,-74.0434736,"['SQL', 'R']"
-33,4.3,Data & Business Analyst,"Jersey City, NJ",53000,84000,27d,40.7177545,-74.0431435,['R']
-34,3.4,Data Reporting Analyst II,"Newark, NJ",53000,89000,19d,40.735657,-74.1723667,"['SQL', 'SAS']"
-35,3.6,DATA ANALYST PROGRAMMER,"New York, NY",45000,68000,11d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'NoSQL']"
-36,3.7,"Data & Insights Analyst, Wirecutter","New York, NY",67000,109000,6d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'Oracle']"
-37,4.1,Data Analyst,"New York, NY",40000,65000,11d,40.7127753,-74.0059728,"['SQL', 'R']"
-38,3.6,"Data Analyst, Royalties and Accounting","New York, NY",59000,96000,25d,40.7127753,-74.0059728,"['Python', 'SQL', 'Tableau']"
-39,4.3,Data Analyst,"New York, NY",46000,73000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-40,4.2,Data Modeling Analyst,"New York, NY",66000,91000,24hr,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'SAS', 'Scripting']"
-41,3.5,Data Analyst,"New York, NY",39000,63000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark', 'Tableau']"
-42,2.6,Data Analyst,"New York, NY",50000,78000,24hr,40.7127753,-74.0059728,"['SQL', 'Tableau']"
-43,3.3,Data Analyst,"New York, NY",48000,76000,7d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-44,4.5,Data Analyst,"New Hyde Park, NY",47000,76000,4d,40.735101799999995,-73.68790820000001,"['SQL', 'R']"
-45,3.8,Data Analyst,"New York, NY",54000,86000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS', 'Microsoft Office']"
-46,2.9,"Senior Data Analyst, Pre-Trial Services","Brooklyn, NY",51000,81000,15d,40.6781784,-73.94415790000001,"['SQL', 'R']"
-47,4.5,Data Analyst,"New York, NY",50000,80000,14d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'AWS', 'Data Analysis']"
-48,3.7,Data Analyst,"New York, NY",64000,101000,21d,40.7127753,-74.0059728,"['SQL', 'R']"
-49,3.8,Data Analyst,"New York, NY",49000,77000,13d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-50,4.0,Data Analyst,"New York, NY",51000,84000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-51,4.1,Data Analyst,"New York, NY",63000,97000,2d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-52,3.5,Data Analyst,"New York, NY",57000,91000,11d,40.7127753,-74.0059728,"['SQL', 'R']"
-53,2.7,Data Analyst,"New York, NY",34000,55000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-54,3.3,Data Analyst,"New York, NY",55000,88000,6d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Scala']"
-55,4.4,Business Data Analyst,"New York, NY",71000,106000,12d,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-56,2.8,Data Analyst,"New York, NY",53000,81000,25d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'SAS', 'AWS']"
-57,4.3,"Office of the CAO | Reference Data, Operations Analyst","New York, NY",68000,92000,4d,40.7127753,-74.0059728,['R']
-58,2.6,Data Analyst - NYC,"New York, NY",50000,78000,5d,40.7127753,-74.0059728,"['SQL', 'Tableau']"
-59,3.3,"Data Analyst, Technology","New York, NY",37000,57000,20d,40.7127753,-74.0059728,['R']
-60,4.1,Data Analyst,"New York, NY",73000,115000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java']"
-61,4.1,Associate Data and Research Analyst,"New York, NY",36000,56000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Microsoft Office']"
-62,4.6,Data Quality Analyst,"Red Bank, NJ",41000,66000,8d,40.347054299999996,-74.0643065,"['SQL', 'R']"
-63,3.9,Data Analyst,"New York, NY",43000,71000,15d,40.7127753,-74.0059728,['R']
-64,4.2,Data Operations Analyst,"New York, NY",53000,78000,14d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-65,4.1,Data Analyst,"New York, NY",43000,72000,17d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-66,4.0,SQL Data Analyst,"New York, NY",58000,97000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-67,4.3,Data Analyst - Search,"New York, NY",46000,73000,23d,40.7127753,-74.0059728,"['SQL', 'R']"
-68,4.8,Data Analyst,"White Plains, NY",75000,95000,4d,41.03398620000001,-73.76290970000001,"['R', 'Tableau']"
-69,4.0,Data Analyst,"New York, NY",46000,73000,1d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-70,4.3,Data Analyst,"New York, NY",52000,84000,8d,40.7127753,-74.0059728,"['SQL', 'R']"
-71,3.8,2020 Financial Research Data Analyst,"New York, NY",58000,85000,30d+,40.7127753,-74.0059728,[]
-72,3.5,Data Insights Analyst,"New York, NY",48000,79000,12d,40.7127753,-74.0059728,"['R', 'Microsoft Office']"
-73,3.9,Asset Management - Global Equities - Data Science - Analyst/Associate,"New York, NY",65000,108000,13d,40.7127753,-74.0059728,"['Python', 'R']"
-74,3.6,DATA ANALYST,"New York, NY",45000,68000,11d,40.7127753,-74.0059728,['R']
-75,4.3,"Office of the CAO | Reference Data, Technical Operations Analyst | Chicago/","New York, NY",68000,92000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-76,2.9,Data Analyst I,"Brooklyn, NY",42000,69000,28d,40.6781784,-73.94415790000001,"['R', 'Microsoft Office']"
-77,3.1,Data Analyst,"New York, NY",60000,96000,7d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark', 'Tableau']"
-78,3.5,Investigations Data Analyst,"Newark, NJ",40000,64000,24hr,40.735657,-74.1723667,['R']
-79,4.2,Data Analyst,"New York, NY",35000,57000,26d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-80,3.1,"Analyst,Data Management Quantitative Analysis","New York, NY",48000,77000,30d+,40.7127753,-74.0059728,"['Python', 'R']"
-81,3.1,Data Analyst,"New York, NY",56000,87000,21d,40.7127753,-74.0059728,"['Python', 'SQL', 'Machine Learning', 'R', 'Java', 'Tableau', 'AWS', 'Scala', 'AI', 'Microsoft Office']"
-82,3.6,Data analyst,"New York, NY",46000,77000,22d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'Oracle']"
-83,4.1,Marketing and Enrollment Data Analyst,"New York, NY",40000,65000,3d,40.7127753,-74.0059728,['R']
-84,3.7,Data Analyst / Data Engineer,"New York, NY",96000,129000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Hadoop', 'Spark', 'Hive', 'AWS']"
-85,4.0,Data Analyst,"Newark, NJ",62000,105000,7d,40.735657,-74.1723667,"['Python', 'SQL', 'R', 'Spark', 'Java', 'Tableau', 'SAS', 'AI']"
-86,4.4,Data Operations Analyst,"New York, NY",61000,92000,18d,40.7127753,-74.0059728,"['SQL', 'R']"
-87,4.2,Business/Data Analyst,"New York, NY",60000,94000,6d,40.7127753,-74.0059728,"['SQL', 'R', 'Data Analysis']"
-88,3.7,Data Analyst,"New York, NY",50000,85000,12d,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-89,4.5,Data Analyst,"New Hyde Park, NY",50000,84000,7d,40.735101799999995,-73.68790820000001,"['SQL', 'Tableau']"
-90,2.9,Data Analyst,"New York, NY",71000,111000,16d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-91,4.1,Data Analyst - ACO,"New York, NY",51000,77000,13d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'SAS']"
-92,3.8,Data Analyst,"New York, NY",53000,84000,21d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'AI']"
-93,3.0,Data Analyst,"New York, NY",54000,87000,7d,40.7127753,-74.0059728,"['SQL', 'R']"
-94,3.5,Data Analyst,"New York, NY",41000,65000,7d,40.7127753,-74.0059728,"['R', 'AI']"
-95,4.3,Mortgage Whole Loan Data & Collateral Analyst,"New York, NY",44000,66000,6d,40.7127753,-74.0059728,"['SQL', 'R']"
-96,4.5,Data Analyst,"New York, NY",60000,95000,26d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-97,3.4,Data Analyst,"New York, NY",65000,101000,5d,40.7127753,-74.0059728,['R']
-98,3.4,Data Quality Analyst,"New York, NY",50000,79000,5d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Oracle']"
-99,4.4,Data Research and Acceleration Analyst,"New York, NY",108000,175000,6d,40.7127753,-74.0059728,"['Python', 'SQL']"
-100,3.3,"Senior Analyst, Customer Analytics & Data Science","New York, NY",68000,110000,6d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'SAS', 'AWS']"
-101,3.5,Data Quality Analyst,"Weehawken, NJ",49000,77000,3d,40.7663711,-74.02537149999998,"['SQL', 'R']"
-102,4.3,Senior Data Analyst - New York City,"New York, NY",87000,132000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-103,3.7,Data Analyst,"New York, NY",49000,79000,14d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'AWS', 'Data Analysis']"
-104,3.1,Data Analyst,"New York, NY",48000,80000,24hr,40.7127753,-74.0059728,"['R', 'Tableau']"
-105,4.2,Data Analyst,"New York, NY",62000,105000,6d,40.7127753,-74.0059728,"['SQL', 'R', 'Data Analysis']"
-106,3.8,Business/Data Analyst,"New York, NY",48000,74000,6d,40.7127753,-74.0059728,['R']
-107,4.0,Healthcare Data Analyst,"New York, NY",49000,78000,19d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'SAS']"
-108,2.5,Associate Data Reporting Analyst,"New York, NY",55000,92000,18d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'Oracle', 'Linux', 'Microsoft Office']"
-109,3.8,Data Scientist/ Business Analyst,"Stamford, CT",103000,138000,22d,41.0534302,-73.53873409999999,"['Python', 'SQL', 'Machine Learning', 'R', 'AI', 'Azure']"
-110,3.5,IT Technical Business Analyst - Data Integrations,"New York, NY",62000,100000,4d,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-111,4.2,Data Analyst,"Jersey City, NJ",59000,95000,27d,40.7177545,-74.0431435,"['R', 'Tableau']"
-112,3.5,Data Analyst - Analytics/SQL,"New York, NY",48000,79000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-113,2.7,"Data Analyst, Special Investigations Unit","New York, NY",47000,76000,2d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-114,3.0,BI Data Analyst,"New York, NY",57000,95000,7d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau']"
-115,3.6,"Data Analyst, Customer Success","New York, NY",44000,69000,8d,40.7127753,-74.0059728,"['SQL', 'R']"
-116,3.5,Quantitative Analyst/Data Scientist,"New York, NY",121000,194000,6d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-117,3.4,"Data Analyst I, Department of OBGYN","New York, NY",45000,66000,7d,40.7127753,-74.0059728,['R']
-118,3.6,Data Analyst,"Jersey City, NJ",51000,86000,12d,40.7177545,-74.0431435,['R']
-119,4.2,Data Analyst/Engineer,"New York, NY",70000,113000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Linux']"
-120,3.4,"Data Analyst II, Environmental Medicine and Public Health","New York, NY",54000,79000,5d,40.7127753,-74.0059728,"['SQL', 'R', 'Java']"
-121,2.9,Data Analyst,"Brooklyn, NY",47000,70000,25d,40.6781784,-73.94415790000001,"['R', 'AI']"
-122,3.5,Data Analyst,"New York, NY",51000,83000,25d,40.7127753,-74.0059728,"['SQL', 'R', 'Hadoop', 'Java', 'Tableau', 'SAS', 'Microsoft Office']"
-123,3.1,Data Analyst,"New York, NY",45000,75000,24d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-124,3.4,"Data Analyst I, Department of Psychiatry","New York, NY",45000,66000,13d,40.7127753,-74.0059728,['R']
-125,4.3,Data Analyst,"New York, NY",49000,82000,22d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-126,4.0,FGP Data Analyst,"New York, NY",50000,74000,4d,40.7127753,-74.0059728,"['R', 'Tableau']"
-127,3.5,Business Data Analyst,"New York, NY",48000,74000,24hr,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-128,2.7,Data Analyst,"New York, NY",44000,73000,14d,40.7127753,-74.0059728,"['Python', 'R']"
-129,4.1,Senior Financial Analyst/Data Analyst - Decision Support,"New York, NY",65000,93000,5d,40.7127753,-74.0059728,"['SQL', 'R']"
-130,3.8,Data Analyst,"Brooklyn, NY",47000,77000,14d,40.6781784,-73.94415790000001,"['Python', 'SQL', 'R', 'Tableau']"
-131,3.2,Data Analyst,"Jersey City, NJ",38000,64000,26d,40.7177545,-74.0431435,"['SQL', 'R', 'Tableau']"
-132,3.5,"Data Analyst, Harlem Neighborhood Health Action Center","New York, NY",50000,83000,7d,40.7127753,-74.0059728,"['R', 'Tableau', 'SAS', 'Microsoft Office']"
-133,3.6,"Data Analyst, Autism Center & Center for the Developing Brain","New York, NY",49000,74000,7d,40.7127753,-74.0059728,"['Python', 'R']"
-134,4.2,Data Analyst,"New York, NY",39000,64000,14d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'Data Analysis']"
-135,3.9,Data Analyst,"New York, NY",39000,66000,13d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'SAS']"
-136,3.5,Data Analyst,"New York, NY",46000,72000,28d,40.7127753,-74.0059728,['R']
-137,3.0,Data Analyst,"Jersey City, NJ",48000,79000,5d,40.7177545,-74.0431435,"['SQL', 'R', 'Tableau']"
-138,3.5,Data Analyst,"New York, NY",41000,70000,13d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Oracle']"
-139,3.2,Data Analyst,"New York, NY",37000,62000,24hr,40.7127753,-74.0059728,"['R', 'SAS', 'AI']"
-140,3.8,Data Quality Analyst,"New York, NY",53000,84000,12d,40.7127753,-74.0059728,['R']
-141,3.6,Data Quality Analyst,"New York, NY",53000,84000,5d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Oracle']"
-142,4.4,"Data Analyst - News Partnerships, Media Partnerships","New York, NY",73000,119000,1d,40.7127753,-74.0059728,"['SQL', 'R', 'Hadoop', 'Tableau', 'Hive']"
-143,3.8,"Specialist Analyst Data Scientist - Technology, Consulting - Insight Studio - UG - Northwestern University (Summer/Fall)","New York, NY",132000,185000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-144,2.9,Senior Data Analyst,"New York, NY",74000,118000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-145,2.7,Venture Capital Analyst - Data Scientist,"New York, NY",81000,120000,8d,40.7127753,-74.0059728,['R']
-146,3.7,Senior Data Analyst,"New York, NY",65000,100000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Hadoop', 'Tableau', 'SAS']"
-147,3.4,Market Data Analyst,"New York, NY",64000,100000,26d,40.7127753,-74.0059728,['R']
-148,4.1,Data Research Analyst,"New York, NY",37000,57000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Microsoft Office']"
-149,3.4,Data Analyst,"New York, NY",43000,69000,5d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark', 'Tableau']"
-150,3.8,Financial Reporting/Data Analyst -Investment Bank,"Jersey City, NJ",47000,79000,12d,40.7177545,-74.0431435,['R']
-151,2.9,Data Analyst,"Brooklyn, NY",35000,57000,11d,40.6781784,-73.94415790000001,"['Python', 'SQL', 'R', 'Java', 'SAS']"
-152,3.6,"Analyst, Data Governance","New York, NY",44000,78000,30d+,40.7127753,-74.0059728,['R']
-153,4.1,Data Support Analyst,"New York, NY",67000,103000,18d,40.7127753,-74.0059728,['R']
-154,4.3,Winter 2020 Co-op - Data and Automation Analyst,"New York, NY",62000,82000,24hr,40.7127753,-74.0059728,['R']
-155,5.0,Healthcare Data Analyst,"New York, NY",45000,75000,18d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-156,3.1,Data Analyst,"New York, NY",46000,73000,12d,40.7127753,-74.0059728,['R']
-157,3.0,BA/Data Analyst,"Jersey City, NJ",50000,80000,3d,40.7177545,-74.0431435,"['R', 'AWS', 'Data Analysis']"
-158,4.6,Data Analyst/Data Scientist (2020 Start) - Analytics - Multioffice,"New York, NY",53000,85000,12d,40.7127753,-74.0059728,"['Python', 'SQL', 'Machine Learning', 'R', 'Java', 'Tableau', 'SAS', 'Natural Language Processing']"
-159,4.3,Senior Data Analyst - Data Infrastructure,"New York, NY",87000,132000,13d,40.7127753,-74.0059728,"['SQL', 'Tableau']"
-160,3.2,Data Governance Business Analyst,"Hoboken, NJ",55000,87000,3d,40.7439905,-74.0323626,['R']
-161,3.3,New York - Junior Data / Business Intelligence Analyst New York,"New York, NY",36000,51000,4d,40.7127753,-74.0059728,['Data Analysis']
-162,3.9,Data Analyst,"New York, NY",43000,70000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-163,3.4,Data Analyst I- MSH Physcian Access Services - FT- Days,"New York, NY",45000,66000,24hr,40.7127753,-74.0059728,['R']
-164,3.0,Senior Data Analyst,"New York, NY",63000,98000,1d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-165,3.4,Data Analyst I - Geriatrics and Palliative Care,"New York, NY",41000,60000,21d,40.7127753,-74.0059728,['R']
-166,4.2,Data Analyst - Analytics/SQL,"New York, NY",46000,79000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-167,3.0,Data Analyst II or III (Structured Finance),"New York, NY",46000,74000,10d,40.7127753,-74.0059728,['R']
-168,3.3,Data Quality Analyst,"New York, NY",59000,89000,1d,40.7127753,-74.0059728,"['SQL', 'R', 'Microsoft Office']"
-169,4.0,Sr Data Analyst- Population Health,"New York, NY",62000,90000,11d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-170,2.7,Data Scientist - Digital Analyst,"Secaucus, NJ",101000,146000,13d,40.7895453,-74.05652979999998,"['Python', 'SQL', 'R', 'SAS']"
-171,2.9,Master Data Analyst,"New York, NY",49000,79000,21d,40.7127753,-74.0059728,['R']
-172,3.2,Data Analyst,"Lake Success, NY",41000,63000,26d,40.7698453,-73.70904279999998,"['R', 'SAS']"
-173,3.5,Data Analyst,"Little Ferry, NJ",36000,57000,13d,40.8528777,-74.0420848,"['SQL', 'R', 'Java']"
-174,4.0,Data Analyst - Analytics/SQL,"New York, NY",47000,76000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-175,4.0,Data Analyst,"Piscataway, NJ",52000,88000,25d,40.554887,-74.4642861,"['Python', 'SQL', 'R', 'Java', 'Oracle']"
-176,3.4,Data Analyst,"Whitehouse Station, NJ",67000,106000,21d,40.6155663,-74.7702576,"['SQL', 'R']"
-177,3.5,Data Analyst (Home-based) - Eastern Timezone - XWA,"New York, NY",43000,73000,17d,40.7127753,-74.0059728,"['R', 'Data Analysis']"
-178,4.0,ICBU Senior Data Analyst Alibaba.com,"New York, NY",83000,126000,3d,40.7127753,-74.0059728,['R']
-179,4.9,Junior/Mid-level Data Analyst with AML,"New York, NY",36000,59000,24hr,40.7127753,-74.0059728,[]
-180,4.7,Data Analyst,"Piscataway, NJ",39000,65000,8d,40.554887,-74.4642861,"['SQL', 'R']"
-181,3.4,Data Analyst,"Piscataway, NJ",38000,62000,4d,40.554887,-74.4642861,"['R', 'Tableau', 'Oracle', 'Microsoft Office']"
-182,4.4,Senior Data Analyst,"New York, NY",66000,105000,24hr,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-183,3.1,Data Analyst,"New York, NY",50000,82000,18d,40.7127753,-74.0059728,"['SQL', 'R']"
-184,2.9,Data Governance Analyst,"New York, NY",59000,95000,30d+,40.7127753,-74.0059728,"['Python', 'R', 'Tableau']"
-185,3.7,Data Modeler/analyst,"New York, NY",84000,113000,10d,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle']"
-186,4.1,"Senior Data Operations Analyst, Data Analytics","New York, NY",68000,98000,15d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau']"
-187,3.2,Data Governance Technical Analyst,"Jersey City, NJ",60000,102000,1d,40.7177545,-74.0431435,"['SQL', 'R', 'Big Data']"
-188,2.9,Business Data Analyst w/ SQL,"New York, NY",74000,111000,24hr,40.7127753,-74.0059728,"['SQL', 'R']"
-189,3.9,Senior Compliance Data Analyst,"New York, NY",75000,116000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-190,3.3,Business and Data Analyst,"Port Chester, NY",47000,77000,21d,41.0017643,-73.66568339999998,"['R', 'Tableau']"
-191,3.8,"Data Analyst, Business Intelligence","New York, NY",49000,78000,17d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-192,3.8,Senior Data Analyst,"New York, NY",54000,91000,7d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'NoSQL']"
-193,1.0,Tech Business/Data Analyst,"New York, NY",44000,67000,21d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java']"
-194,3.1,Data Analyst (Marketing Analytics),"New York, NY",45000,76000,5d,40.7127753,-74.0059728,"['SQL', 'R']"
-195,3.2,Data Analyst,"Roslyn, NY",65000,96000,10d,40.7998227,-73.6509622,['R']
-196,2.7,Data Governance Analyst Technical Steward,"New York, NY",75000,107000,2d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'Data Warehouse']"
-197,2.9,Data Analyst,"Stamford, CT",36000,59000,5d,41.0534302,-73.53873409999999,"['R', 'Microsoft Office']"
-198,2.5,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",50000,80000,20d,40.7127753,-74.0059728,['R']
-199,3.6,Data Analyst,"Hauppauge, NY",50000,84000,18d,40.8256536,-73.2026138,"['Python', 'SQL', 'R', 'Tableau', 'Big Data', 'Oracle', 'Data Analysis', 'Azure']"
-200,3.4,"Senior Data Operations Analyst, Data Analytics","New York, NY",50000,73000,15d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau']"
-201,3.7,"NGS Data Analyst, Regeneron Genetics Center","Tarrytown, NY",59000,96000,25d,41.076207700000005,-73.85874609999998,"['Python', 'R', 'AWS']"
-202,3.1,"Data Analyst II, Environmental Medicine and Public Health","New York, NY",54000,80000,3d,40.7127753,-74.0059728,"['SQL', 'R', 'Java']"
-203,3.8,Sr. Business Intelligence Engineer / Data Analyst,"New York, NY",104000,143000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'AWS']"
-204,3.5,Data Lineage Analyst - Data Governance,"New York, NY",83000,115000,7d,40.7127753,-74.0059728,"['SQL', 'R']"
-205,3.6,QlikSense / Data Analyst,"Jersey City, NJ",51000,86000,30d+,40.7177545,-74.0431435,"['SQL', 'R']"
-206,3.3,Data Mapper/ Data Analyst,"New York, NY",74000,120000,30d+,40.7127753,-74.0059728,"['R', 'Data Analysis']"
-207,2.7,Data Governance Analyst,"New York, NY",54000,85000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Data Warehouse']"
-208,3.6,Sure shot: Data Analyst with SQL/PLSQL/BI/Datawarehousing,"New York, NY",51000,86000,30d+,40.7127753,-74.0059728,"['SQL', 'R']"
-209,3.5,Sr Data Analyst,"New York, NY",69000,113000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark', 'Java', 'Tableau', 'Big Data', 'AWS', 'Scala', 'NoSQL', 'Oracle', 'Azure']"
-210,4.9,AML Data Analyst,"New York, NY",45000,75000,18d,40.7127753,-74.0059728,['SQL']
-211,4.3,Data Analyst,"New York, NY",39000,65000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Data Warehouse']"
-212,3.2,Data Analyst,"Princeton, NJ",50000,78000,13d,40.3572976,-74.66722259999999,"['Python', 'SQL', 'R', 'Tableau']"
-213,3.0,Data Quality Analyst,"New York, NY",48000,73000,1d,40.7127753,-74.0059728,"['SQL', 'R', 'Microsoft Office']"
-214,3.6,Program Data Analyst,"New York, NY",38000,65000,5d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-215,3.6,Financial Data Analyst (Healthcare),"New York, NY",45000,72000,4d,40.7127753,-74.0059728,['R']
-216,3.1,"Analyst, Data Architecture","New York, NY",102000,145000,3d,40.7127753,-74.0059728,"['R', 'Spark']"
-217,4.0,Data Analyst,"New York, NY",47000,76000,30d+,40.7127753,-74.0059728,"['SQL', 'Java', 'SAS']"
-218,3.1,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",57000,92000,30d+,40.7127753,-74.0059728,['R']
-219,4.8,Data Analyst-Junior Profiles also works-Only NY/NJ Candidates Please on w2 Only,"Jersey City, NJ",41000,63000,10d,40.7177545,-74.0431435,"['Python', 'SQL', 'R', 'Tableau']"
-220,4.0,Senior Data Analyst,"New York, NY",80000,129000,27d,40.7127753,-74.0059728,"['SQL', 'R', 'Data Analysis']"
-221,4.3,"Office of the CAO | Reference Data, Project Manager/Business Analyst","New York, NY",122000,164000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-222,4.0,Data Analyst,"New York, NY",51000,75000,24d,40.7127753,-74.0059728,"['R', 'SAS', 'Microsoft Office']"
-223,3.3,Data Analyst - Compu-Vision Consulting Inc.,"New York, NY",73000,119000,30d+,40.7127753,-74.0059728,['R']
-224,3.6,DATA ANALYST PATIENT EXPERIENCE,"New York, NY",51000,77000,24hr,40.7127753,-74.0059728,"['SQL', 'R']"
-225,4.2,Compliance Data Analyst,"New York, NY",52000,77000,4d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-226,3.6,Data Analyst,"Basking Ridge, NJ",54000,84000,6d,40.7066174,-74.54932840000001,"['SQL', 'R']"
-227,3.3,Salesforce Data Analyst,"New York, NY",53000,84000,2d,40.7127753,-74.0059728,"['R', 'Microsoft Office']"
-228,3.5,Data Analyst,"Newark, NJ",53000,90000,30d+,40.735657,-74.1723667,"['Python', 'SQL', 'R', 'Hadoop', 'Spark', 'Java', 'Tableau', 'Hive']"
-229,2.7,"Data Analyst, CIJ","New York, NY",38000,64000,21d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'AWS']"
-230,3.1,"Data Analyst I, Department of Psychiatry","New York, NY",38000,58000,30d+,40.7127753,-74.0059728,['R']
-231,3.6,"Senior/Staff Data Scientist, Analyst","New York, NY",156000,209000,24hr,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-232,3.7,Senior Data Analyst,"New York, NY",56000,87000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Hadoop', 'Spark', 'Hive', 'AWS', 'Pig']"
-233,3.6,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",81000,133000,6d,40.7177545,-74.0431435,"['SQL', 'R']"
-234,4.7,Data Analyst - Empower Professionals,"Jersey City, NJ",50000,85000,30d+,40.7177545,-74.0431435,"['R', 'Data Analysis']"
-235,3.9,Fraud Data Analyst,"New York, NY",42000,70000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-236,4.6,Data Analyst,"Tarrytown, NY",45000,76000,3d,41.076207700000005,-73.85874609999998,"['SQL', 'R', 'SAS', 'Oracle']"
-237,3.4,2020 Data Systems Analyst Inernship,"Freehold, NJ",53000,98000,24d,40.21367539999999,-74.3000878,['Tableau']
-238,4.2,"Data Analyst, Go-Live","New York, NY",40000,67000,8d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-239,3.8,Data Analyst,"Fort Lee, NJ",46000,74000,7d,40.8509333,-73.9701381,"['SQL', 'R', 'Tableau', 'Oracle']"
-240,3.4,Data Science Analyst I Computational Biology - Genetics,"New York, NY",61000,95000,5d,40.7127753,-74.0059728,"['Python', 'R', 'SAS', 'Scala']"
-241,3.5,Quantitative Analyst/Data Scientist,"New York, NY",96000,155000,6d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-242,3.9,Data Analyst,"Wharton, NJ",59000,99000,13d,40.8931546,-74.58182540000001,"['R', 'MATLAB', 'Microsoft Office']"
-243,3.5,"Senior Data Analyst M/WBE, Enterprise Data Services","New York, NY",73000,120000,12d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-244,3.6,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",46000,74000,26d,40.7127753,-74.0059728,['R']
-245,3.4,"Data & Reporting Business Analyst - Kenilworth, NJ","New York, NY",56000,92000,4d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-246,2.7,Data Analyst,"Florham Park, NJ",51000,86000,7d,40.787878000000006,-74.38820720000001,"['SQL', 'R']"
-247,3.0,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",44000,70000,26d,40.7127753,-74.0059728,['R']
-248,3.1,"Data Analyst (Americas Transformation & Strategy Department) in New York, New York | Careers at New York","New York, NY",45000,71000,30d+,40.7127753,-74.0059728,['R']
-249,3.8,"Data Analyst with Tableau (CTH ROLE, direct onsite , Only Locals)","New Hyde Park, NY",36000,61000,11d,40.735101799999995,-73.68790820000001,['Tableau']
-250,3.8,Data Analyst 3,"New York, NY",52000,87000,20d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'Oracle']"
-251,4.0,"Senior Associate, Data Management Reporting Analyst, Central Services","Peapack, NJ",75000,112000,15d,40.7151691,-74.65760909999999,"['SQL', 'R', 'Java', 'SAS', 'Oracle', 'Microsoft Office']"
-252,3.9,"Marketing Data Management Analyst, Corporate & Investment Bank","New York, NY",48000,77000,5d,40.7127753,-74.0059728,"['R', 'Tableau']"
-253,3.4,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",99000,152000,6d,40.7177545,-74.0431435,"['SQL', 'R']"
-254,3.9,Hotel Program Operations and Data Analyst,"Parsippany, NJ",48000,80000,6d,40.865286499999996,-74.41738769999998,['R']
-255,3.3,Data Analyst - Compu-Vision Consulting Inc.,"New York, NY",73000,119000,30d+,40.7127753,-74.0059728,['R']
-256,3.5,Data Analyst,"New York, NY",58000,95000,7d,40.7127753,-74.0059728,['R']
-257,4.2,Compliance Data Analyst,"New York, NY",52000,77000,4d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-258,3.7,Clinical Data Analyst,"Edison, NJ",55000,83000,5d,40.5187154,-74.4120953,['R']
-259,3.6,Data Analyst,"Basking Ridge, NJ",54000,84000,6d,40.7066174,-74.54932840000001,"['SQL', 'R']"
-260,3.5,Data Analyst,"Newark, NJ",53000,90000,30d+,40.735657,-74.1723667,"['Python', 'SQL', 'R', 'Hadoop', 'Spark', 'Java', 'Tableau', 'Hive']"
-261,2.7,"Data Analyst, CIJ","New York, NY",38000,64000,21d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'AWS']"
-262,3.3,Salesforce Data Analyst,"New York, NY",53000,84000,2d,40.7127753,-74.0059728,"['R', 'Microsoft Office']"
-263,3.1,"Data Analyst I, Department of Psychiatry","New York, NY",38000,58000,30d+,40.7127753,-74.0059728,['R']
-264,4.3,Senior Data Analyst,"New York, NY",87000,132000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-265,3.6,"Senior/Staff Data Scientist, Analyst","New York, NY",156000,209000,24hr,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-266,3.4,Audience Data Analyst,"New York, NY",47000,75000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'Linux']"
-267,3.7,"Data Analyst, Data & Analytics (Advanced Analytics) (Manager) (Multiple Positions)","Iselin, NJ",89000,123000,14d,40.5753817,-74.3223703,"['Python', 'SQL', 'R', 'Tableau', 'SAS', 'TensorFlow']"
-268,3.0,Data Analyst II or III,"New York, NY",46000,74000,20d,40.7127753,-74.0059728,['R']
-269,3.7,Senior Data Analyst,"New York, NY",56000,87000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Hadoop', 'Spark', 'Hive', 'AWS', 'Pig']"
-270,3.6,"Data Analyst, Accessories Supply Planning","Atlanta, GA",46000,74000,12d,33.7489954,-84.3879824,"['R', 'Tableau']"
-271,3.4,Data Analyst II - Genetics,"New York, NY",59000,87000,3d,40.7127753,-74.0059728,"['R', 'Data Warehouse']"
-272,4.7,Data Analyst - Empower Professionals,"Jersey City, NJ",50000,85000,30d+,40.7177545,-74.0431435,"['R', 'Data Analysis']"
-273,3.6,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",81000,133000,6d,40.7177545,-74.0431435,"['SQL', 'R']"
-274,4.6,Data Analyst,"Tarrytown, NY",45000,76000,3d,41.076207700000005,-73.85874609999998,"['SQL', 'R', 'SAS', 'Oracle']"
-275,3.9,Fraud Data Analyst,"New York, NY",42000,70000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-276,3.4,2020 Data Systems Analyst Inernship,"Freehold, NJ",53000,98000,24d,40.21367539999999,-74.3000878,['Tableau']
-277,4.2,"Data Analyst, Go-Live","New York, NY",40000,67000,8d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-278,3.4,Data Science Analyst I Computational Biology - Genetics,"New York, NY",61000,95000,5d,40.7127753,-74.0059728,"['Python', 'R', 'SAS', 'Scala']"
-279,2.1,Lead Data Analyst,"New York, NY",81000,120000,3d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'Oracle']"
-280,3.7,Marketing Communications Data Analyst,"New York, NY",69000,115000,21d,40.7127753,-74.0059728,"['R', 'Tableau']"
-281,3.5,Quantitative Analyst/Data Scientist,"New York, NY",96000,155000,6d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-282,3.8,Data Analyst,"Fort Lee, NJ",46000,74000,7d,40.8509333,-73.9701381,"['SQL', 'R', 'Tableau', 'Oracle']"
-283,3.5,"Senior Data Analyst M/WBE, Enterprise Data Services","New York, NY",73000,120000,12d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-284,3.1,"Data Analyst I, Department of OBGYN","New York, NY",41000,60000,30d+,40.7127753,-74.0059728,['R']
-285,3.6,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",46000,74000,26d,40.7127753,-74.0059728,['R']
-286,3.4,Data Reporting Analyst II,"Newark, NJ",53000,89000,19d,40.735657,-74.1723667,"['SQL', 'SAS']"
-287,3.5,Data Analyst (Data Quality & Management),"New York, NY",43000,71000,4d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'SAS', 'Oracle', 'Azure']"
-288,3.6,DATA ANALYST PROGRAMMER,"New York, NY",45000,68000,11d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'NoSQL']"
-289,3.5,"Business/Reporting Analyst, Office of Data Management","New York, NY",57000,95000,24hr,40.7127753,-74.0059728,"['SQL', 'R', 'Microsoft Office']"
-290,3.9,Data Analyst,"Wharton, NJ",59000,99000,13d,40.8931546,-74.58182540000001,"['R', 'MATLAB', 'Microsoft Office']"
-291,2.7,Data Analyst,"Florham Park, NJ",51000,86000,7d,40.787878000000006,-74.38820720000001,"['SQL', 'R']"
-292,3.6,PAYROLL DATA ANALYST,"New York, NY",45000,68000,15d,40.7127753,-74.0059728,"['R', 'Microsoft Office']"
-293,3.4,"Data & Reporting Business Analyst - Kenilworth, NJ","New York, NY",56000,92000,4d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau']"
-294,3.8,"Data Analyst with Tableau (CTH ROLE, direct onsite , Only Locals)","New Hyde Park, NY",36000,61000,11d,40.735101799999995,-73.68790820000001,['Tableau']
-295,2.8,Senior Data Analyst,"New York, NY",95000,135000,6d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'Data Warehouse']"
-296,3.2,Data Platforms Senior Systems Business Analyst,"Jersey City, NJ",78000,122000,5d,40.7177545,-74.0431435,"['SQL', 'R', 'Data Warehouse']"
-297,3.0,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",44000,70000,26d,40.7127753,-74.0059728,['R']
-298,3.2,Data Governance Business Analyst,"Hoboken, NJ",52000,81000,4d,40.7439905,-74.0323626,['R']
-299,3.5,Fraud Data Analyst,"New York, NY",41000,68000,12d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-300,4.0,"Senior Associate, Data Management Reporting Analyst, Central Services","Peapack, NJ",75000,112000,15d,40.7151691,-74.65760909999999,"['SQL', 'R', 'Java', 'SAS', 'Oracle', 'Microsoft Office']"
-301,3.1,Data Analyst - Pharma LifeSciences,"Stamford, CT",56000,89000,8d,41.0534302,-73.53873409999999,"['Python', 'SQL', 'R', 'SAS', 'AWS', 'Oracle']"
-302,3.1,Principal Data Analyst-Data Architect,"Florham Park, NJ",158000,223000,3d,40.787878000000006,-74.38820720000001,"['R', 'Hadoop', 'Oracle']"
-303,2.7,Senior Data Analyst,"New York, NY",68000,109000,20d,40.7127753,-74.0059728,"['R', 'SAS']"
-304,3.8,Data Analyst 4,"New York, NY",63000,104000,18d,40.7127753,-74.0059728,"['R', 'Tableau', 'Oracle']"
-305,1.0,Data Analyst-BA,"New York, NY",40000,67000,5d,40.7127753,-74.0059728,"['SQL', 'Oracle']"
-306,3.4,Senior Data Analyst,"New York, NY",66000,102000,21d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-307,4.3,Compensation and Data Analyst (Human Resources),"New York, NY",59000,85000,20d,40.7127753,-74.0059728,['R']
-308,3.8,Data Analyst 3,"New York, NY",52000,87000,20d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'Oracle']"
-309,3.1,"Data Analyst (Americas Transformation & Strategy Department) in New York, New York | Careers at New York","New York, NY",45000,71000,30d+,40.7127753,-74.0059728,['R']
-310,2.1,Senior Data Analyst,"New York, NY",88000,126000,11d,40.7127753,-74.0059728,"['R', 'SAS']"
-311,3.9,"Marketing Data Management Analyst, Corporate & Investment Bank","New York, NY",48000,77000,5d,40.7127753,-74.0059728,"['R', 'Tableau']"
-312,4.6,Data Analyst and Data Scientist,"Summit, NJ",53000,85000,25d,40.714637599999996,-74.3646122,"['Python', 'SQL', 'Machine Learning', 'R', 'Java', 'Tableau', 'SAS', 'Natural Language Processing']"
-313,3.4,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",99000,152000,6d,40.7177545,-74.0431435,"['SQL', 'R']"
-314,3.4,Senior Reporting & Data Analyst,"Whitehouse Station, NJ",103000,155000,13d,40.6155663,-74.7702576,"['SQL', 'R', 'SAS']"
-315,4.2,Senior Forensic Data Analyst,"New York, NY",55000,86000,14d,40.7127753,-74.0059728,"['R', 'Tableau']"
-316,2.5,Data Analyst,"Roslyn, NY",58000,86000,25d,40.7998227,-73.6509622,['R']
-317,2.2,Data & Interface Analyst,"Staten Island, NY",44000,70000,8d,40.579531700000004,-74.1502007,"['SQL', 'R', 'Oracle']"
-318,4.3,Mortgage Whole Loan Data & Collateral Analyst,"New York, NY",44000,66000,6d,40.7127753,-74.0059728,"['SQL', 'R']"
-319,4.3,"Office of the CAO | Reference Data, Operations Analyst","New York, NY",68000,92000,4d,40.7127753,-74.0059728,['R']
-320,4.0,Regulatory Data & Risk Analyst,"White Plains, NY",51000,78000,4d,41.03398620000001,-73.76290970000001,"['SQL', 'R', 'Tableau', 'SAS']"
-321,3.1,"Analyst, Data Architecture","New York, NY",73000,107000,17d,40.7127753,-74.0059728,"['R', 'Spark', 'Microsoft Office']"
-322,3.6,Orion - Media Data Analyst,"New York, NY",38000,60000,5d,40.7127753,-74.0059728,"['Python', 'R', 'Java', 'Tableau']"
-323,3.1,Data Privacy Analyst,"Matawan, NJ",65000,83000,17d,40.41482999999999,-74.2295891,['R']
-324,3.6,"Investment Banking, Summer Analyst: Data Science Analyst, M&A Strategic Shareholder Advisory","New York, NY",98000,122000,3d,40.7127753,-74.0059728,[]
-325,2.1,Data Governance Analyst Technical Steward,"New York, NY",85000,128000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'Data Warehouse']"
-326,3.8,Central Data Science Solutions (CDSS) Business Analyst or Principal Business Analyst,"Ridgefield, NJ",67000,109000,12d,40.8342669,-74.00875049999998,"['R', 'SAS', 'Oracle']"
-327,3.4,Data & Reporting Business Analyst - Kenilworth,"Hoboken, NJ",56000,92000,4d,40.7439905,-74.0323626,"['SQL', 'R', 'Tableau']"
-328,3.3,Data Analyst/Report Writer,"Flemington, NJ",50000,77000,3d,40.5123258,-74.85933179999998,"['Python', 'SQL', 'R']"
-329,3.8,Senior Data Analyst,"New York, NY",48000,79000,30d+,40.7127753,-74.0059728,['AI']
-330,3.4,Business Analyst/Data Analyst,"Parsippany, NJ",51000,87000,8d,40.865286499999996,-74.41738769999998,['R']
-331,4.0,Data Analyst / IT Data and Business Intelligence,"Jersey City, NJ",62000,105000,20d,40.7177545,-74.0431435,"['SQL', 'R', 'Data Analysis']"
-332,4.2,Data Analyst - II,"New York, NY",54000,83000,3d,40.7127753,-74.0059728,['R']
-333,3.8,Data Analyst,"Port Washington, NY",38000,61000,19d,40.825656099999996,-73.69818579999998,"['SQL', 'R', 'Java', 'SAS', 'NoSQL', 'Azure']"
-334,3.7,Senior Data Analyst,"New York, NY",84000,133000,8d,40.7127753,-74.0059728,['R']
-335,2.1,Data Governance Analyst,"New York, NY",53000,84000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Data Warehouse']"
-336,3.8,"Sr. Data Analyst, Data Analytics & Audience Science","New York, NY",84000,134000,10d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-337,3.8,Configuration/Data Analyst,"Uniondale, NY",65000,103000,6d,40.700379299999994,-73.5929056,['R']
-338,3.4,"Senior Business Analyst, Data Management & Business Intelligence Systems","New York, NY",61000,91000,20d,40.7127753,-74.0059728,"['R', 'Oracle', 'AI']"
-339,3.6,Senior Data Analyst,"New York, NY",58000,91000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-340,3.7,Fraud Data Analyst,"New York, NY",40000,62000,11d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-341,4.7,Lead Data Analyst,"New York, NY",50000,84000,19d,40.7127753,-74.0059728,"['R', 'Big Data']"
-342,3.5,Senior Business Data Analyst,"Weehawken, NJ",70000,106000,14d,40.7663711,-74.02537149999998,"['Python', 'SQL', 'R', 'Spark', 'Tableau', 'Big Data']"
-343,3.7,"Data Analyst, CHOICE","New York, NY",48000,72000,2d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'SAS']"
-344,4.1,Business and Data Analyst,"Stamford, CT",43000,70000,7d,41.0534302,-73.53873409999999,['R']
-345,3.6,Technical Data Analyst - Diverse Lynx,"Jersey City, NJ",57000,97000,30d+,40.7177545,-74.0431435,"['SQL', 'R', 'AWS', 'Data Analysis']"
-346,3.5,Senior Data Business Analyst,"New York, NY",77000,117000,27d,40.7127753,-74.0059728,['R']
-347,3.7,"Senior Data Analyst, Data Instrumentation","New York, NY",85000,135000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark']"
-348,3.1,Senior Data Analyst - Compliance,"Jersey City, NJ",55000,85000,24hr,40.7177545,-74.0431435,"['Python', 'SQL', 'R', 'Tableau', 'Oracle', 'Microsoft SQL Server', 'Azure', 'Microsoft Office']"
-349,4.2,Senior Data Analyst,"New York, NY",60000,99000,2d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-350,4.3,"Office of the CAO | Reference Data, Technical Operations Analyst | Chicago/","New York, NY",68000,92000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-351,4.5,Sr Data Analyst,"New York, NY",72000,115000,10d,40.7127753,-74.0059728,"['SQL', 'R']"
-352,4.0,Sr Data Analyst- Population Health,"New York, NY",62000,90000,11d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-353,4.2,Data Analyst (Tableau / Qlik),"Bridgewater, NJ",50000,82000,3d,40.5939636,-74.6049061,"['R', 'Tableau']"
-354,2.2,HEDIS Data Analyst,"New York, NY",46000,71000,4d,40.7127753,-74.0059728,"['SQL', 'AWS']"
-355,3.7,Senior Data Analyst,"Queens Village, NY",57000,89000,22d,40.7156628,-73.7419017,"['Python', 'SQL', 'R', 'Tableau']"
-356,2.8,Data Analyst,"West Point, NY",38000,63000,11d,41.391482700000005,-73.95597210000003,['R']
-357,3.0,Clinical Data Analyst,"Bronx, NY",45000,67000,12d,40.844781899999994,-73.86482679999999,"['SQL', 'R']"
-358,3.5,"Vendor/Procurement Data Analyst - Integrated Resources, Inc","New York, NY",70000,116000,30d+,40.7127753,-74.0059728,['R']
-359,3.8,Practice Spclst Data Analyst,"Manhasset, NY",55000,83000,4d,40.7978787,-73.6995749,['R']
-360,3.6,Data Analyst (Short Hills - NJ),"Jersey City, NJ",51000,86000,28d,40.7177545,-74.0431435,"['SQL', 'R', 'Java', 'SAS']"
-361,2.8,Senior Healthcare Data Analyst,"New York, NY",59000,86000,11d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'Microsoft Office']"
-362,3.8,Deloitte Consulting - Specialist Analyst Data Scientist - North Carolina State University (NCSU),"New York, NY",115000,171000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-363,3.3,Defined Benefit Functional Data Analyst,"New York, NY",42000,67000,7d,40.7127753,-74.0059728,"['SQL', 'R']"
-364,3.6,Data Analyst -Policy Analytics,"New York, NY",33000,56000,17d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-365,3.2,Data Science Systems Programmer Analyst,"New York, NY",76000,108000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau', 'SAS']"
-366,4.5,Senior Healthcare Data Analyst,"New York, NY",65000,99000,6d,40.7127753,-74.0059728,"['SQL', 'R']"
-367,2.8,Senior Product Data Analyst,"New York, NY",95000,135000,24hr,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-368,3.6,Tech Business Analyst/Data Analyst,"New York, NY",56000,91000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java']"
-369,4.6,IT Support analyst - Data analytics and devops,"Roseland, NJ",38000,60000,11d,40.8206555,-74.2937594,"['SQL', 'Tableau', 'SAS']"
-370,3.1,"Tapia Data Science, Data Analytics, Technical Business Analyst (Lead Data Analyst)","New York, NY",40000,64000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'Machine Learning', 'R', 'Tableau', 'AI', 'Data Analysis']"
-371,3.7,Senior Financial Data & Business System Analyst,"Brooklyn, NY",67000,108000,6d,40.6781784,-73.94415790000001,['R']
-372,4.8,ETL Datastage Developer/IBM Infosphere Datastage Consultant(ETL Data Analyst)-Only NY/NJ candidates Please,"New York, NY",57000,90000,17d,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle', 'Scripting']"
-373,3.8,"Data Analyst with Tableau (Direct Onsite, Only Locals)","New Hyde Park, NY",37000,61000,11d,40.735101799999995,-73.68790820000001,"['R', 'Tableau']"
-374,4.2,Data Analyst - Insurance - XDuce,"New York, NY",46000,79000,30d+,40.7127753,-74.0059728,[]
-375,2.8,IT - Data Analyst,"Jersey City, NJ",38000,62000,6d,40.7177545,-74.0431435,['R']
-376,3.9,Master Data Analyst,"Warren, NJ",54000,89000,11d,40.6342489,-74.50047959999998,['R']
-377,3.8,"Investment Banking, Summer Analyst: Data Science Analyst, M&A Strategic Shareholder Advisory","New York, NY",77000,99000,3d,40.7127753,-74.0059728,[]
-378,4.2,SAS Programmer Analyst / Healthcare Claims Data,"New Brunswick, NJ",90000,129000,24hr,40.4862157,-74.4518188,"['SQL', 'R', 'SAS']"
-379,3.5,US Data Quality and Governance Business Analyst,"Weehawken, NJ",70000,113000,19d,40.7663711,-74.02537149999998,['R']
-380,3.5,US Data Quality & Profiling Business Analyst,"Weehawken, NJ",70000,113000,19d,40.7663711,-74.02537149999998,['R']
-381,3.1,"Analyst, Advanced Data Modeler","New York, NY",70000,94000,10d,40.7127753,-74.0059728,"['Python', 'R']"
-382,3.4,Data Reporting Analyst III,"Newark, NJ",51000,85000,19d,40.735657,-74.1723667,"['SQL', 'R', 'SAS']"
-383,3.8,Senior Data Analyst,"New York, NY",54000,91000,7d,40.7127753,-74.0059728,"['SQL', 'R', 'Tableau', 'NoSQL']"
-384,3.5,Senior Metrics and Reporting Analyst - Data Governance and Management,"Lebanon, NJ",74000,121000,14d,40.641768299999995,-74.83599869999998,"['Python', 'SQL', 'R', 'Tableau']"
-385,3.5,Fraud Data Analyst,"New York, NY",43000,71000,12d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'SAS']"
-386,2.6,"Data Analyst - Lenmar Consulting, Inc.","Jersey City, NJ",38000,65000,30d+,40.7177545,-74.0431435,"['Python', 'SQL', 'R', 'Tableau', 'SAS', 'Scala']"
-387,3.7,Marketing Data Analyst,"Stamford, CT",37000,58000,13d,41.0534302,-73.53873409999999,"['SQL', 'R', 'Tableau']"
-388,3.8,Deloitte Consulting – Specialist Analyst Data Scientist - North Carolina State University (NCSU),"New York, NY",115000,171000,10d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-389,3.1,Defined Benefit Functional Data Analyst,"Harrison, NY",41000,65000,8d,40.9700171,-73.71763370000001,"['SQL', 'R']"
-390,3.7,"Data Steward - (Siebel, SQL, Data Analyst)","Florham Park, NJ",49000,79000,11d,40.787878000000006,-74.38820720000001,"['SQL', 'R']"
-391,3.4,Data Warehouse Analyst; Adolescent Health,"New York, NY",68000,100000,11d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'Oracle', 'Data Warehouse', 'Microsoft SQL Server', 'Scripting']"
-392,3.1,"Data Analyst I -Diagnostic, Molecular and Interventional Radiology","New York, NY",41000,60000,3d,40.7127753,-74.0059728,['R']
-393,2.8,Technical Data Analyst,"Rockleigh, NJ",56000,84000,24hr,41.000375399999996,-73.930414,"['SQL', 'R']"
-394,3.4,"Senior Data Analyst, Environmental Medicine and Public Health","New York, NY",50000,72000,16d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'Oracle', 'Data Warehouse']"
-395,3.6,Data Analyst with SQL/PLSQL/BI/Datawarehousing,"New York, NY",51000,86000,30d+,40.7127753,-74.0059728,"['SQL', 'R']"
-396,3.5,Data Analyst- Stony Brook CPMP General Accounting,"Stony Brook, NY",48000,73000,30d+,40.92565379999999,-73.1409429,"['SQL', 'R']"
-397,3.4,SENIOR DATA ANALYST,"New York, NY",55000,82000,19d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'SAS', 'Oracle', 'AI']"
-398,5.0,"Data Analyst- Pennsylvania,PA - Georgia IT Inc.","New York, NY",48000,81000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Java', 'Tableau']"
-399,3.4,"Data Analyst I -Diagnostic, Molecular and Interventional Radiology","New York, NY",41000,60000,19d,40.7127753,-74.0059728,['R']
-400,2.9,Sr. Data and Reporting Analyst,"Stamford, CT",47000,79000,8d,41.0534302,-73.53873409999999,"['Python', 'SQL', 'R', 'Hadoop', 'Tableau', 'SAS', 'NoSQL', 'Oracle']"
-401,3.2,"Senior Analyst, Analytics and Data Science","New York, NY",57000,92000,3d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'AWS', 'AI']"
-402,3.7,SAP System & SDP Data Analyst,"White Plains, NY",56000,80000,11d,41.03398620000001,-73.76290970000001,"['R', 'Microsoft Office']"
-403,3.7,Healthcare Encounter Data Analyst,"New York, NY",45000,69000,2d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-404,3.1,"Senior Data Analyst - Compliance in Jersey City, New Jersey | Careers at Harborside","Jersey City, NJ",55000,85000,30d+,40.7177545,-74.0431435,"['Python', 'SQL', 'R', 'Tableau', 'Oracle', 'Microsoft SQL Server', 'Azure', 'Microsoft Office']"
-405,3.4,Clinical Data Analyst,"Edison, NJ",57000,87000,30d+,40.5187154,-74.4120953,['R']
-406,3.8,"Senior Data Analyst – Global Supply Analytics, AMERICAS","New York, NY",79000,119000,5d,40.7127753,-74.0059728,"['Python', 'R', 'Hadoop', 'Tableau']"
-407,3.4,Regulatory Data & Risk Analyst,"White Plains, NY",62000,93000,4d,41.03398620000001,-73.76290970000001,"['SQL', 'R', 'Tableau', 'SAS']"
-408,4.1,Information Data Analyst,"Dover, NJ",39000,67000,11d,40.883988,-74.56210250000001,"['R', 'Microsoft Office']"
-409,5.0,Business Data Analyst ONLY,"Morristown, NJ",54000,84000,9d,40.796766700000006,-74.4815438,"['SQL', 'R', 'Tableau']"
-410,3.1,"Sr. Analyst, Client Data and DMP Strategy","New York, NY",60000,80000,20d,40.7127753,-74.0059728,"['R', 'Spark']"
-411,2.5,Data Warehouse Business Analyst (T-SQL),"Bronx, NY",75000,116000,4d,40.844781899999994,-73.86482679999999,"['SQL', 'R', 'AWS', 'Oracle', 'Data Warehouse', 'Azure']"
-412,3.2,Data Warehouse Analyst - Crescens Inc.,"Jersey City, NJ",45000,68000,30d+,40.7177545,-74.0431435,"['SQL', 'R', 'Tableau', 'Data Warehouse']"
-413,3.4,SQL Data Reporting Analyst - Revenue Cycle Patient Accounts (FT),"Oceanport, NJ",49000,82000,5d,40.318166299999994,-74.0151382,"['SQL', 'R', 'Tableau']"
-414,3.7,"NGS Data Analyst, Regeneron Genetics Center","Tarrytown, NY",59000,96000,25d,41.076207700000005,-73.85874609999998,"['Python', 'R', 'AWS']"
-415,3.6,Regulatory Reporting and Data Analyst,"Bridgewater, NJ",40000,66000,4d,40.5939636,-74.6049061,['R']
-416,4.3,"Office of the CAO | Reference Data, Project Manager/Business Analyst","New York, NY",122000,164000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau']"
-417,3.7,Senior Data Analyst,"New York, NY",55000,84000,27d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'AWS']"
-418,3.6,Lead Marketing Data Analyst,"New York, NY",56000,83000,13d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS']"
-419,3.6,Business Analyst – Oncology/SPP data (Life Sciences),"Berkeley Heights, NJ",68000,106000,26d,40.6808726,-74.43105240000001,"['SQL', 'R', 'Tableau']"
-420,2.9,"Editorial Data Analyst, newsday.com","Melville, NY",50000,75000,11d,40.793432200000005,-73.41512139999998,['R']
-421,3.4,Senior Data Business Analyst,"New York, NY",116000,180000,27d,40.7127753,-74.0059728,['R']
-422,3.4,Clinical Data Analyst,"Lake Success, NY",51000,78000,8d,40.7698453,-73.70904279999998,['R']
-423,3.6,Data Analyst - Diverse Lynx,"Jersey City, NJ",51000,86000,30d+,40.7177545,-74.0431435,['R']
-424,3.6,MDM Data Analyst,"Jersey City, NJ",51000,86000,30d+,40.7177545,-74.0431435,['R']
-425,3.8,Data Analyst - BLAW Web Document Acquisition,"Princeton, NJ",54000,78000,21d,40.3572976,-74.66722259999999,"['Python', 'R', 'Java']"
-426,3.4,Sr. Data Analyst,"New York, NY",95000,142000,18d,40.7127753,-74.0059728,"['SQL', 'Machine Learning', 'R']"
-427,2.7,"Senior Data Analyst, Pharmacy","New York, NY",68000,109000,18d,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'Oracle']"
-428,3.8,Sr. Business Analyst/Data Analyst/Securities/Reference Data,"Jersey City, NJ",60000,100000,8d,40.7177545,-74.0431435,"['SQL', 'R', 'Kafka']"
-429,3.4,Quantitative Analyst Data Science,"Stamford, CT",61000,106000,30d+,41.0534302,-73.53873409999999,"['Python', 'SQL', 'R']"
-430,3.1,Sr. Specialist Info Sec Analyst - Data Scientist,"New York, NY",108000,156000,11d,40.7127753,-74.0059728,"['SQL', 'R', 'Java', 'Oracle']"
-431,3.5,Oracle Data Cloud - Security Operations Analyst,"New York, NY",58000,87000,9d,40.7127753,-74.0059728,"['R', 'Oracle']"
-432,3.9,Data Warehouse Analyst - Cygnus Professionals,"Jersey City, NJ",51000,77000,30d+,40.7177545,-74.0431435,"['SQL', 'R', 'Tableau', 'Data Warehouse']"
-433,4.8,Sr. Datastage and Data Analyst,"New York, NY",75000,113000,22d,40.7127753,-74.0059728,"['SQL', 'R', 'Oracle', 'Scripting']"
-434,2.9,Credit Services Data Analyst,"Stamford, CT",46000,74000,11d,41.0534302,-73.53873409999999,"['SQL', 'R', 'Tableau']"
-435,3.8,"Insight Studio Specialist Data Scientist - Analyst - Technology, Consulting - BTA - UG - University of Michigan (Summer/Fall)","New York, NY",132000,185000,4d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-436,3.7,Madewell Customer Data Science Sr. Analyst,"Long Island City, NY",64000,97000,27d,40.744679,-73.94854240000001,"['Python', 'SQL', 'R', 'Tableau', 'Big Data']"
-437,3.1,"Senior Financial Analyst, Technology/Data Operations - Entertainment and Media Industry Opportunity","New York, NY",56000,84000,30d+,40.7127753,-74.0059728,['R']
-438,3.9,CIB Digital & Platform Services Resolution & Recovery - Sr. Data/Business Analyst,"Brooklyn, NY",62000,109000,18d,40.6781784,-73.94415790000001,"['R', 'Tableau']"
-439,3.1,"Lead Analyst, Data Mgmt Ops","Pennington, NJ",50000,77000,20d,40.3284402,-74.790718,"['SQL', 'R']"
-440,3.4,Data & Reporting Business Analyst,"Kenilworth, NJ",56000,92000,4d,40.6764911,-74.2907032,"['SQL', 'R', 'Tableau']"
-441,3.8,NJATCSU Data Warehouse Analyst - Softpath System LLC,"Jersey City, NJ",54000,80000,30d+,40.7177545,-74.0431435,"['SQL', 'R', 'Tableau']"
-442,4.0,Data Analyst / IT Data & Business Intelligence,"Harrison, NY",50000,81000,20d,40.9700171,-73.71763370000001,"['SQL', 'Data Analysis']"
-443,4.2,Insurance Systems Analyst - Business & Data,"New York, NY",47000,81000,12d,40.7127753,-74.0059728,"['SQL', 'R', 'Microsoft Office']"
-444,3.2,Data Governance Analysts,"Warren, NJ",62000,96000,4d,40.6342489,-74.50047959999998,['R']
-445,3.8,Senior Data Analyst,"Fort Lee, NJ",60000,92000,7d,40.8509333,-73.9701381,"['SQL', 'R', 'Tableau', 'Oracle']"
-446,3.4,2020 Data Systems Analyst Inernship,"Freehold, NJ",53000,98000,24d,40.21367539999999,-74.3000878,['Tableau']
-447,3.0,Hotel Program Operations and Data Analyst,"Parsippany, NJ",33000,55000,30d+,40.865286499999996,-74.41738769999998,['R']
-448,4.7,Lead Data Analyst,"New York, NY",50000,84000,19d,40.7127753,-74.0059728,"['R', 'Big Data']"
-449,2.3,Data and Business Analyst - Montvale NJ,"Montvale, NJ",46000,75000,20d,41.046763500000004,-74.02291729999999,"['R', 'Tableau', 'AI']"
-450,2.4,Data Analyst - Foster Care,"Staten Island, NY",30000,50000,13d,40.579531700000004,-74.1502007,['R']
-451,2.1,"Senior Data Analyst, Pharmacy","New York, NY",88000,126000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'Oracle']"
-452,3.5,Senior Data Business Analyst,"New York, NY",66000,105000,27d,40.7127753,-74.0059728,['R']
-453,3.9,Sr. Data Analyst,"New York, NY",60000,93000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'Data Analysis']"
-454,3.6,Lead Data Analyst,"Piscataway, NJ",74000,114000,1d,40.554887,-74.4642861,"['SQL', 'R', 'Oracle', 'Microsoft SQL Server']"
-455,2.3,Data and Business Analyst,"Montvale, NJ",46000,75000,20d,41.046763500000004,-74.02291729999999,"['R', 'Tableau', 'AI']"
-456,4.1,"Senior Business Analyst for Business Process, Data Analysis, and Data Modeling for Pharmaceutical R&D - Alpha Consulting Corp.","Jersey City, NJ",93000,147000,30d+,40.7177545,-74.0431435,"['R', 'AI']"
-457,3.4,Quantitative Analyst – Data Science,"Stamford, CT",61000,106000,11d,41.0534302,-73.53873409999999,"['Python', 'SQL', 'R']"
-458,4.2,Data Analyst/Architect,"New York, NY",43000,72000,30d+,40.7127753,-74.0059728,['R']
-459,3.1,"Senior Data Analyst, Environmental Medicine and Public Health","New York, NY",54000,78000,30d+,40.7127753,-74.0059728,"['SQL', 'R', 'SAS', 'Oracle', 'Data Warehouse']"
-460,2.5,"Data Analyst, Decision Support","Jericho, NY",51000,79000,3d,40.79204410000001,-73.53984759999999,"['Python', 'SQL', 'R', 'Tableau']"
-461,3.1,Data Warehouse Analyst; Adolescent Health,"New York, NY",61000,90000,30d+,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'Oracle', 'Data Warehouse', 'Microsoft SQL Server', 'Scripting']"
-462,3.2,SAP Analyst (Master Data Maintainer),"Lyndhurst, NJ",55000,80000,5d,40.81201710000001,-74.1243063,['R']
-463,3.2,"Senior Data Analyst, Supervised Release Program","New York, NY",64000,105000,14d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Tableau', 'SAS', 'Oracle']"
-464,3.1,Data Science Analyst I Computational Biology - Genetics,"New York, NY",49000,78000,30d+,40.7127753,-74.0059728,"['Python', 'R', 'SAS', 'Scala']"
-465,3.2,Audit Data Analyst,"Livingston, NJ",45000,71000,14d,40.7862871,-74.3300842,"['Python', 'SQL', 'R', 'Tableau']"
-466,3.1,"Specialist, Big Data Senior Analyst (Treasury and ALM)","New York, NY",60000,94000,14d,40.7127753,-74.0059728,"['SQL', 'R', 'Hadoop', 'Hive']"
-467,2.9,Business Data Analyst II,"Stamford, CT",59000,93000,12d,41.0534302,-73.53873409999999,"['SQL', 'R', 'Tableau', 'Oracle']"
-468,2.9,"Sr. Analyst, Data and Reporting","Stamford, CT",49000,82000,4d,41.0534302,-73.53873409999999,"['SQL', 'R']"
-469,3.6,Business Analyst Oncology/SPP data (Life Sciences),"Berkeley Heights, NJ",68000,106000,30d+,40.6808726,-74.43105240000001,"['SQL', 'R', 'Tableau', 'SAS']"
-470,3.8,Senior Data Analyst / Scientist,"New York, NY",56000,92000,15d,40.7127753,-74.0059728,"['Machine Learning', 'R']"
-471,3.3,Senior Data Management Analyst,"Secaucus, NJ",60000,90000,22d,40.7895453,-74.05652979999998,"['SQL', 'R', 'SAS', 'Microsoft Office']"
-472,3.2,Senior Data Governance Analyst,"Greenwich, CT",66000,99000,19d,41.0262417,-73.62819640000001,"['SQL', 'R', 'Data Warehouse', 'Microsoft Office']"
-473,3.4,"Senior Data Analyst, Data Instrumentation","New York, NY",49000,80000,20d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark']"
-474,2.9,Service Delivery Reporting & Data Analyst,"Stamford, CT",51000,83000,7d,41.0534302,-73.53873409999999,"['SQL', 'R', 'Tableau', 'Oracle']"
-475,3.3,"Senior Analyst, Claims Data Engineering","New York, NY",104000,139000,28d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark', 'SAS', 'AWS']"
-476,3.9,Data Analyst (Radar Systems) with Security Clearance,"Picatinny Arsenal, NJ",59000,99000,30d+,40.9170764,-74.5805051,"['R', 'MATLAB', 'Microsoft Office']"
-477,4.5,"JPSC-7176 - Position 35, 59, 62, 100,101,102, 141,142,166 : Senior Data Analyst","Brooklyn, NY",76000,115000,22d,40.6781784,-73.94415790000001,"['SQL', 'R']"
-478,3.3,"Senior Analyst, Claims Data Engineering","New York, NY",104000,139000,28d,40.7127753,-74.0059728,"['Python', 'SQL', 'R', 'Spark', 'SAS', 'AWS']"
-479,3.6,Position # 18 Clinical Data Analyst,"Princeton, NJ",46000,70000,6d,40.3572976,-74.66722259999999,['R']
-480,3.5,Business Intelligence Analyst (Data Analyst),"Somerset, NJ",61000,84000,15d,40.497603999999995,-74.48848679999998,"['SQL', 'R', 'Oracle']"
-481,3.7,Business Analyst Leader - Specialty Pharmacy Data,"East Hanover, NJ",84000,118000,10d,40.8200623,-74.3647247,"['R', 'AI']"
-482,4.0,Business Analyst - Enterprise Data Management Team (EDM) - CR,"White Plains, NY",42000,67000,5d,41.03398620000001,-73.76290970000001,"['SQL', 'R', 'Oracle']"
-483,3.6,Senior Data Analyst ETL Developer,"Bedminster, NJ",64000,97000,8d,40.669264,-74.68039999999998,"['Python', 'SQL', 'R', 'Hadoop', 'NoSQL', 'Oracle']"
-484,4.2,Data Analyst Team Lead,"New York, NY",73000,118000,7d,40.7127753,-74.0059728,"['Python', 'SQL', 'R']"
-485,3.3,Data Support & Solutions Analyst,"Norwalk, CT",49000,86000,12d,41.11774399999999,-73.4081575,['R']
-486,2.9,Sr Data Analyst,"Stamford, CT",71000,103000,12d,41.0534302,-73.53873409999999,"['SQL', 'R']"
-487,,Data Analyst - Data Engineer / Analyst,"Princeton Junction, Mercer, NJ",51000,72000,15d,40.31733010000001,-74.61987909999998,['SQL']
-488,2.2,Central Data Science Solutions (CDSS) Business Analyst or Principal Business Analyst,"Ridgefield, CT",52000,85000,22d,41.28406349999999,-73.4975412,"['R', 'SAS', 'Oracle']"
-489,3.7,"Lead Data Analyst, Advanced Analytics","Union Beach, NJ",72000,115000,25d,40.446496200000006,-74.17819879999998,"['Python', 'Machine Learning', 'R', 'Hadoop', 'Spark', 'Tableau', 'SAS', 'Big Data', 'AWS']"
-490,4.2,Sr Data Analyst,"Purchase, NY",60000,92000,22d,41.0400135,-73.71444770000001,"['SQL', 'R', 'Data Analysis']"
-491,2.8,Business Analyst - Data Governance,"Stamford, CT",51000,79000,30d+,41.0534302,-73.53873409999999,['R']
-492,2.9,Programmer Analyst/Data Strategist,"Jefferson Valley, NY",45000,62000,7d,41.3138618,-73.80073399999998,"['R', 'Java']"
-493,3.9,Senior Business Technology Analyst / Big Data,"Princeton, NJ",91000,113000,25d,40.3572976,-74.66722259999999,"['Python', 'SQL', 'R', 'Hadoop', 'Spark', 'Java', 'Hive', 'Scala', 'Kafka', 'Pig']"
-494,3.4,Business Analyst - Enterprise Data Management Team (EDM) - CR,"White Plains, NY",48000,75000,5d,41.03398620000001,-73.76290970000001,"['SQL', 'R', 'Oracle']"
-495,3.3,Principal Programmer Analyst (Hadoop/Big Data),"Somerset, NJ",91000,152000,6d,40.497603999999995,-74.48848679999998,"['SQL', 'R', 'Hadoop', 'Spark', 'Hive', 'Big Data', 'NoSQL', 'Oracle', 'Linux']"
+0,3.5,Data Analyst,"Edison, NJ",49000,76000,26d,40.5187154,-74.4120953,"Python,SQL,R,Tableau"
+1,3.7,Data Analyst,"New York, NY",53000,86000,18d,40.7127753,-74.0059728,"SQL,R,Spark,Big Data,AWS"
+2,2.8,Big Data Analyst / Engineer,"New York, NY",43000,70000,11d,40.7127753,-74.0059728,"Python,SQL,R,Hadoop,Tableau,Hive,SAS,Big Data,Linux"
+3,2.7,"Data Analyst II (SQL, Tableau)","New York, NY",52000,86000,27d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,Oracle"
+4,2.8,Risk Data Analyst,"New York, NY",43000,70000,4d,40.7127753,-74.0059728,"Python,SQL,R"
+5,2.8,Senior Data Analyst,"New York, NY",65000,101000,3d,40.7127753,-74.0059728,"Python,SQL,R,Java,SAS"
+6,3.2,"Senior Manager I, Data Analyst","Hoboken, NJ",129000,182000,26d,40.7439905,-74.0323626,R
+7,4.6,Data Quality Analyst,"Red Bank, NJ",41000,66000,8d,40.3470543,-74.0643065,"SQL,R"
+8,3.2,Data Analyst,"Hackensack, NJ",51000,81000,13d,40.8859325,-74.0434736,"SQL,R"
+9,4.2,Data Operations Analyst,"New York, NY",53000,78000,14d,40.7127753,-74.0059728,"Python,SQL,R"
+10,4.5,Data Analyst,"New York, NY",60000,95000,26d,40.7127753,-74.0059728,"Python,SQL,R"
+11,3.5,Business Data Analyst,"New York, NY",48000,74000,24hr,40.7127753,-74.0059728,"Python,SQL,R"
+12,4,FGP Data Analyst,"New York, NY",50000,74000,4d,40.7127753,-74.0059728,"R,Tableau"
+13,3.2,Data Governance Business Analyst,"Hoboken, NJ",55000,87000,3d,40.7439905,-74.0323626,R
+14,3.3,Business and Data Analyst,"Port Chester, NY",47000,77000,21d,41.0017643,-73.6656834,"R,Tableau"
+15,3.6,Entry Level Data Analyst (Machine Learning Engineer),"Jersey City, NJ",37000,61000,2d,40.7177545,-74.0431435,"Python,SQL,R,Big Data,Scala,NoSQL"
+16,3.1,Junior Data Analyst,"New York, NY",43000,71000,5d,40.7127753,-74.0059728,"Python,SQL,R"
+17,4.6,Data Analyst/Data Scientist (2020 Start) - Analytics - Multioffice,"New York, NY",53000,85000,12d,40.7127753,-74.0059728,"Python,SQL,Machine Learning,R,Java,Tableau,SAS,Natural Language Processing"
+18,3.6,"Data Analyst, Royalties and Accounting - Entertainment and Media Industry Opportunity","New York, NY",59000,96000,13d,40.7127753,-74.0059728,"Python,SQL,Tableau"
+19,3.8,"Data Analyst, Business Intelligence","New York, NY",49000,78000,17d,40.7127753,-74.0059728,"SQL,R,Tableau"
+20,4,Data Analyst,"New York, NY",51000,75000,24d,40.7127753,-74.0059728,"R,SAS,Microsoft Office"
+21,3.6,DATA ANALYST PATIENT EXPERIENCE,"New York, NY",51000,77000,24hr,40.7127753,-74.0059728,"SQL,R"
+22,3.7,Data Analyst Entry Level,"New York, NY",34000,56000,13d,40.7127753,-74.0059728,R
+23,3.9,Hotel Program Operations and Data Analyst,"Parsippany, NJ",48000,80000,6d,40.8652865,-74.4173877,R
+24,3.7,Data Analyst - Account Analytics,"New York, NY",44000,71000,3d,40.7127753,-74.0059728,"Python,SQL,R,Hadoop,Spark,Hive,AWS,Pig"
+25,3.8,Data Analyst - NetOps,"New York, NY",58000,85000,15d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,C/C++"
+26,4.4,"Product Analyst, Data Science","New York, NY",56000,92000,13d,40.7127753,-74.0059728,"SQL,R,SAS,MATLAB"
+27,3.8,Data Analyst NetOps,"New York, NY",58000,85000,13d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,C/C++"
+28,3.5,Data Analyst,"New York, NY",58000,95000,7d,40.7127753,-74.0059728,R
+29,2.8,Data Analyst - Personal Shopping,"New York, NY",44000,71000,3d,40.7127753,-74.0059728,"SQL,R,Tableau"
+30,3.2,"Senior Manager I, Data Analyst","Hoboken, NJ",129000,182000,26d,40.7439905,-74.0323626,R
+31,2.8,Data Analyst - Personal Shopping,"New York, NY",44000,71000,3d,40.7127753,-74.0059728,"SQL,R,Tableau"
+32,3.2,Data Analyst,"Hackensack, NJ",51000,81000,13d,40.8859325,-74.0434736,"SQL,R"
+33,4.3,Data & Business Analyst,"Jersey City, NJ",53000,84000,27d,40.7177545,-74.0431435,R
+34,3.4,Data Reporting Analyst II,"Newark, NJ",53000,89000,19d,40.735657,-74.1723667,"SQL,SAS"
+35,3.6,DATA ANALYST PROGRAMMER,"New York, NY",45000,68000,11d,40.7127753,-74.0059728,"Python,SQL,R,NoSQL"
+36,3.7,"Data & Insights Analyst, Wirecutter","New York, NY",67000,109000,6d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,Oracle"
+37,4.1,Data Analyst,"New York, NY",40000,65000,11d,40.7127753,-74.0059728,"SQL,R"
+38,3.6,"Data Analyst, Royalties and Accounting","New York, NY",59000,96000,25d,40.7127753,-74.0059728,"Python,SQL,Tableau"
+39,4.3,Data Analyst,"New York, NY",46000,73000,4d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+40,4.2,Data Modeling Analyst,"New York, NY",66000,91000,24hr,40.7127753,-74.0059728,"SQL,R,Tableau,SAS,Scripting"
+41,3.5,Data Analyst,"New York, NY",39000,63000,4d,40.7127753,-74.0059728,"Python,SQL,R,Spark,Tableau"
+42,2.6,Data Analyst,"New York, NY",50000,78000,24hr,40.7127753,-74.0059728,"SQL,Tableau"
+43,3.3,Data Analyst,"New York, NY",48000,76000,7d,40.7127753,-74.0059728,"Python,SQL,R"
+44,4.5,Data Analyst,"New Hyde Park, NY",47000,76000,4d,40.7351018,-73.6879082,"SQL,R"
+45,3.8,Data Analyst,"New York, NY",54000,86000,20d,40.7127753,-74.0059728,"Python,SQL,R,SAS,Microsoft Office"
+46,2.9,"Senior Data Analyst, Pre-Trial Services","Brooklyn, NY",51000,81000,15d,40.6781784,-73.9441579,"SQL,R"
+47,4.5,Data Analyst,"New York, NY",50000,80000,14d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,AWS,Data Analysis"
+48,3.7,Data Analyst,"New York, NY",64000,101000,21d,40.7127753,-74.0059728,"SQL,R"
+49,3.8,Data Analyst,"New York, NY",49000,77000,13d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+50,4,Data Analyst,"New York, NY",51000,84000,20d,40.7127753,-74.0059728,"Python,SQL,R"
+51,4.1,Data Analyst,"New York, NY",63000,97000,2d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+52,3.5,Data Analyst,"New York, NY",57000,91000,11d,40.7127753,-74.0059728,"SQL,R"
+53,2.7,Data Analyst,"New York, NY",34000,55000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+54,3.3,Data Analyst,"New York, NY",55000,88000,6d,40.7127753,-74.0059728,"Python,SQL,R,Scala"
+55,4.4,Business Data Analyst,"New York, NY",71000,106000,12d,40.7127753,-74.0059728,"SQL,R,Oracle"
+56,2.8,Data Analyst,"New York, NY",53000,81000,25d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,SAS,AWS"
+57,4.3,"Office of the CAO | Reference Data, Operations Analyst","New York, NY",68000,92000,4d,40.7127753,-74.0059728,R
+58,2.6,Data Analyst - NYC,"New York, NY",50000,78000,5d,40.7127753,-74.0059728,"SQL,Tableau"
+59,3.3,"Data Analyst, Technology","New York, NY",37000,57000,20d,40.7127753,-74.0059728,R
+60,4.1,Data Analyst,"New York, NY",73000,115000,4d,40.7127753,-74.0059728,"Python,SQL,R,Java"
+61,4.1,Associate Data and Research Analyst,"New York, NY",36000,56000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Microsoft Office"
+62,4.6,Data Quality Analyst,"Red Bank, NJ",41000,66000,8d,40.3470543,-74.0643065,"SQL,R"
+63,3.9,Data Analyst,"New York, NY",43000,71000,15d,40.7127753,-74.0059728,R
+64,4.2,Data Operations Analyst,"New York, NY",53000,78000,14d,40.7127753,-74.0059728,"Python,SQL,R"
+65,4.1,Data Analyst,"New York, NY",43000,72000,17d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+66,4,SQL Data Analyst,"New York, NY",58000,97000,30d+,40.7127753,-74.0059728,"SQL,R,Oracle"
+67,4.3,Data Analyst - Search,"New York, NY",46000,73000,23d,40.7127753,-74.0059728,"SQL,R"
+68,4.8,Data Analyst,"White Plains, NY",75000,95000,4d,41.0339862,-73.7629097,"R,Tableau"
+69,4,Data Analyst,"New York, NY",46000,73000,1d,40.7127753,-74.0059728,"Python,SQL,R"
+70,4.3,Data Analyst,"New York, NY",52000,84000,8d,40.7127753,-74.0059728,"SQL,R"
+71,3.8,2020 Financial Research Data Analyst,"New York, NY",58000,85000,30d+,40.7127753,-74.0059728,
+72,3.5,Data Insights Analyst,"New York, NY",48000,79000,12d,40.7127753,-74.0059728,"R,Microsoft Office"
+73,3.9,Asset Management - Global Equities - Data Science - Analyst/Associate,"New York, NY",65000,108000,13d,40.7127753,-74.0059728,"Python,R"
+74,3.6,DATA ANALYST,"New York, NY",45000,68000,11d,40.7127753,-74.0059728,R
+75,4.3,"Office of the CAO | Reference Data, Technical Operations Analyst | Chicago/","New York, NY",68000,92000,4d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+76,2.9,Data Analyst I,"Brooklyn, NY",42000,69000,28d,40.6781784,-73.9441579,"R,Microsoft Office"
+77,3.1,Data Analyst,"New York, NY",60000,96000,7d,40.7127753,-74.0059728,"Python,SQL,R,Spark,Tableau"
+78,3.5,Investigations Data Analyst,"Newark, NJ",40000,64000,24hr,40.735657,-74.1723667,R
+79,4.2,Data Analyst,"New York, NY",35000,57000,26d,40.7127753,-74.0059728,"SQL,R,Tableau"
+80,3.1,"Analyst,Data Management Quantitative Analysis","New York, NY",48000,77000,30d+,40.7127753,-74.0059728,"Python,R"
+81,3.1,Data Analyst,"New York, NY",56000,87000,21d,40.7127753,-74.0059728,"Python,SQL,Machine Learning,R,Java,Tableau,AWS,Scala,AI,Microsoft Office"
+82,3.6,Data analyst,"New York, NY",46000,77000,22d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,Oracle"
+83,4.1,Marketing and Enrollment Data Analyst,"New York, NY",40000,65000,3d,40.7127753,-74.0059728,R
+84,3.7,Data Analyst / Data Engineer,"New York, NY",96000,129000,27d,40.7127753,-74.0059728,"Python,SQL,R,Hadoop,Spark,Hive,AWS"
+85,4,Data Analyst,"Newark, NJ",62000,105000,7d,40.735657,-74.1723667,"Python,SQL,R,Spark,Java,Tableau,SAS,AI"
+86,4.4,Data Operations Analyst,"New York, NY",61000,92000,18d,40.7127753,-74.0059728,"SQL,R"
+87,4.2,Business/Data Analyst,"New York, NY",60000,94000,6d,40.7127753,-74.0059728,"SQL,R,Data Analysis"
+88,3.7,Data Analyst,"New York, NY",50000,85000,12d,40.7127753,-74.0059728,"SQL,R,Oracle"
+89,4.5,Data Analyst,"New Hyde Park, NY",50000,84000,7d,40.7351018,-73.6879082,"SQL,Tableau"
+90,2.9,Data Analyst,"New York, NY",71000,111000,16d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+91,4.1,Data Analyst - ACO,"New York, NY",51000,77000,13d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,SAS"
+92,3.8,Data Analyst,"New York, NY",53000,84000,21d,40.7127753,-74.0059728,"SQL,R,SAS,AI"
+93,3,Data Analyst,"New York, NY",54000,87000,7d,40.7127753,-74.0059728,"SQL,R"
+94,3.5,Data Analyst,"New York, NY",41000,65000,7d,40.7127753,-74.0059728,"R,AI"
+95,4.3,Mortgage Whole Loan Data & Collateral Analyst,"New York, NY",44000,66000,6d,40.7127753,-74.0059728,"SQL,R"
+96,4.5,Data Analyst,"New York, NY",60000,95000,26d,40.7127753,-74.0059728,"Python,SQL,R"
+97,3.4,Data Analyst,"New York, NY",65000,101000,5d,40.7127753,-74.0059728,R
+98,3.4,Data Quality Analyst,"New York, NY",50000,79000,5d,40.7127753,-74.0059728,"Python,SQL,R,Oracle"
+99,4.4,Data Research and Acceleration Analyst,"New York, NY",108000,175000,6d,40.7127753,-74.0059728,"Python,SQL"
+100,3.3,"Senior Analyst, Customer Analytics & Data Science","New York, NY",68000,110000,6d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,SAS,AWS"
+101,3.5,Data Quality Analyst,"Weehawken, NJ",49000,77000,3d,40.7663711,-74.0253715,"SQL,R"
+102,4.3,Senior Data Analyst - New York City,"New York, NY",87000,132000,27d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+103,3.7,Data Analyst,"New York, NY",49000,79000,14d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,AWS,Data Analysis"
+104,3.1,Data Analyst,"New York, NY",48000,80000,24hr,40.7127753,-74.0059728,"R,Tableau"
+105,4.2,Data Analyst,"New York, NY",62000,105000,6d,40.7127753,-74.0059728,"SQL,R,Data Analysis"
+106,3.8,Business/Data Analyst,"New York, NY",48000,74000,6d,40.7127753,-74.0059728,R
+107,4,Healthcare Data Analyst,"New York, NY",49000,78000,19d,40.7127753,-74.0059728,"SQL,R,Tableau,SAS"
+108,2.5,Associate Data Reporting Analyst,"New York, NY",55000,92000,18d,40.7127753,-74.0059728,"SQL,R,Tableau,Oracle,Linux,Microsoft Office"
+109,3.8,Data Scientist/ Business Analyst,"Stamford, CT",103000,138000,22d,41.0534302,-73.5387341,"Python,SQL,Machine Learning,R,AI,Azure"
+110,3.5,IT Technical Business Analyst - Data Integrations,"New York, NY",62000,100000,4d,40.7127753,-74.0059728,"SQL,R,Oracle"
+111,4.2,Data Analyst,"Jersey City, NJ",59000,95000,27d,40.7177545,-74.0431435,"R,Tableau"
+112,3.5,Data Analyst - Analytics/SQL,"New York, NY",48000,79000,30d+,40.7127753,-74.0059728,"SQL,R,Oracle"
+113,2.7,"Data Analyst, Special Investigations Unit","New York, NY",47000,76000,2d,40.7127753,-74.0059728,"SQL,R,SAS"
+114,3,BI Data Analyst,"New York, NY",57000,95000,7d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau"
+115,3.6,"Data Analyst, Customer Success","New York, NY",44000,69000,8d,40.7127753,-74.0059728,"SQL,R"
+116,3.5,Quantitative Analyst/Data Scientist,"New York, NY",121000,194000,6d,40.7127753,-74.0059728,"Python,SQL,R"
+117,3.4,"Data Analyst I, Department of OBGYN","New York, NY",45000,66000,7d,40.7127753,-74.0059728,R
+118,3.6,Data Analyst,"Jersey City, NJ",51000,86000,12d,40.7177545,-74.0431435,R
+119,4.2,Data Analyst/Engineer,"New York, NY",70000,113000,3d,40.7127753,-74.0059728,"Python,SQL,R,Linux"
+120,3.4,"Data Analyst II, Environmental Medicine and Public Health","New York, NY",54000,79000,5d,40.7127753,-74.0059728,"SQL,R,Java"
+121,2.9,Data Analyst,"Brooklyn, NY",47000,70000,25d,40.6781784,-73.9441579,"R,AI"
+122,3.5,Data Analyst,"New York, NY",51000,83000,25d,40.7127753,-74.0059728,"SQL,R,Hadoop,Java,Tableau,SAS,Microsoft Office"
+123,3.1,Data Analyst,"New York, NY",45000,75000,24d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+124,3.4,"Data Analyst I, Department of Psychiatry","New York, NY",45000,66000,13d,40.7127753,-74.0059728,R
+125,4.3,Data Analyst,"New York, NY",49000,82000,22d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+126,4,FGP Data Analyst,"New York, NY",50000,74000,4d,40.7127753,-74.0059728,"R,Tableau"
+127,3.5,Business Data Analyst,"New York, NY",48000,74000,24hr,40.7127753,-74.0059728,"Python,SQL,R"
+128,2.7,Data Analyst,"New York, NY",44000,73000,14d,40.7127753,-74.0059728,"Python,R"
+129,4.1,Senior Financial Analyst/Data Analyst - Decision Support,"New York, NY",65000,93000,5d,40.7127753,-74.0059728,"SQL,R"
+130,3.8,Data Analyst,"Brooklyn, NY",47000,77000,14d,40.6781784,-73.9441579,"Python,SQL,R,Tableau"
+131,3.2,Data Analyst,"Jersey City, NJ",38000,64000,26d,40.7177545,-74.0431435,"SQL,R,Tableau"
+132,3.5,"Data Analyst, Harlem Neighborhood Health Action Center","New York, NY",50000,83000,7d,40.7127753,-74.0059728,"R,Tableau,SAS,Microsoft Office"
+133,3.6,"Data Analyst, Autism Center & Center for the Developing Brain","New York, NY",49000,74000,7d,40.7127753,-74.0059728,"Python,R"
+134,4.2,Data Analyst,"New York, NY",39000,64000,14d,40.7127753,-74.0059728,"SQL,R,Tableau,Data Analysis"
+135,3.9,Data Analyst,"New York, NY",39000,66000,13d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,SAS"
+136,3.5,Data Analyst,"New York, NY",46000,72000,28d,40.7127753,-74.0059728,R
+137,3,Data Analyst,"Jersey City, NJ",48000,79000,5d,40.7177545,-74.0431435,"SQL,R,Tableau"
+138,3.5,Data Analyst,"New York, NY",41000,70000,13d,40.7127753,-74.0059728,"Python,SQL,R,Oracle"
+139,3.2,Data Analyst,"New York, NY",37000,62000,24hr,40.7127753,-74.0059728,"R,SAS,AI"
+140,3.8,Data Quality Analyst,"New York, NY",53000,84000,12d,40.7127753,-74.0059728,R
+141,3.6,Data Quality Analyst,"New York, NY",53000,84000,5d,40.7127753,-74.0059728,"Python,SQL,R,Oracle"
+142,4.4,"Data Analyst - News Partnerships, Media Partnerships","New York, NY",73000,119000,1d,40.7127753,-74.0059728,"SQL,R,Hadoop,Tableau,Hive"
+143,3.8,"Specialist Analyst Data Scientist - Technology, Consulting - Insight Studio - UG - Northwestern University (Summer/Fall)","New York, NY",132000,185000,27d,40.7127753,-74.0059728,"Python,SQL,R"
+144,2.9,Senior Data Analyst,"New York, NY",74000,118000,20d,40.7127753,-74.0059728,"Python,SQL,R"
+145,2.7,Venture Capital Analyst - Data Scientist,"New York, NY",81000,120000,8d,40.7127753,-74.0059728,R
+146,3.7,Senior Data Analyst,"New York, NY",65000,100000,20d,40.7127753,-74.0059728,"Python,SQL,R,Hadoop,Tableau,SAS"
+147,3.4,Market Data Analyst,"New York, NY",64000,100000,26d,40.7127753,-74.0059728,R
+148,4.1,Data Research Analyst,"New York, NY",37000,57000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Microsoft Office"
+149,3.4,Data Analyst,"New York, NY",43000,69000,5d,40.7127753,-74.0059728,"Python,SQL,R,Spark,Tableau"
+150,3.8,Financial Reporting/Data Analyst -Investment Bank,"Jersey City, NJ",47000,79000,12d,40.7177545,-74.0431435,R
+151,2.9,Data Analyst,"Brooklyn, NY",35000,57000,11d,40.6781784,-73.9441579,"Python,SQL,R,Java,SAS"
+152,3.6,"Analyst, Data Governance","New York, NY",44000,78000,30d+,40.7127753,-74.0059728,R
+153,4.1,Data Support Analyst,"New York, NY",67000,103000,18d,40.7127753,-74.0059728,R
+154,4.3,Winter 2020 Co-op - Data and Automation Analyst,"New York, NY",62000,82000,24hr,40.7127753,-74.0059728,R
+155,5,Healthcare Data Analyst,"New York, NY",45000,75000,18d,40.7127753,-74.0059728,"SQL,R,SAS"
+156,3.1,Data Analyst,"New York, NY",46000,73000,12d,40.7127753,-74.0059728,R
+157,3,BA/Data Analyst,"Jersey City, NJ",50000,80000,3d,40.7177545,-74.0431435,"R,AWS,Data Analysis"
+158,4.6,Data Analyst/Data Scientist (2020 Start) - Analytics - Multioffice,"New York, NY",53000,85000,12d,40.7127753,-74.0059728,"Python,SQL,Machine Learning,R,Java,Tableau,SAS,Natural Language Processing"
+159,4.3,Senior Data Analyst - Data Infrastructure,"New York, NY",87000,132000,13d,40.7127753,-74.0059728,"SQL,Tableau"
+160,3.2,Data Governance Business Analyst,"Hoboken, NJ",55000,87000,3d,40.7439905,-74.0323626,R
+161,3.3,New York - Junior Data / Business Intelligence Analyst New York,"New York, NY",36000,51000,4d,40.7127753,-74.0059728,Data Analysis
+162,3.9,Data Analyst,"New York, NY",43000,70000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+163,3.4,Data Analyst I- MSH Physcian Access Services - FT- Days,"New York, NY",45000,66000,24hr,40.7127753,-74.0059728,R
+164,3,Senior Data Analyst,"New York, NY",63000,98000,1d,40.7127753,-74.0059728,"SQL,R,Tableau"
+165,3.4,Data Analyst I - Geriatrics and Palliative Care,"New York, NY",41000,60000,21d,40.7127753,-74.0059728,R
+166,4.2,Data Analyst - Analytics/SQL,"New York, NY",46000,79000,30d+,40.7127753,-74.0059728,"SQL,R,Oracle"
+167,3,Data Analyst II or III (Structured Finance),"New York, NY",46000,74000,10d,40.7127753,-74.0059728,R
+168,3.3,Data Quality Analyst,"New York, NY",59000,89000,1d,40.7127753,-74.0059728,"SQL,R,Microsoft Office"
+169,4,Sr Data Analyst- Population Health,"New York, NY",62000,90000,11d,40.7127753,-74.0059728,"SQL,R,SAS"
+170,2.7,Data Scientist - Digital Analyst,"Secaucus, NJ",101000,146000,13d,40.7895453,-74.0565298,"Python,SQL,R,SAS"
+171,2.9,Master Data Analyst,"New York, NY",49000,79000,21d,40.7127753,-74.0059728,R
+172,3.2,Data Analyst,"Lake Success, NY",41000,63000,26d,40.7698453,-73.7090428,"R,SAS"
+173,3.5,Data Analyst,"Little Ferry, NJ",36000,57000,13d,40.8528777,-74.0420848,"SQL,R,Java"
+174,4,Data Analyst - Analytics/SQL,"New York, NY",47000,76000,30d+,40.7127753,-74.0059728,"SQL,R,Oracle"
+175,4,Data Analyst,"Piscataway, NJ",52000,88000,25d,40.554887,-74.4642861,"Python,SQL,R,Java,Oracle"
+176,3.4,Data Analyst,"Whitehouse Station, NJ",67000,106000,21d,40.6155663,-74.7702576,"SQL,R"
+177,3.5,Data Analyst (Home-based) - Eastern Timezone - XWA,"New York, NY",43000,73000,17d,40.7127753,-74.0059728,"R,Data Analysis"
+178,4,ICBU Senior Data Analyst Alibaba.com,"New York, NY",83000,126000,3d,40.7127753,-74.0059728,R
+179,4.9,Junior/Mid-level Data Analyst with AML,"New York, NY",36000,59000,24hr,40.7127753,-74.0059728,
+180,4.7,Data Analyst,"Piscataway, NJ",39000,65000,8d,40.554887,-74.4642861,"SQL,R"
+181,3.4,Data Analyst,"Piscataway, NJ",38000,62000,4d,40.554887,-74.4642861,"R,Tableau,Oracle,Microsoft Office"
+182,4.4,Senior Data Analyst,"New York, NY",66000,105000,24hr,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+183,3.1,Data Analyst,"New York, NY",50000,82000,18d,40.7127753,-74.0059728,"SQL,R"
+184,2.9,Data Governance Analyst,"New York, NY",59000,95000,30d+,40.7127753,-74.0059728,"Python,R,Tableau"
+185,3.7,Data Modeler/analyst,"New York, NY",84000,113000,10d,40.7127753,-74.0059728,"SQL,R,Oracle"
+186,4.1,"Senior Data Operations Analyst, Data Analytics","New York, NY",68000,98000,15d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau"
+187,3.2,Data Governance Technical Analyst,"Jersey City, NJ",60000,102000,1d,40.7177545,-74.0431435,"SQL,R,Big Data"
+188,2.9,Business Data Analyst w/ SQL,"New York, NY",74000,111000,24hr,40.7127753,-74.0059728,"SQL,R"
+189,3.9,Senior Compliance Data Analyst,"New York, NY",75000,116000,27d,40.7127753,-74.0059728,"Python,SQL,R"
+190,3.3,Business and Data Analyst,"Port Chester, NY",47000,77000,21d,41.0017643,-73.6656834,"R,Tableau"
+191,3.8,"Data Analyst, Business Intelligence","New York, NY",49000,78000,17d,40.7127753,-74.0059728,"SQL,R,Tableau"
+192,3.8,Senior Data Analyst,"New York, NY",54000,91000,7d,40.7127753,-74.0059728,"SQL,R,Tableau,NoSQL"
+193,1,Tech Business/Data Analyst,"New York, NY",44000,67000,21d,40.7127753,-74.0059728,"Python,SQL,R,Java"
+194,3.1,Data Analyst (Marketing Analytics),"New York, NY",45000,76000,5d,40.7127753,-74.0059728,"SQL,R"
+195,3.2,Data Analyst,"Roslyn, NY",65000,96000,10d,40.7998227,-73.6509622,R
+196,2.7,Data Governance Analyst Technical Steward,"New York, NY",75000,107000,2d,40.7127753,-74.0059728,"SQL,R,Tableau,Data Warehouse"
+197,2.9,Data Analyst,"Stamford, CT",36000,59000,5d,41.0534302,-73.5387341,"R,Microsoft Office"
+198,2.5,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",50000,80000,20d,40.7127753,-74.0059728,R
+199,3.6,Data Analyst,"Hauppauge, NY",50000,84000,18d,40.8256536,-73.2026138,"Python,SQL,R,Tableau,Big Data,Oracle,Data Analysis,Azure"
+200,3.4,"Senior Data Operations Analyst, Data Analytics","New York, NY",50000,73000,15d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau"
+201,3.7,"NGS Data Analyst, Regeneron Genetics Center","Tarrytown, NY",59000,96000,25d,41.0762077,-73.8587461,"Python,R,AWS"
+202,3.1,"Data Analyst II, Environmental Medicine and Public Health","New York, NY",54000,80000,3d,40.7127753,-74.0059728,"SQL,R,Java"
+203,3.8,Sr. Business Intelligence Engineer / Data Analyst,"New York, NY",104000,143000,27d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,AWS"
+204,3.5,Data Lineage Analyst - Data Governance,"New York, NY",83000,115000,7d,40.7127753,-74.0059728,"SQL,R"
+205,3.6,QlikSense / Data Analyst,"Jersey City, NJ",51000,86000,30d+,40.7177545,-74.0431435,"SQL,R"
+206,3.3,Data Mapper/ Data Analyst,"New York, NY",74000,120000,30d+,40.7127753,-74.0059728,"R,Data Analysis"
+207,2.7,Data Governance Analyst,"New York, NY",54000,85000,30d+,40.7127753,-74.0059728,"SQL,R,Data Warehouse"
+208,3.6,Sure shot: Data Analyst with SQL/PLSQL/BI/Datawarehousing,"New York, NY",51000,86000,30d+,40.7127753,-74.0059728,"SQL,R"
+209,3.5,Sr Data Analyst,"New York, NY",69000,113000,3d,40.7127753,-74.0059728,"Python,SQL,R,Spark,Java,Tableau,Big Data,AWS,Scala,NoSQL,Oracle,Azure"
+210,4.9,AML Data Analyst,"New York, NY",45000,75000,18d,40.7127753,-74.0059728,SQL
+211,4.3,Data Analyst,"New York, NY",39000,65000,30d+,40.7127753,-74.0059728,"SQL,R,Data Warehouse"
+212,3.2,Data Analyst,"Princeton, NJ",50000,78000,13d,40.3572976,-74.6672226,"Python,SQL,R,Tableau"
+213,3,Data Quality Analyst,"New York, NY",48000,73000,1d,40.7127753,-74.0059728,"SQL,R,Microsoft Office"
+214,3.6,Program Data Analyst,"New York, NY",38000,65000,5d,40.7127753,-74.0059728,"Python,SQL,R"
+215,3.6,Financial Data Analyst (Healthcare),"New York, NY",45000,72000,4d,40.7127753,-74.0059728,R
+216,3.1,"Analyst, Data Architecture","New York, NY",102000,145000,3d,40.7127753,-74.0059728,"R,Spark"
+217,4,Data Analyst,"New York, NY",47000,76000,30d+,40.7127753,-74.0059728,"SQL,Java,SAS"
+218,3.1,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",57000,92000,30d+,40.7127753,-74.0059728,R
+219,4.8,Data Analyst-Junior Profiles also works-Only NY/NJ Candidates Please on w2 Only,"Jersey City, NJ",41000,63000,10d,40.7177545,-74.0431435,"Python,SQL,R,Tableau"
+220,4,Senior Data Analyst,"New York, NY",80000,129000,27d,40.7127753,-74.0059728,"SQL,R,Data Analysis"
+221,4.3,"Office of the CAO | Reference Data, Project Manager/Business Analyst","New York, NY",122000,164000,4d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+222,4,Data Analyst,"New York, NY",51000,75000,24d,40.7127753,-74.0059728,"R,SAS,Microsoft Office"
+223,3.3,Data Analyst - Compu-Vision Consulting Inc.,"New York, NY",73000,119000,30d+,40.7127753,-74.0059728,R
+224,3.6,DATA ANALYST PATIENT EXPERIENCE,"New York, NY",51000,77000,24hr,40.7127753,-74.0059728,"SQL,R"
+225,4.2,Compliance Data Analyst,"New York, NY",52000,77000,4d,40.7127753,-74.0059728,"SQL,R,SAS"
+226,3.6,Data Analyst,"Basking Ridge, NJ",54000,84000,6d,40.7066174,-74.5493284,"SQL,R"
+227,3.3,Salesforce Data Analyst,"New York, NY",53000,84000,2d,40.7127753,-74.0059728,"R,Microsoft Office"
+228,3.5,Data Analyst,"Newark, NJ",53000,90000,30d+,40.735657,-74.1723667,"Python,SQL,R,Hadoop,Spark,Java,Tableau,Hive"
+229,2.7,"Data Analyst, CIJ","New York, NY",38000,64000,21d,40.7127753,-74.0059728,"SQL,R,Tableau,AWS"
+230,3.1,"Data Analyst I, Department of Psychiatry","New York, NY",38000,58000,30d+,40.7127753,-74.0059728,R
+231,3.6,"Senior/Staff Data Scientist, Analyst","New York, NY",156000,209000,24hr,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+232,3.7,Senior Data Analyst,"New York, NY",56000,87000,20d,40.7127753,-74.0059728,"Python,SQL,R,Hadoop,Spark,Hive,AWS,Pig"
+233,3.6,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",81000,133000,6d,40.7177545,-74.0431435,"SQL,R"
+234,4.7,Data Analyst - Empower Professionals,"Jersey City, NJ",50000,85000,30d+,40.7177545,-74.0431435,"R,Data Analysis"
+235,3.9,Fraud Data Analyst,"New York, NY",42000,70000,3d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+236,4.6,Data Analyst,"Tarrytown, NY",45000,76000,3d,41.0762077,-73.8587461,"SQL,R,SAS,Oracle"
+237,3.4,2020 Data Systems Analyst Inernship,"Freehold, NJ",53000,98000,24d,40.2136754,-74.3000878,Tableau
+238,4.2,"Data Analyst, Go-Live","New York, NY",40000,67000,8d,40.7127753,-74.0059728,"Python,SQL,R"
+239,3.8,Data Analyst,"Fort Lee, NJ",46000,74000,7d,40.8509333,-73.9701381,"SQL,R,Tableau,Oracle"
+240,3.4,Data Science Analyst I Computational Biology - Genetics,"New York, NY",61000,95000,5d,40.7127753,-74.0059728,"Python,R,SAS,Scala"
+241,3.5,Quantitative Analyst/Data Scientist,"New York, NY",96000,155000,6d,40.7127753,-74.0059728,"Python,SQL,R"
+242,3.9,Data Analyst,"Wharton, NJ",59000,99000,13d,40.8931546,-74.5818254,"R,MATLAB,Microsoft Office"
+243,3.5,"Senior Data Analyst M/WBE, Enterprise Data Services","New York, NY",73000,120000,12d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+244,3.6,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",46000,74000,26d,40.7127753,-74.0059728,R
+245,3.4,"Data & Reporting Business Analyst - Kenilworth, NJ","New York, NY",56000,92000,4d,40.7127753,-74.0059728,"SQL,R,Tableau"
+246,2.7,Data Analyst,"Florham Park, NJ",51000,86000,7d,40.787878,-74.3882072,"SQL,R"
+247,3,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",44000,70000,26d,40.7127753,-74.0059728,R
+248,3.1,"Data Analyst (Americas Transformation & Strategy Department) in New York, New York | Careers at New York","New York, NY",45000,71000,30d+,40.7127753,-74.0059728,R
+249,3.8,"Data Analyst with Tableau (CTH ROLE, direct onsite , Only Locals)","New Hyde Park, NY",36000,61000,11d,40.7351018,-73.6879082,Tableau
+250,3.8,Data Analyst 3,"New York, NY",52000,87000,20d,40.7127753,-74.0059728,"SQL,R,SAS,Oracle"
+251,4,"Senior Associate, Data Management Reporting Analyst, Central Services","Peapack, NJ",75000,112000,15d,40.7151691,-74.6576091,"SQL,R,Java,SAS,Oracle,Microsoft Office"
+252,3.9,"Marketing Data Management Analyst, Corporate & Investment Bank","New York, NY",48000,77000,5d,40.7127753,-74.0059728,"R,Tableau"
+253,3.4,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",99000,152000,6d,40.7177545,-74.0431435,"SQL,R"
+254,3.9,Hotel Program Operations and Data Analyst,"Parsippany, NJ",48000,80000,6d,40.8652865,-74.4173877,R
+255,3.3,Data Analyst - Compu-Vision Consulting Inc.,"New York, NY",73000,119000,30d+,40.7127753,-74.0059728,R
+256,3.5,Data Analyst,"New York, NY",58000,95000,7d,40.7127753,-74.0059728,R
+257,4.2,Compliance Data Analyst,"New York, NY",52000,77000,4d,40.7127753,-74.0059728,"SQL,R,SAS"
+258,3.7,Clinical Data Analyst,"Edison, NJ",55000,83000,5d,40.5187154,-74.4120953,R
+259,3.6,Data Analyst,"Basking Ridge, NJ",54000,84000,6d,40.7066174,-74.5493284,"SQL,R"
+260,3.5,Data Analyst,"Newark, NJ",53000,90000,30d+,40.735657,-74.1723667,"Python,SQL,R,Hadoop,Spark,Java,Tableau,Hive"
+261,2.7,"Data Analyst, CIJ","New York, NY",38000,64000,21d,40.7127753,-74.0059728,"SQL,R,Tableau,AWS"
+262,3.3,Salesforce Data Analyst,"New York, NY",53000,84000,2d,40.7127753,-74.0059728,"R,Microsoft Office"
+263,3.1,"Data Analyst I, Department of Psychiatry","New York, NY",38000,58000,30d+,40.7127753,-74.0059728,R
+264,4.3,Senior Data Analyst,"New York, NY",87000,132000,27d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+265,3.6,"Senior/Staff Data Scientist, Analyst","New York, NY",156000,209000,24hr,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+266,3.4,Audience Data Analyst,"New York, NY",47000,75000,20d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,Linux"
+267,3.7,"Data Analyst, Data & Analytics (Advanced Analytics) (Manager) (Multiple Positions)","Iselin, NJ",89000,123000,14d,40.5753817,-74.3223703,"Python,SQL,R,Tableau,SAS,TensorFlow"
+268,3,Data Analyst II or III,"New York, NY",46000,74000,20d,40.7127753,-74.0059728,R
+269,3.7,Senior Data Analyst,"New York, NY",56000,87000,20d,40.7127753,-74.0059728,"Python,SQL,R,Hadoop,Spark,Hive,AWS,Pig"
+270,3.6,"Data Analyst, Accessories Supply Planning","Atlanta, GA",46000,74000,12d,33.7489954,-84.3879824,"R,Tableau"
+271,3.4,Data Analyst II - Genetics,"New York, NY",59000,87000,3d,40.7127753,-74.0059728,"R,Data Warehouse"
+272,4.7,Data Analyst - Empower Professionals,"Jersey City, NJ",50000,85000,30d+,40.7177545,-74.0431435,"R,Data Analysis"
+273,3.6,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",81000,133000,6d,40.7177545,-74.0431435,"SQL,R"
+274,4.6,Data Analyst,"Tarrytown, NY",45000,76000,3d,41.0762077,-73.8587461,"SQL,R,SAS,Oracle"
+275,3.9,Fraud Data Analyst,"New York, NY",42000,70000,3d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+276,3.4,2020 Data Systems Analyst Inernship,"Freehold, NJ",53000,98000,24d,40.2136754,-74.3000878,Tableau
+277,4.2,"Data Analyst, Go-Live","New York, NY",40000,67000,8d,40.7127753,-74.0059728,"Python,SQL,R"
+278,3.4,Data Science Analyst I Computational Biology - Genetics,"New York, NY",61000,95000,5d,40.7127753,-74.0059728,"Python,R,SAS,Scala"
+279,2.1,Lead Data Analyst,"New York, NY",81000,120000,3d,40.7127753,-74.0059728,"SQL,R,SAS,Oracle"
+280,3.7,Marketing Communications Data Analyst,"New York, NY",69000,115000,21d,40.7127753,-74.0059728,"R,Tableau"
+281,3.5,Quantitative Analyst/Data Scientist,"New York, NY",96000,155000,6d,40.7127753,-74.0059728,"Python,SQL,R"
+282,3.8,Data Analyst,"Fort Lee, NJ",46000,74000,7d,40.8509333,-73.9701381,"SQL,R,Tableau,Oracle"
+283,3.5,"Senior Data Analyst M/WBE, Enterprise Data Services","New York, NY",73000,120000,12d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+284,3.1,"Data Analyst I, Department of OBGYN","New York, NY",41000,60000,30d+,40.7127753,-74.0059728,R
+285,3.6,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",46000,74000,26d,40.7127753,-74.0059728,R
+286,3.4,Data Reporting Analyst II,"Newark, NJ",53000,89000,19d,40.735657,-74.1723667,"SQL,SAS"
+287,3.5,Data Analyst (Data Quality & Management),"New York, NY",43000,71000,4d,40.7127753,-74.0059728,"SQL,R,Tableau,SAS,Oracle,Azure"
+288,3.6,DATA ANALYST PROGRAMMER,"New York, NY",45000,68000,11d,40.7127753,-74.0059728,"Python,SQL,R,NoSQL"
+289,3.5,"Business/Reporting Analyst, Office of Data Management","New York, NY",57000,95000,24hr,40.7127753,-74.0059728,"SQL,R,Microsoft Office"
+290,3.9,Data Analyst,"Wharton, NJ",59000,99000,13d,40.8931546,-74.5818254,"R,MATLAB,Microsoft Office"
+291,2.7,Data Analyst,"Florham Park, NJ",51000,86000,7d,40.787878,-74.3882072,"SQL,R"
+292,3.6,PAYROLL DATA ANALYST,"New York, NY",45000,68000,15d,40.7127753,-74.0059728,"R,Microsoft Office"
+293,3.4,"Data & Reporting Business Analyst - Kenilworth, NJ","New York, NY",56000,92000,4d,40.7127753,-74.0059728,"SQL,R,Tableau"
+294,3.8,"Data Analyst with Tableau (CTH ROLE, direct onsite , Only Locals)","New Hyde Park, NY",36000,61000,11d,40.7351018,-73.6879082,Tableau
+295,2.8,Senior Data Analyst,"New York, NY",95000,135000,6d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,Data Warehouse"
+296,3.2,Data Platforms Senior Systems Business Analyst,"Jersey City, NJ",78000,122000,5d,40.7177545,-74.0431435,"SQL,R,Data Warehouse"
+297,3,"Cantor Fitzgerald: Client Data Management, Analyst","New York, NY",44000,70000,26d,40.7127753,-74.0059728,R
+298,3.2,Data Governance Business Analyst,"Hoboken, NJ",52000,81000,4d,40.7439905,-74.0323626,R
+299,3.5,Fraud Data Analyst,"New York, NY",41000,68000,12d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+300,4,"Senior Associate, Data Management Reporting Analyst, Central Services","Peapack, NJ",75000,112000,15d,40.7151691,-74.6576091,"SQL,R,Java,SAS,Oracle,Microsoft Office"
+301,3.1,Data Analyst - Pharma LifeSciences,"Stamford, CT",56000,89000,8d,41.0534302,-73.5387341,"Python,SQL,R,SAS,AWS,Oracle"
+302,3.1,Principal Data Analyst-Data Architect,"Florham Park, NJ",158000,223000,3d,40.787878,-74.3882072,"R,Hadoop,Oracle"
+303,2.7,Senior Data Analyst,"New York, NY",68000,109000,20d,40.7127753,-74.0059728,"R,SAS"
+304,3.8,Data Analyst 4,"New York, NY",63000,104000,18d,40.7127753,-74.0059728,"R,Tableau,Oracle"
+305,1,Data Analyst-BA,"New York, NY",40000,67000,5d,40.7127753,-74.0059728,"SQL,Oracle"
+306,3.4,Senior Data Analyst,"New York, NY",66000,102000,21d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+307,4.3,Compensation and Data Analyst (Human Resources),"New York, NY",59000,85000,20d,40.7127753,-74.0059728,R
+308,3.8,Data Analyst 3,"New York, NY",52000,87000,20d,40.7127753,-74.0059728,"SQL,R,SAS,Oracle"
+309,3.1,"Data Analyst (Americas Transformation & Strategy Department) in New York, New York | Careers at New York","New York, NY",45000,71000,30d+,40.7127753,-74.0059728,R
+310,2.1,Senior Data Analyst,"New York, NY",88000,126000,11d,40.7127753,-74.0059728,"R,SAS"
+311,3.9,"Marketing Data Management Analyst, Corporate & Investment Bank","New York, NY",48000,77000,5d,40.7127753,-74.0059728,"R,Tableau"
+312,4.6,Data Analyst and Data Scientist,"Summit, NJ",53000,85000,25d,40.7146376,-74.3646122,"Python,SQL,Machine Learning,R,Java,Tableau,SAS,Natural Language Processing"
+313,3.4,Sr. Reference Data Business Analyst - SQL,"Jersey City, NJ",99000,152000,6d,40.7177545,-74.0431435,"SQL,R"
+314,3.4,Senior Reporting & Data Analyst,"Whitehouse Station, NJ",103000,155000,13d,40.6155663,-74.7702576,"SQL,R,SAS"
+315,4.2,Senior Forensic Data Analyst,"New York, NY",55000,86000,14d,40.7127753,-74.0059728,"R,Tableau"
+316,2.5,Data Analyst,"Roslyn, NY",58000,86000,25d,40.7998227,-73.6509622,R
+317,2.2,Data & Interface Analyst,"Staten Island, NY",44000,70000,8d,40.5795317,-74.1502007,"SQL,R,Oracle"
+318,4.3,Mortgage Whole Loan Data & Collateral Analyst,"New York, NY",44000,66000,6d,40.7127753,-74.0059728,"SQL,R"
+319,4.3,"Office of the CAO | Reference Data, Operations Analyst","New York, NY",68000,92000,4d,40.7127753,-74.0059728,R
+320,4,Regulatory Data & Risk Analyst,"White Plains, NY",51000,78000,4d,41.0339862,-73.7629097,"SQL,R,Tableau,SAS"
+321,3.1,"Analyst, Data Architecture","New York, NY",73000,107000,17d,40.7127753,-74.0059728,"R,Spark,Microsoft Office"
+322,3.6,Orion - Media Data Analyst,"New York, NY",38000,60000,5d,40.7127753,-74.0059728,"Python,R,Java,Tableau"
+323,3.1,Data Privacy Analyst,"Matawan, NJ",65000,83000,17d,40.41483,-74.2295891,R
+324,3.6,"Investment Banking, Summer Analyst: Data Science Analyst, M&A Strategic Shareholder Advisory","New York, NY",98000,122000,3d,40.7127753,-74.0059728,
+325,2.1,Data Governance Analyst Technical Steward,"New York, NY",85000,128000,30d+,40.7127753,-74.0059728,"SQL,R,Tableau,Data Warehouse"
+326,3.8,Central Data Science Solutions (CDSS) Business Analyst or Principal Business Analyst,"Ridgefield, NJ",67000,109000,12d,40.8342669,-74.0087505,"R,SAS,Oracle"
+327,3.4,Data & Reporting Business Analyst - Kenilworth,"Hoboken, NJ",56000,92000,4d,40.7439905,-74.0323626,"SQL,R,Tableau"
+328,3.3,Data Analyst/Report Writer,"Flemington, NJ",50000,77000,3d,40.5123258,-74.8593318,"Python,SQL,R"
+329,3.8,Senior Data Analyst,"New York, NY",48000,79000,30d+,40.7127753,-74.0059728,AI
+330,3.4,Business Analyst/Data Analyst,"Parsippany, NJ",51000,87000,8d,40.8652865,-74.4173877,R
+331,4,Data Analyst / IT Data and Business Intelligence,"Jersey City, NJ",62000,105000,20d,40.7177545,-74.0431435,"SQL,R,Data Analysis"
+332,4.2,Data Analyst - II,"New York, NY",54000,83000,3d,40.7127753,-74.0059728,R
+333,3.8,Data Analyst,"Port Washington, NY",38000,61000,19d,40.8256561,-73.6981858,"SQL,R,Java,SAS,NoSQL,Azure"
+334,3.7,Senior Data Analyst,"New York, NY",84000,133000,8d,40.7127753,-74.0059728,R
+335,2.1,Data Governance Analyst,"New York, NY",53000,84000,30d+,40.7127753,-74.0059728,"SQL,R,Data Warehouse"
+336,3.8,"Sr. Data Analyst, Data Analytics & Audience Science","New York, NY",84000,134000,10d,40.7127753,-74.0059728,"Python,SQL,R"
+337,3.8,Configuration/Data Analyst,"Uniondale, NY",65000,103000,6d,40.7003793,-73.5929056,R
+338,3.4,"Senior Business Analyst, Data Management & Business Intelligence Systems","New York, NY",61000,91000,20d,40.7127753,-74.0059728,"R,Oracle,AI"
+339,3.6,Senior Data Analyst,"New York, NY",58000,91000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+340,3.7,Fraud Data Analyst,"New York, NY",40000,62000,11d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+341,4.7,Lead Data Analyst,"New York, NY",50000,84000,19d,40.7127753,-74.0059728,"R,Big Data"
+342,3.5,Senior Business Data Analyst,"Weehawken, NJ",70000,106000,14d,40.7663711,-74.0253715,"Python,SQL,R,Spark,Tableau,Big Data"
+343,3.7,"Data Analyst, CHOICE","New York, NY",48000,72000,2d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,SAS"
+344,4.1,Business and Data Analyst,"Stamford, CT",43000,70000,7d,41.0534302,-73.5387341,R
+345,3.6,Technical Data Analyst - Diverse Lynx,"Jersey City, NJ",57000,97000,30d+,40.7177545,-74.0431435,"SQL,R,AWS,Data Analysis"
+346,3.5,Senior Data Business Analyst,"New York, NY",77000,117000,27d,40.7127753,-74.0059728,R
+347,3.7,"Senior Data Analyst, Data Instrumentation","New York, NY",85000,135000,3d,40.7127753,-74.0059728,"Python,SQL,R,Spark"
+348,3.1,Senior Data Analyst - Compliance,"Jersey City, NJ",55000,85000,24hr,40.7177545,-74.0431435,"Python,SQL,R,Tableau,Oracle,Microsoft SQL Server,Azure,Microsoft Office"
+349,4.2,Senior Data Analyst,"New York, NY",60000,99000,2d,40.7127753,-74.0059728,"Python,SQL,R"
+350,4.3,"Office of the CAO | Reference Data, Technical Operations Analyst | Chicago/","New York, NY",68000,92000,4d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+351,4.5,Sr Data Analyst,"New York, NY",72000,115000,10d,40.7127753,-74.0059728,"SQL,R"
+352,4,Sr Data Analyst- Population Health,"New York, NY",62000,90000,11d,40.7127753,-74.0059728,"SQL,R,SAS"
+353,4.2,Data Analyst (Tableau / Qlik),"Bridgewater, NJ",50000,82000,3d,40.5939636,-74.6049061,"R,Tableau"
+354,2.2,HEDIS Data Analyst,"New York, NY",46000,71000,4d,40.7127753,-74.0059728,"SQL,AWS"
+355,3.7,Senior Data Analyst,"Queens Village, NY",57000,89000,22d,40.7156628,-73.7419017,"Python,SQL,R,Tableau"
+356,2.8,Data Analyst,"West Point, NY",38000,63000,11d,41.3914827,-73.9559721,R
+357,3,Clinical Data Analyst,"Bronx, NY",45000,67000,12d,40.8447819,-73.8648268,"SQL,R"
+358,3.5,"Vendor/Procurement Data Analyst - Integrated Resources, Inc","New York, NY",70000,116000,30d+,40.7127753,-74.0059728,R
+359,3.8,Practice Spclst Data Analyst,"Manhasset, NY",55000,83000,4d,40.7978787,-73.6995749,R
+360,3.6,Data Analyst (Short Hills - NJ),"Jersey City, NJ",51000,86000,28d,40.7177545,-74.0431435,"SQL,R,Java,SAS"
+361,2.8,Senior Healthcare Data Analyst,"New York, NY",59000,86000,11d,40.7127753,-74.0059728,"SQL,R,Tableau,Microsoft Office"
+362,3.8,Deloitte Consulting - Specialist Analyst Data Scientist - North Carolina State University (NCSU),"New York, NY",115000,171000,30d+,40.7127753,-74.0059728,"Python,SQL,R"
+363,3.3,Defined Benefit Functional Data Analyst,"New York, NY",42000,67000,7d,40.7127753,-74.0059728,"SQL,R"
+364,3.6,Data Analyst -Policy Analytics,"New York, NY",33000,56000,17d,40.7127753,-74.0059728,"Python,SQL,R"
+365,3.2,Data Science Systems Programmer Analyst,"New York, NY",76000,108000,3d,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau,SAS"
+366,4.5,Senior Healthcare Data Analyst,"New York, NY",65000,99000,6d,40.7127753,-74.0059728,"SQL,R"
+367,2.8,Senior Product Data Analyst,"New York, NY",95000,135000,24hr,40.7127753,-74.0059728,"SQL,R,SAS"
+368,3.6,Tech Business Analyst/Data Analyst,"New York, NY",56000,91000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Java"
+369,4.6,IT Support analyst - Data analytics and devops,"Roseland, NJ",38000,60000,11d,40.8206555,-74.2937594,"SQL,Tableau,SAS"
+370,3.1,"Tapia Data Science, Data Analytics, Technical Business Analyst (Lead Data Analyst)","New York, NY",40000,64000,3d,40.7127753,-74.0059728,"Python,SQL,Machine Learning,R,Tableau,AI,Data Analysis"
+371,3.7,Senior Financial Data & Business System Analyst,"Brooklyn, NY",67000,108000,6d,40.6781784,-73.9441579,R
+372,4.8,ETL Datastage Developer/IBM Infosphere Datastage Consultant(ETL Data Analyst)-Only NY/NJ candidates Please,"New York, NY",57000,90000,17d,40.7127753,-74.0059728,"SQL,R,Oracle,Scripting"
+373,3.8,"Data Analyst with Tableau (Direct Onsite, Only Locals)","New Hyde Park, NY",37000,61000,11d,40.7351018,-73.6879082,"R,Tableau"
+374,4.2,Data Analyst - Insurance - XDuce,"New York, NY",46000,79000,30d+,40.7127753,-74.0059728,
+375,2.8,IT - Data Analyst,"Jersey City, NJ",38000,62000,6d,40.7177545,-74.0431435,R
+376,3.9,Master Data Analyst,"Warren, NJ",54000,89000,11d,40.6342489,-74.5004796,R
+377,3.8,"Investment Banking, Summer Analyst: Data Science Analyst, M&A Strategic Shareholder Advisory","New York, NY",77000,99000,3d,40.7127753,-74.0059728,
+378,4.2,SAS Programmer Analyst / Healthcare Claims Data,"New Brunswick, NJ",90000,129000,24hr,40.4862157,-74.4518188,"SQL,R,SAS"
+379,3.5,US Data Quality and Governance Business Analyst,"Weehawken, NJ",70000,113000,19d,40.7663711,-74.0253715,R
+380,3.5,US Data Quality & Profiling Business Analyst,"Weehawken, NJ",70000,113000,19d,40.7663711,-74.0253715,R
+381,3.1,"Analyst, Advanced Data Modeler","New York, NY",70000,94000,10d,40.7127753,-74.0059728,"Python,R"
+382,3.4,Data Reporting Analyst III,"Newark, NJ",51000,85000,19d,40.735657,-74.1723667,"SQL,R,SAS"
+383,3.8,Senior Data Analyst,"New York, NY",54000,91000,7d,40.7127753,-74.0059728,"SQL,R,Tableau,NoSQL"
+384,3.5,Senior Metrics and Reporting Analyst - Data Governance and Management,"Lebanon, NJ",74000,121000,14d,40.6417683,-74.8359987,"Python,SQL,R,Tableau"
+385,3.5,Fraud Data Analyst,"New York, NY",43000,71000,12d,40.7127753,-74.0059728,"Python,SQL,R,SAS"
+386,2.6,"Data Analyst - Lenmar Consulting, Inc.","Jersey City, NJ",38000,65000,30d+,40.7177545,-74.0431435,"Python,SQL,R,Tableau,SAS,Scala"
+387,3.7,Marketing Data Analyst,"Stamford, CT",37000,58000,13d,41.0534302,-73.5387341,"SQL,R,Tableau"
+388,3.8,Deloitte Consulting – Specialist Analyst Data Scientist - North Carolina State University (NCSU),"New York, NY",115000,171000,10d,40.7127753,-74.0059728,"Python,SQL,R"
+389,3.1,Defined Benefit Functional Data Analyst,"Harrison, NY",41000,65000,8d,40.9700171,-73.7176337,"SQL,R"
+390,3.7,"Data Steward - (Siebel, SQL, Data Analyst)","Florham Park, NJ",49000,79000,11d,40.787878,-74.3882072,"SQL,R"
+391,3.4,Data Warehouse Analyst; Adolescent Health,"New York, NY",68000,100000,11d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,Oracle,Data Warehouse,Microsoft SQL Server,Scripting"
+392,3.1,"Data Analyst I -Diagnostic, Molecular and Interventional Radiology","New York, NY",41000,60000,3d,40.7127753,-74.0059728,R
+393,2.8,Technical Data Analyst,"Rockleigh, NJ",56000,84000,24hr,41.0003754,-73.930414,"SQL,R"
+394,3.4,"Senior Data Analyst, Environmental Medicine and Public Health","New York, NY",50000,72000,16d,40.7127753,-74.0059728,"SQL,R,SAS,Oracle,Data Warehouse"
+395,3.6,Data Analyst with SQL/PLSQL/BI/Datawarehousing,"New York, NY",51000,86000,30d+,40.7127753,-74.0059728,"SQL,R"
+396,3.5,Data Analyst- Stony Brook CPMP General Accounting,"Stony Brook, NY",48000,73000,30d+,40.9256538,-73.1409429,"SQL,R"
+397,3.4,SENIOR DATA ANALYST,"New York, NY",55000,82000,19d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,SAS,Oracle,AI"
+398,5,"Data Analyst- Pennsylvania,PA - Georgia IT Inc.","New York, NY",48000,81000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Java,Tableau"
+399,3.4,"Data Analyst I -Diagnostic, Molecular and Interventional Radiology","New York, NY",41000,60000,19d,40.7127753,-74.0059728,R
+400,2.9,Sr. Data and Reporting Analyst,"Stamford, CT",47000,79000,8d,41.0534302,-73.5387341,"Python,SQL,R,Hadoop,Tableau,SAS,NoSQL,Oracle"
+401,3.2,"Senior Analyst, Analytics and Data Science","New York, NY",57000,92000,3d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,AWS,AI"
+402,3.7,SAP System & SDP Data Analyst,"White Plains, NY",56000,80000,11d,41.0339862,-73.7629097,"R,Microsoft Office"
+403,3.7,Healthcare Encounter Data Analyst,"New York, NY",45000,69000,2d,40.7127753,-74.0059728,"SQL,R,SAS"
+404,3.1,"Senior Data Analyst - Compliance in Jersey City, New Jersey | Careers at Harborside","Jersey City, NJ",55000,85000,30d+,40.7177545,-74.0431435,"Python,SQL,R,Tableau,Oracle,Microsoft SQL Server,Azure,Microsoft Office"
+405,3.4,Clinical Data Analyst,"Edison, NJ",57000,87000,30d+,40.5187154,-74.4120953,R
+406,3.8,"Senior Data Analyst – Global Supply Analytics, AMERICAS","New York, NY",79000,119000,5d,40.7127753,-74.0059728,"Python,R,Hadoop,Tableau"
+407,3.4,Regulatory Data & Risk Analyst,"White Plains, NY",62000,93000,4d,41.0339862,-73.7629097,"SQL,R,Tableau,SAS"
+408,4.1,Information Data Analyst,"Dover, NJ",39000,67000,11d,40.883988,-74.5621025,"R,Microsoft Office"
+409,5,Business Data Analyst ONLY,"Morristown, NJ",54000,84000,9d,40.7967667,-74.4815438,"SQL,R,Tableau"
+410,3.1,"Sr. Analyst, Client Data and DMP Strategy","New York, NY",60000,80000,20d,40.7127753,-74.0059728,"R,Spark"
+411,2.5,Data Warehouse Business Analyst (T-SQL),"Bronx, NY",75000,116000,4d,40.8447819,-73.8648268,"SQL,R,AWS,Oracle,Data Warehouse,Azure"
+412,3.2,Data Warehouse Analyst - Crescens Inc.,"Jersey City, NJ",45000,68000,30d+,40.7177545,-74.0431435,"SQL,R,Tableau,Data Warehouse"
+413,3.4,SQL Data Reporting Analyst - Revenue Cycle Patient Accounts (FT),"Oceanport, NJ",49000,82000,5d,40.3181663,-74.0151382,"SQL,R,Tableau"
+414,3.7,"NGS Data Analyst, Regeneron Genetics Center","Tarrytown, NY",59000,96000,25d,41.0762077,-73.8587461,"Python,R,AWS"
+415,3.6,Regulatory Reporting and Data Analyst,"Bridgewater, NJ",40000,66000,4d,40.5939636,-74.6049061,R
+416,4.3,"Office of the CAO | Reference Data, Project Manager/Business Analyst","New York, NY",122000,164000,4d,40.7127753,-74.0059728,"Python,SQL,R,Tableau"
+417,3.7,Senior Data Analyst,"New York, NY",55000,84000,27d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,AWS"
+418,3.6,Lead Marketing Data Analyst,"New York, NY",56000,83000,13d,40.7127753,-74.0059728,"SQL,R,SAS"
+419,3.6,Business Analyst – Oncology/SPP data (Life Sciences),"Berkeley Heights, NJ",68000,106000,26d,40.6808726,-74.4310524,"SQL,R,Tableau"
+420,2.9,"Editorial Data Analyst, newsday.com","Melville, NY",50000,75000,11d,40.7934322,-73.4151214,R
+421,3.4,Senior Data Business Analyst,"New York, NY",116000,180000,27d,40.7127753,-74.0059728,R
+422,3.4,Clinical Data Analyst,"Lake Success, NY",51000,78000,8d,40.7698453,-73.7090428,R
+423,3.6,Data Analyst - Diverse Lynx,"Jersey City, NJ",51000,86000,30d+,40.7177545,-74.0431435,R
+424,3.6,MDM Data Analyst,"Jersey City, NJ",51000,86000,30d+,40.7177545,-74.0431435,R
+425,3.8,Data Analyst - BLAW Web Document Acquisition,"Princeton, NJ",54000,78000,21d,40.3572976,-74.6672226,"Python,R,Java"
+426,3.4,Sr. Data Analyst,"New York, NY",95000,142000,18d,40.7127753,-74.0059728,"SQL,Machine Learning,R"
+427,2.7,"Senior Data Analyst, Pharmacy","New York, NY",68000,109000,18d,40.7127753,-74.0059728,"SQL,R,SAS,Oracle"
+428,3.8,Sr. Business Analyst/Data Analyst/Securities/Reference Data,"Jersey City, NJ",60000,100000,8d,40.7177545,-74.0431435,"SQL,R,Kafka"
+429,3.4,Quantitative Analyst Data Science,"Stamford, CT",61000,106000,30d+,41.0534302,-73.5387341,"Python,SQL,R"
+430,3.1,Sr. Specialist Info Sec Analyst - Data Scientist,"New York, NY",108000,156000,11d,40.7127753,-74.0059728,"SQL,R,Java,Oracle"
+431,3.5,Oracle Data Cloud - Security Operations Analyst,"New York, NY",58000,87000,9d,40.7127753,-74.0059728,"R,Oracle"
+432,3.9,Data Warehouse Analyst - Cygnus Professionals,"Jersey City, NJ",51000,77000,30d+,40.7177545,-74.0431435,"SQL,R,Tableau,Data Warehouse"
+433,4.8,Sr. Datastage and Data Analyst,"New York, NY",75000,113000,22d,40.7127753,-74.0059728,"SQL,R,Oracle,Scripting"
+434,2.9,Credit Services Data Analyst,"Stamford, CT",46000,74000,11d,41.0534302,-73.5387341,"SQL,R,Tableau"
+435,3.8,"Insight Studio Specialist Data Scientist - Analyst - Technology, Consulting - BTA - UG - University of Michigan (Summer/Fall)","New York, NY",132000,185000,4d,40.7127753,-74.0059728,"Python,SQL,R"
+436,3.7,Madewell Customer Data Science Sr. Analyst,"Long Island City, NY",64000,97000,27d,40.744679,-73.9485424,"Python,SQL,R,Tableau,Big Data"
+437,3.1,"Senior Financial Analyst, Technology/Data Operations - Entertainment and Media Industry Opportunity","New York, NY",56000,84000,30d+,40.7127753,-74.0059728,R
+438,3.9,CIB Digital & Platform Services Resolution & Recovery - Sr. Data/Business Analyst,"Brooklyn, NY",62000,109000,18d,40.6781784,-73.9441579,"R,Tableau"
+439,3.1,"Lead Analyst, Data Mgmt Ops","Pennington, NJ",50000,77000,20d,40.3284402,-74.790718,"SQL,R"
+440,3.4,Data & Reporting Business Analyst,"Kenilworth, NJ",56000,92000,4d,40.6764911,-74.2907032,"SQL,R,Tableau"
+441,3.8,NJATCSU Data Warehouse Analyst - Softpath System LLC,"Jersey City, NJ",54000,80000,30d+,40.7177545,-74.0431435,"SQL,R,Tableau"
+442,4,Data Analyst / IT Data & Business Intelligence,"Harrison, NY",50000,81000,20d,40.9700171,-73.7176337,"SQL,Data Analysis"
+443,4.2,Insurance Systems Analyst - Business & Data,"New York, NY",47000,81000,12d,40.7127753,-74.0059728,"SQL,R,Microsoft Office"
+444,3.2,Data Governance Analysts,"Warren, NJ",62000,96000,4d,40.6342489,-74.5004796,R
+445,3.8,Senior Data Analyst,"Fort Lee, NJ",60000,92000,7d,40.8509333,-73.9701381,"SQL,R,Tableau,Oracle"
+446,3.4,2020 Data Systems Analyst Inernship,"Freehold, NJ",53000,98000,24d,40.2136754,-74.3000878,Tableau
+447,3,Hotel Program Operations and Data Analyst,"Parsippany, NJ",33000,55000,30d+,40.8652865,-74.4173877,R
+448,4.7,Lead Data Analyst,"New York, NY",50000,84000,19d,40.7127753,-74.0059728,"R,Big Data"
+449,2.3,Data and Business Analyst - Montvale NJ,"Montvale, NJ",46000,75000,20d,41.0467635,-74.0229173,"R,Tableau,AI"
+450,2.4,Data Analyst - Foster Care,"Staten Island, NY",30000,50000,13d,40.5795317,-74.1502007,R
+451,2.1,"Senior Data Analyst, Pharmacy","New York, NY",88000,126000,30d+,40.7127753,-74.0059728,"SQL,R,SAS,Oracle"
+452,3.5,Senior Data Business Analyst,"New York, NY",66000,105000,27d,40.7127753,-74.0059728,R
+453,3.9,Sr. Data Analyst,"New York, NY",60000,93000,30d+,40.7127753,-74.0059728,"SQL,R,Data Analysis"
+454,3.6,Lead Data Analyst,"Piscataway, NJ",74000,114000,1d,40.554887,-74.4642861,"SQL,R,Oracle,Microsoft SQL Server"
+455,2.3,Data and Business Analyst,"Montvale, NJ",46000,75000,20d,41.0467635,-74.0229173,"R,Tableau,AI"
+456,4.1,"Senior Business Analyst for Business Process, Data Analysis, and Data Modeling for Pharmaceutical R&D - Alpha Consulting Corp.","Jersey City, NJ",93000,147000,30d+,40.7177545,-74.0431435,"R,AI"
+457,3.4,Quantitative Analyst – Data Science,"Stamford, CT",61000,106000,11d,41.0534302,-73.5387341,"Python,SQL,R"
+458,4.2,Data Analyst/Architect,"New York, NY",43000,72000,30d+,40.7127753,-74.0059728,R
+459,3.1,"Senior Data Analyst, Environmental Medicine and Public Health","New York, NY",54000,78000,30d+,40.7127753,-74.0059728,"SQL,R,SAS,Oracle,Data Warehouse"
+460,2.5,"Data Analyst, Decision Support","Jericho, NY",51000,79000,3d,40.7920441,-73.5398476,"Python,SQL,R,Tableau"
+461,3.1,Data Warehouse Analyst; Adolescent Health,"New York, NY",61000,90000,30d+,40.7127753,-74.0059728,"Python,SQL,R,Tableau,Oracle,Data Warehouse,Microsoft SQL Server,Scripting"
+462,3.2,SAP Analyst (Master Data Maintainer),"Lyndhurst, NJ",55000,80000,5d,40.8120171,-74.1243063,R
+463,3.2,"Senior Data Analyst, Supervised Release Program","New York, NY",64000,105000,14d,40.7127753,-74.0059728,"Python,SQL,R,Tableau,SAS,Oracle"
+464,3.1,Data Science Analyst I Computational Biology - Genetics,"New York, NY",49000,78000,30d+,40.7127753,-74.0059728,"Python,R,SAS,Scala"
+465,3.2,Audit Data Analyst,"Livingston, NJ",45000,71000,14d,40.7862871,-74.3300842,"Python,SQL,R,Tableau"
+466,3.1,"Specialist, Big Data Senior Analyst (Treasury and ALM)","New York, NY",60000,94000,14d,40.7127753,-74.0059728,"SQL,R,Hadoop,Hive"
+467,2.9,Business Data Analyst II,"Stamford, CT",59000,93000,12d,41.0534302,-73.5387341,"SQL,R,Tableau,Oracle"
+468,2.9,"Sr. Analyst, Data and Reporting","Stamford, CT",49000,82000,4d,41.0534302,-73.5387341,"SQL,R"
+469,3.6,Business Analyst Oncology/SPP data (Life Sciences),"Berkeley Heights, NJ",68000,106000,30d+,40.6808726,-74.4310524,"SQL,R,Tableau,SAS"
+470,3.8,Senior Data Analyst / Scientist,"New York, NY",56000,92000,15d,40.7127753,-74.0059728,"Machine Learning,R"
+471,3.3,Senior Data Management Analyst,"Secaucus, NJ",60000,90000,22d,40.7895453,-74.0565298,"SQL,R,SAS,Microsoft Office"
+472,3.2,Senior Data Governance Analyst,"Greenwich, CT",66000,99000,19d,41.0262417,-73.6281964,"SQL,R,Data Warehouse,Microsoft Office"
+473,3.4,"Senior Data Analyst, Data Instrumentation","New York, NY",49000,80000,20d,40.7127753,-74.0059728,"Python,SQL,R,Spark"
+474,2.9,Service Delivery Reporting & Data Analyst,"Stamford, CT",51000,83000,7d,41.0534302,-73.5387341,"SQL,R,Tableau,Oracle"
+475,3.3,"Senior Analyst, Claims Data Engineering","New York, NY",104000,139000,28d,40.7127753,-74.0059728,"Python,SQL,R,Spark,SAS,AWS"
+476,3.9,Data Analyst (Radar Systems) with Security Clearance,"Picatinny Arsenal, NJ",59000,99000,30d+,40.9170764,-74.5805051,"R,MATLAB,Microsoft Office"
+477,4.5,"JPSC-7176 - Position 35, 59, 62, 100,101,102, 141,142,166 : Senior Data Analyst","Brooklyn, NY",76000,115000,22d,40.6781784,-73.9441579,"SQL,R"
+478,3.3,"Senior Analyst, Claims Data Engineering","New York, NY",104000,139000,28d,40.7127753,-74.0059728,"Python,SQL,R,Spark,SAS,AWS"
+479,3.6,Position # 18 Clinical Data Analyst,"Princeton, NJ",46000,70000,6d,40.3572976,-74.6672226,R
+480,3.5,Business Intelligence Analyst (Data Analyst),"Somerset, NJ",61000,84000,15d,40.497604,-74.4884868,"SQL,R,Oracle"
+481,3.7,Business Analyst Leader - Specialty Pharmacy Data,"East Hanover, NJ",84000,118000,10d,40.8200623,-74.3647247,"R,AI"
+482,4,Business Analyst - Enterprise Data Management Team (EDM) - CR,"White Plains, NY",42000,67000,5d,41.0339862,-73.7629097,"SQL,R,Oracle"
+483,3.6,Senior Data Analyst ETL Developer,"Bedminster, NJ",64000,97000,8d,40.669264,-74.6804,"Python,SQL,R,Hadoop,NoSQL,Oracle"
+484,4.2,Data Analyst Team Lead,"New York, NY",73000,118000,7d,40.7127753,-74.0059728,"Python,SQL,R"
+485,3.3,Data Support & Solutions Analyst,"Norwalk, CT",49000,86000,12d,41.117744,-73.4081575,R
+486,2.9,Sr Data Analyst,"Stamford, CT",71000,103000,12d,41.0534302,-73.5387341,"SQL,R"
+487,,Data Analyst - Data Engineer / Analyst,"Princeton Junction, Mercer, NJ",51000,72000,15d,40.3173301,-74.6198791,SQL
+488,2.2,Central Data Science Solutions (CDSS) Business Analyst or Principal Business Analyst,"Ridgefield, CT",52000,85000,22d,41.2840635,-73.4975412,"R,SAS,Oracle"
+489,3.7,"Lead Data Analyst, Advanced Analytics","Union Beach, NJ",72000,115000,25d,40.4464962,-74.1781988,"Python,Machine Learning,R,Hadoop,Spark,Tableau,SAS,Big Data,AWS"
+490,4.2,Sr Data Analyst,"Purchase, NY",60000,92000,22d,41.0400135,-73.7144477,"SQL,R,Data Analysis"
+491,2.8,Business Analyst - Data Governance,"Stamford, CT",51000,79000,30d+,41.0534302,-73.5387341,R
+492,2.9,Programmer Analyst/Data Strategist,"Jefferson Valley, NY",45000,62000,7d,41.3138618,-73.800734,"R,Java"
+493,3.9,Senior Business Technology Analyst / Big Data,"Princeton, NJ",91000,113000,25d,40.3572976,-74.6672226,"Python,SQL,R,Hadoop,Spark,Java,Hive,Scala,Kafka,Pig"
+494,3.4,Business Analyst - Enterprise Data Management Team (EDM) - CR,"White Plains, NY",48000,75000,5d,41.0339862,-73.7629097,"SQL,R,Oracle"
+495,3.3,Principal Programmer Analyst (Hadoop/Big Data),"Somerset, NJ",91000,152000,6d,40.497604,-74.4884868,"SQL,R,Hadoop,Spark,Hive,Big Data,NoSQL,Oracle,Linux"

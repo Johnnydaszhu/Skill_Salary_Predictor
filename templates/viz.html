@@ -79,7 +79,7 @@
                 <select class="selectpicker 2" data-live-search="true" data-max-options="6" data-min-options="3"
                         data-width="50%" multiple name="skills_selected" data-header="Pleas choose more than 3"
                         required>
-                    <optgroup label="Lanuage">
+                    <optgroup label="Language">
                         <option value="C/C++">C/C++</option>
                         <option value="Scripting">Scripting</option>
                         <option value="SQL">SQL</option>
@@ -92,7 +92,7 @@
                         <option value="Python">Python</option>
                         <option value="R">R</option>
                     </optgroup>
-                    <optgroup label="Platform/Framework">
+                    <optgroup label="Platform/Framework/Software">
                         <option value=".Net">.NET Framework</option>
                         <option value="AWS">AWS</option>
                         <option value="Azure">Azure</option>
@@ -104,8 +104,7 @@
                         <option value="Pig">Apache Pig</option>
                         <option value="MongoDB">MongoDB</option>
                         <option value="Linux">Linux</option>
-                    </optgroup>
-                    <optgroup label="Software">
+                        <option value="Cassandra">Cassandra</option>
                         <option value="Excel">Excel</option>
                         <option value="HBase">Apache HBase</option>
                         <option value="Tableau">Tableau</option>
@@ -503,7 +502,7 @@
                                 s += params.name;
                                 var values = params.value.toString().split(",");
                                 s += '<strong>Average Salary:</strong> $' + values[0];
-                                s += '<br><strong>Ratio</strong>: ' + values[1] + '%';
+                                s += '<br><strong>importance</strong>: ' + values[1];
                                 s += '<br><strong>Skill</strong>: ' + values[2];
                                 return s;
                             }
@@ -521,21 +520,21 @@
                         },
                         yAxis: {
                             scale: true,
-                            axisLabel: {formatter: '{value}%'},
-                            name: 'Ratio in jobs',
+                            axisLabel: {formatter: '{value}'},
+                            name: 'Skill Importance',
 
                         },
 
                         series: [{
                             type: 'scatter',
                             symbolSize: 8,
-                            data: {{ skill_info_avg_ratio| safe}},
+                            data: {{ skill_info_avg_importance| safe}},
 
                         }, {
                             type: 'effectScatter',
                             symbolSize: 10,
 
-                            data: {{ single_skill_info_avg_ratio |safe}},
+                            data: {{ single_skill_info_avg_importance |safe}},
 
 
                         },]
@@ -585,7 +584,7 @@
                     var myChart = echarts.init(document.getElementById('main 5'));
 
                     myChart.showLoading();
-                    $.getJSON('static/data/data2.json', function (json) {
+                    $.getJSON('static/data/data.json', function (json) {
                         myChart.hideLoading();
                         window.onresize = function () {
                             myChart.resize();
@@ -596,7 +595,7 @@
                             series: [
                                 {
                                     type: 'graph',
-                                    layout: 'force',
+                                    layout: 'none',
                                     bottom: 1,
                                     animation: false,
                                     // progressiveThreshold: 700,
@@ -624,7 +623,7 @@
                                     edgeSymbol: ['arrow'],
                                     edgeLabel: {},
                                     force: {
-                                        repulsion: 3000,
+                                        repulsion: 2500,
                                         edgeLength: [100, 500],
                                         gravity: 0.3
                                     },
@@ -632,8 +631,8 @@
                                     focusNodeAdjacency: true,
                                     lineStyle: {
                                         normal: {
-                                            width: 0.5,
-                                            curveness: 0.3,
+                                            width: 0.3,
+                                            curveness: 1,
 
 
                                         }
