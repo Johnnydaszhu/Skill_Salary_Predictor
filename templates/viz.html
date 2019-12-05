@@ -56,12 +56,15 @@
             <br>
             <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
             <div class="card mb-4 shadow-sm text-left" style="width:100%;" style="background-color: #F6F6F6">
-                <div class="card-header shadow-sm rounded"><strong>Choose and Predict: </strong> </div>
+                <div class="card-header shadow-sm rounded"><strong>Choose and Predict: </strong></div>
                 <div class="card-body">
                     <p>
                         Use Machine Learning to predict salary base on <strong style="color: crimson">
                         Data Analyst skills</strong>
-                        in job description !&nbsp <img class="float-right" src="static/info.svg" width="20" height="20" data-html="true" title="Rating: How people think?<br> SkillsL: For one job only" data-toggle="tooltip" data-placement="left"><br>
+                        in job description !&nbsp <img class="float-right" src="static/info.svg" width="20" height="20"
+                                                       data-html="true"
+                                                       title="Rating: How people think?<br> SkillsL: For one job only"
+                                                       data-toggle="tooltip" data-placement="left"><br>
                 </div>
 
                 <section class="predictor">
@@ -142,7 +145,8 @@
                     <div class="text-center">
                         <br>
                         <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
-                                style="width: 200px;">Re-Submit
+                                style="width: 200px;"
+                                onclick="document.getElementById('my_id').style.display = 'block' ;">Re-Submit
                         </button>
                     </div>
                 </section>
@@ -150,7 +154,6 @@
     <br>
 </div>
 </div>
-
 
 
 <!-- Echarts Viz -->
@@ -800,7 +803,7 @@
             </script>
         </div>
     </div>
-<p class="mt-5 mb-3 text-muted text-center">Copyright © 2019 Qihua.</p>
+    <p class="mt-5 mb-3 text-muted text-center">Copyright © 2019 Qihua.</p>
 </div>
 
 </div>
@@ -808,16 +811,17 @@
 
 <script>
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-$(document).ready(function() {
-    $("#div1Link").click(function() {
-        $("html, body").animate({
-            scrollTop: $("#allviz").offset().top }, {duration: 500,easing: "swing"});
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    $(document).ready(function () {
+        $("#div1Link").click(function () {
+            $("html, body").animate({
+                scrollTop: $("#allviz").offset().top
+            }, {duration: 500, easing: "swing"});
             return false;
+        });
     });
-});
 
 
     $(document).ready(function () {

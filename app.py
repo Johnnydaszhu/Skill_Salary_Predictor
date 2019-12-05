@@ -105,9 +105,11 @@ def predict():
     single_skill_info_avg_importance = np.array(single_skill_info[['avg','importance','name',]]).tolist()
     skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
 
-    dataforflask = pd.read_csv('static/data/2019-12-3NYC_df_noloc.csv')
-    data_average_min = dataforflask['min'].mean
-    data_average_max = dataforflask['max'].mean
+    # dataforflask = pd.read_csv('static/data/2019-12-3NYC_df_noloc.csv')
+    # data_average_min = dataforflask['min'].mean
+    # data_average_max = dataforflask['max'].mean
+    data_average_min = 58115
+    data_average_max = 90512
 
     prediction_com = pd.read_csv('static/data/prediction_com.csv')
     y_min = np.array(prediction_com[['index','y_min']]).tolist()
