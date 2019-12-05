@@ -82,112 +82,126 @@
 <div class="container-fluid ">
 
     <form action="{{ url_for('predict',_anchor='allviz') }}" method="POST">
-        <div class="text-center mb-4">
-            <a href="/">
-                <img src="../static/stationery2.png" class="img-fluid animated fadeInUp" alt="Responsive image"
+        <div class="text-center mb-4" id="'img-logo">
+            <div id="image">
+                <img id="preload" onload="fadeIn(this)"  src="../static/stationery2.png" style="display:none;" alt="Responsive image"
                      width="60%" height="60%"
-                     title="Back to Homepage">
-            </a>
+                     title="Back to Homepage"/>
+            </div>
+
+
+
+
 
             <br>
             <h1 class="h3 mb-3 font-weight-normal ">Salary Predictor</h1>
 
-                    <p class="col-sm">
-                        Use Machine Learning to predict salary base on <strong style="color: crimson">
-                        Data Analyst skills</strong>
-                        in job description! &nbsp<img src="static/info.svg" width="20" height="20" data-html="true" title="Rating: How people think?<br> SkillsL: For one job only" data-toggle="tooltip" data-placement="left"><br>
-                    </p>
+            <p class="col-sm">
+                Use Machine Learning to predict salary base on <strong style="color: crimson">
+                Data Analyst skills</strong>
+                in job description! &nbsp<img src="static/info.svg" width="20" height="20" data-html="true"
+                                              title="Rating: How people think?<br> SkillsL: For one job only"
+                                              data-toggle="tooltip" data-placement="left"><br>
+            </p>
         </div>
 
-                <section class="predictor">
-                    <!-- Main Input For Receiving Query to our ML -->
-                    <div class="text-center">
-                        <label class="mdb-main-label">Company Ratings: </label><br>
-                        <select class="selectpicker 1" data-max-options="1"
-                                data-width="auto" name="rating" ,required>
-                            <img src="static/info.svg" width="20" height="20" title="How people think of this company?" data-toggle="tooltip">
-                            <option value="0">0 - I have nothing to lose</option>
-                            <option value="1">1 - "Well...</option>
-                            <option value="2">2 - It is Okay..</option>
-                            <option value="3" selected>3 - Dataset Median</option>
-                            <option value="4">4 - Great!</option>
-                            <option value="5">5 - Dream came true</option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="text-center">
-                        <label class="mdb-main-label">Data Skills: </label><br>
-                        <select class="selectpicker 2" data-live-search="false" data-max-options="6"
-                                data-min-options="3"
-                                data-width="auto" multiple name="skills_selected"
-                                required>
-                            <optgroup label="Language">
-                                <option value="C/C++">C/C++</option>
-                                <option value="Scripting">Scripting</option>
-                                <option value="SQL">SQL</option>
-                                <option value="Scala">Scala</option>
-                                <option value="Java">Java</option>
-                                <option value="JavaScript">JavaScript</option>
-                                <option value="MATLAB">MATLAB</option>
-                                <option value="MySQL">MySQL</option>
-                                <option value="Perl">Perl</option>
-                                <option value="Python">Python</option>
-                                <option value="R">R</option>
-                            </optgroup>
-                            <optgroup label="Platform/Framework/Software">
-                                <option value=".Net">.NET Framework</option>
-                                <option value="AWS">AWS</option>
-                                <option value="Azure">Azure</option>
-                                <option value="Git">Git</option>
-                                <option value="Spark">Apache Spark</option>
-                                <option value="Shell Scripting">Shell Scripting</option>
-                                <option value="S3">Amazon S3</option>
-                                <option value="PostgreSQL">PostgreSQL</option>
-                                <option value="Pig">Apache Pig</option>
-                                <option value="MongoDB">MongoDB</option>
-                                <option value="Linux">Linux</option>
-                                <option value="Cassandra">Cassandra</option>
-                                <option value="Excel">Excel</option>
-                                <option value="HBase">Apache HBase</option>
-                                <option value="Tableau">Tableau</option>
-                                <option value="TensorFlow">TensorFlow</option>
-                                <option value="Hadoop">Apache Hadoop</option>
-                                <option value="Hive">Apache Hive</option>
-                                <option value="SPSS">SPSS</option>
-                                <option value="SAS">SAS</option>
-                                <option value="Oracle">Oracle</option>
-                                <option value="Microsoft Office">Microsoft Office</option>
-                                <option value="Kafka">Apache Kafka</option>
-                                <option value="Microsoft SQL Server">Microsoft SQL Server</option>
-                            </optgroup>
-                            <optgroup label="Concept">
-                                <option value="AI">AI</option>
-                                <option value="Big Data">Big Data</option>
-                                <option value="Business Intelligence">Business Intelligence</option>
-                                <option value="Data Analysis">Data Analysis</option>
-                                <option value="Data Science">Data Science</option>
-                                <option value="Data Warehouse">Data Warehouse</option>
-                                <option value="Project Management">Project Management</option>
-                                <option value="NoSQL">NoSQL</option>
-                                <option value="Natural Language Processing">NLP</option>
-                                <option value="Machine Learning">Machine Learning</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                    <div class="text-center">
-                        <br>
-                        <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
-                                style="width: 200px;"
-                                onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
-                        </button>
-                    </div>
-                </section>
+        <section class="predictor">
+            <!-- Main Input For Receiving Query to our ML -->
+            <div class="text-center">
+                <label class="mdb-main-label">Company Ratings: </label><br>
+                <select class="selectpicker 1" data-max-options="1"
+                        data-width="auto" name="rating" ,required>
+                    <img  src="static/info.svg" width="20" height="20" title="How people think of this company?"
+                         data-toggle="tooltip">
+                    <option value="0">0 - I have nothing to lose</option>
+                    <option value="1">1 - "Well...</option>
+                    <option value="2">2 - It is Okay..</option>
+                    <option value="3" selected>3 - Dataset Median</option>
+                    <option value="4">4 - Great!</option>
+                    <option value="5">5 - Dream came true</option>
+                </select>
+            </div>
+            <br>
+            <div class="text-center">
+                <label class="mdb-main-label">Data Skills: </label><br>
+                <select class="selectpicker 2" data-live-search="false" data-max-options="6"
+                        data-min-options="3"
+                        data-width="auto" multiple name="skills_selected"
+                        required>
+                    <optgroup label="Language">
+                        <option value="C/C++">C/C++</option>
+                        <option value="Scripting">Scripting</option>
+                        <option value="SQL">SQL</option>
+                        <option value="Scala">Scala</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="MATLAB">MATLAB</option>
+                        <option value="MySQL">MySQL</option>
+                        <option value="Perl">Perl</option>
+                        <option value="Python">Python</option>
+                        <option value="R">R</option>
+                    </optgroup>
+                    <optgroup label="Platform/Framework/Software">
+                        <option value=".Net">.NET Framework</option>
+                        <option value="AWS">AWS</option>
+                        <option value="Azure">Azure</option>
+                        <option value="Git">Git</option>
+                        <option value="Spark">Apache Spark</option>
+                        <option value="Shell Scripting">Shell Scripting</option>
+                        <option value="S3">Amazon S3</option>
+                        <option value="PostgreSQL">PostgreSQL</option>
+                        <option value="Pig">Apache Pig</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="Linux">Linux</option>
+                        <option value="Cassandra">Cassandra</option>
+                        <option value="Excel">Excel</option>
+                        <option value="HBase">Apache HBase</option>
+                        <option value="Tableau">Tableau</option>
+                        <option value="TensorFlow">TensorFlow</option>
+                        <option value="Hadoop">Apache Hadoop</option>
+                        <option value="Hive">Apache Hive</option>
+                        <option value="SPSS">SPSS</option>
+                        <option value="SAS">SAS</option>
+                        <option value="Oracle">Oracle</option>
+                        <option value="Microsoft Office">Microsoft Office</option>
+                        <option value="Kafka">Apache Kafka</option>
+                        <option value="Microsoft SQL Server">Microsoft SQL Server</option>
+                    </optgroup>
+                    <optgroup label="Concept">
+                        <option value="AI">AI</option>
+                        <option value="Big Data">Big Data</option>
+                        <option value="Business Intelligence">Business Intelligence</option>
+                        <option value="Data Analysis">Data Analysis</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value="Data Warehouse">Data Warehouse</option>
+                        <option value="Project Management">Project Management</option>
+                        <option value="NoSQL">NoSQL</option>
+                        <option value="Natural Language Processing">NLP</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="text-center">
+                <br>
+                <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
+                        style="width: 200px;"
+                        onclick="document.getElementById('my_id').style.display = 'block' ;">Submit
+                </button>
+            </div>
+        </section>
     </form>
     <br>
+
+
+    <script>
+        function fadeIn(obj) {
+    $(obj).fadeIn(1000);
+}
+    </script>
     <script>
         $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+            $('[data-toggle="tooltip"]').tooltip()
+        })
         $(".animated").addClass("delay-1s");
         $(document).ready(function () {
             $("#btnFetch").click(function () {
