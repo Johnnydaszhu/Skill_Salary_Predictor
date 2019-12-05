@@ -56,24 +56,21 @@
             <br>
             <h1 class="h3 mb-3 font-weight-normal">Salary Predictor</h1>
             <div class="card mb-4 shadow-sm text-left" style="width:100%;" style="background-color: #F6F6F6">
-                <div class="card-header shadow-sm rounded"><strong>Choose and Predict: </strong></div>
+                <div class="card-header shadow-sm rounded"><strong>Choose and Predict: </strong> </div>
                 <div class="card-body">
                     <p>
                         Use Machine Learning to predict salary base on <strong style="color: crimson">
                         Data Analyst skills</strong>
-                        in job description!<br><br>
-                        Please <strong style="color: crimson">Only</strong> select the skills thatOne job requires
-                        to
-                        maximize the accuracy
-                    </p>
+                        in job description !&nbsp <img class="float-right" src="static/info.svg" width="20" height="20" data-html="true" title="Rating: How people think?<br> SkillsL: For one job only" data-toggle="tooltip" data-placement="left"><br>
                 </div>
 
                 <section class="predictor">
                     <!-- Main Input For Receiving Query to our ML -->
                     <div class="text-center">
-                        <label class="mdb-main-label">Company Ratings: </label><br>
+                        <label class="mdb-main-label">Company Ratings: </label>
+                        <br>
                         <select class="selectpicker 1" data-max-options="1"
-                                data-width="50%" name="rating" title="how people think of this company" ,required>
+                                data-width="auto" name="rating" ,required>
                             <option value="0">0 - I have nothing to lose</option>
                             <option value="1">1 - "Well...</option>
                             <option value="2">2 - It is Okay..</option>
@@ -87,7 +84,7 @@
                         <label class="mdb-main-label">Data Skills: </label><br>
                         <select class="selectpicker 2" data-live-search="false" data-max-options="6"
                                 data-min-options="3"
-                                data-width="50%" multiple name="skills_selected" title="Pleas choose more than 3"
+                                data-width="auto" multiple name="skills_selected"
                                 required>
                             <optgroup label="Language">
                                 <option value="C/C++">C/C++</option>
@@ -147,8 +144,7 @@
                         <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
                                 style="width: 200px;"
                                 onclick="document.getElementById('my_id').style.display = 'block' ;">Re-Submit
-                        </button>&nbsp
-                        <img src="static/info.svg" width="20" height="20" title="Try Python, Tableau and MySql" data-toggle="tooltip">
+                        </button>
                     </div>
                 </section>
     </form>
