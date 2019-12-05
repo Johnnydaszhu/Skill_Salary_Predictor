@@ -34,6 +34,7 @@
     <script src="/static/js/echarts.min.js"></script>
     <script src="/static/js/ecStat.min.js"></script>
     <script src="/static/js/odometer.js"></script>
+    <script src="/static/js/html2canvas.min.js"></script>
 
     <style>
         .odometer .odometer-inside:before {
@@ -803,11 +804,14 @@
     </div>
 
 </div>
+
 </div>
 
 
 <script>
-
+{#html2canvas(document.querySelector("#capture")).then(canvas => {#}
+{#    document.body.appendChild(canvas)#}
+{#});#}
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
