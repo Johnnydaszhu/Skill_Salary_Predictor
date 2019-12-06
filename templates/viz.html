@@ -215,7 +215,102 @@
                     it tends to predict higher on the low end and lower on the high end.
                 </div>
             </div>
-{#  #}
+            <br><br>
+            <h6 class="card-title text-center"><strong style="color: crimson">Predicted</strong> VS <strong
+                    style="color: #2F4554">Actual</strong></h6>
+
+            <div id="main 0" style="width:100%;height:400px; margin:auto;"
+                 style="background-color: #F6F6F6"></div>
+            <script>
+                var myChart0 = echarts.init(document.getElementById('main 0'));
+
+                option = {
+                    xAxis: {
+                        scale: true,
+                        axisLabel: {formatter: '{value}'},
+                        name: 'Salary ranks per job',
+                        nameGap: 30,
+                        nameLocation: 'middle',
+                        splitNumber: 5,
+
+                    },
+                    grid: {
+                        left: '20%',
+                        right: '5%'
+                    },
+                    yAxis: {
+                        scale: false,
+                        axisLabel: {formatter: '${value}'},
+                        name: 'Min Salary',
+
+                    },
+
+                    series: [{
+                        type: 'scatter',
+                        symbolSize: 5,
+
+                        data: {{ y_pred_min |safe}},
+                    }, {
+                        type: 'scatter',
+                        symbolSize: 5,
+                        data: {{ y_min| safe}},
+
+                    }]
+                };
+
+
+                myChart0.setOption(option);
+                window.onresize = function () {
+                    myChart0.resize();
+                };
+            </script>
+            <br>
+            <div id="main 01" style="width:100%;height:400px; margin:auto;"
+                 style="background-color: #F6F6F6"></div>
+            <script>
+                var myChart0 = echarts.init(document.getElementById('main 01'));
+
+                option = {
+                    xAxis: {
+                        scale: true,
+                        axisLabel: {formatter: '{value}'},
+                        name: 'Salary ranks per job',
+                        nameGap: 30,
+                        nameLocation: 'middle',
+                        splitNumber: 5,
+
+                    },
+                    grid: {
+                        left: '20%',
+                        right: '5%'
+                    },
+                    yAxis: {
+                        scale: false,
+                        axisLabel: {formatter: '${value}'},
+                        name: 'Max Salary',
+                        max: 170000,
+
+                    },
+
+                    series: [{
+                        type: 'scatter',
+                        symbolSize: 5,
+
+                        data: {{ y_pred_max |safe}},
+                    }, {
+                        type: 'scatter',
+                        symbolSize: 5,
+                        data: {{ y_max| safe}},
+
+                    }]
+                };
+
+
+                myChart0.setOption(option);
+                window.onresize = function () {
+                    myChart0.resize();
+                };
+            </script>
         </div>
 
     </div>
@@ -426,8 +521,290 @@
         </div>
     </div>
 
+ <div class="card mb-4 shadow-sm" style="width:100%;height: 100%;" style="background-color: #F6F6F6">
+        <div class="card-header shadow-sm rounded"><strong>Where is you?</strong>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                A histogram to show how minimum and maximum <strong style="color: crimson">salary distribute</strong> in
+                our dataset.
+            </p>
+            <div id="main 1" style="width:100%;height:400px; margin:auto"
+                 style="background-color: #F6F6F6"></div>
+
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('main 1'));
+
+                var xAxisData = {{ hist_x }};
+                var data2 = {{hist_min}};
+                var data1 ={{hist_max}};
 
 
+                var option = {
+                    grid: {
+                        left: '20%',
+                        right: '5%',
+                    },
+                    title: {
+                        show: false
+                    },
+                    legend: {
+                        name: ['Min', 'Max'],
+                        data: ['min', 'max'],
+                        align: 'right',
+                        bottom: 2
+                    },
+
+                    toolbox: {
+                        y: 'bottom',
+                        feature: {
+                            magicType: {
+                                type: ['stack', 'tiled']
+                            },
+                        }
+                    },
+                    tooltip: {
+                        formatter: '${b0}',
+                    },
+                    grid: {
+                        containLabel: false
+                    },
+                    xAxis: {
+                        data: xAxisData,
+                        silent: false,
+                        axisLabel: {formatter: '${value}'},
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    yAxis: {
+                        show: true,
+                        name: 'Frequency',
+
+                    },
+                    series: [{
+                        name: 'min',
+                        type: 'bar',
+                        data: data2,
+
+                        animationDelay: function (idx) {
+                            return idx * 10;
+                        }
+                    }, {
+                        name: 'max',
+                        type: 'bar',
+                        data: data1,
+                        animationDelay: function (idx) {
+                            return idx * 10 + 100;
+                        }
+                    }],
+                    animationEasing: 'elasticOut',
+                    animationDelayUpdate: function (idx) {
+                        return idx * 5;
+                    }
+                };
+
+
+                myChart.setOption(option);
+                window.onresize = function () {
+                    myChart.resize();
+                };
+            </script>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm" style="width:100%;" style="background-color: #F6F6F6">
+        <div class="card-header shadow-sm rounded"><strong>How skills really matters for
+            salary?</strong>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                This is a grand picture of how each skill matters in predicting salary among the <strong
+                    style="color: crimson">top 46</strong> skills. Simply saying, the
+                higher importance score, the greater this skill would impact the salary prediction.
+            </p>
+            <div id="main 4" style="width:100%;height:400px; margin:auto;"
+                 style="background-color: #F6F6F6"></div>
+            <script>
+                var app = {}
+                var myChart4 = echarts.init(document.getElementById('main 4'));
+
+                option = {
+                    grid: {
+                        left: '20%',
+                        right: '5%',
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        textStyle: {
+                            align: 'left'
+                        },
+                        formatter: function (params) {
+                            var s = '';
+                            s += params.name;
+                            var values = params.value.toString().split(",");
+                            s += '<strong>Average Salary:</strong> $' + values[0];
+                            s += '<br><strong>Skill Importance</strong>: ' + values[1] + '%';
+                            s += '<br><strong>Skill</strong>: ' + values[2];
+                            return s;
+                        }
+
+                    },
+
+                    xAxis: {
+                        scale: true,
+                        axisLabel: {formatter: '${value}'},
+                        name: 'Salary for One skill',
+                        nameGap: 30,
+                        nameLocation: 'middle',
+                        splitNumber: 3,
+
+                    },
+                    yAxis: {
+                        scale: true,
+                        axisLabel: {formatter: '{value}%'},
+                        name: 'Skill Importance',
+
+                    },
+
+                    series: [{
+                        type: 'scatter',
+                        symbolSize: 8,
+                        data: {{ skill_info_avg_importance| safe}},
+
+                    }, {
+                        type: 'effectScatter',
+                        symbolSize: 10,
+
+                        data: {{ single_skill_info_avg_importance |safe}},
+
+
+                    },]
+                };
+
+
+                myChart4.setOption(option);
+                window.onresize = function () {
+                    myChart4.resize();
+                };
+                app.currentIndex = -1;
+                setInterval(function () {
+                    var dataLen = option.series[0].data.length;
+                    // 取消之前高亮的图形
+                    myChart4.dispatchAction({
+                        type: 'downplay',
+                        seriesIndex: 0,
+                        dataIndex: app.currentIndex
+                    });
+                    app.currentIndex = (app.currentIndex + 1) % dataLen;
+                    // 高亮当前图形
+                    myChart4.dispatchAction({
+                        type: 'highlight',
+                        seriesIndex: 0,
+                        dataIndex: app.currentIndex
+                    });
+                    // 显示 tooltip
+                    myChart4.dispatchAction({
+                        type: 'showTip',
+                        seriesIndex: 0,
+                        dataIndex: app.currentIndex
+                    });
+                }, 3500);
+            </script>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm" style="width:100%;" style="background-color: #F6F6F6">
+        <div class="card-header shadow-sm rounded"><strong>What a high paid skill pair looks like? </strong></div>
+        <div class="card-body">
+            <p class="card-text">
+                This network graph shows how those high paid skills related.
+                Fun fact: You could <strong style="color: crimson">draw</strong> the skill to see it more clear.
+            </p>
+            <div id="main 5" style="width:100%;height:400px; margin:auto"
+                 style="background-color: #F6F6F6"></div>
+
+            <script type="text/javascript">
+
+                var myChart = echarts.init(document.getElementById('main 5'));
+
+                myChart.showLoading();
+                $.getJSON('static/data/data.json', function (json) {
+                    myChart.hideLoading();
+                    window.onresize = function () {
+                        myChart.resize();
+                    };
+
+                    myChart.setOption(option = {
+                        grid: {
+                            left: '40%',
+                            right: '5%',
+                        },
+
+                        series: [
+                            {
+                                type: 'graph',
+                                layout: 'none',
+                                bottom: 1,
+                                animation: false,
+                                // progressiveThreshold: 700,
+                                edges: json.edges.map(function (edge) {
+                                    return {
+                                        source: edge.source,
+                                        target: edge.target
+                                    };
+                                }),
+                                data: json.nodes.map(function (node) {
+                                    return {
+                                        x: node.x,
+                                        y: node.y,
+                                        id: node.id,
+                                        name: node.label,
+                                        symbolSize: node.size,
+                                        itemStyle: {
+                                            normal: node.color
+                                        }
+                                    };
+                                }),
+                                type: 'graph',
+                                layout: 'force',
+                                roam: false,
+                                edgeSymbol: ['arrow'],
+                                left: '20%',
+                                right: '20%',
+                                edgeLabel: {},
+                                force: {
+                                    repulsion: 1000,
+                                    edgeLength: [100, 500],
+                                    gravity: 0.4
+                                },
+                                draggable: true,
+                                focusNodeAdjacency: true,
+                                lineStyle: {
+                                    normal: {
+                                        width: 0.7,
+                                        curveness: 1,
+
+
+                                    }
+                                },
+
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        textStyle: {}
+                                    }
+                                },
+
+                            }
+                        ]
+                    }, true);
+                });
+
+
+            </script>
+        </div>
+    </div>
     <p class="mt-5 mb-3 text-muted text-center">Copyright © 2019 Qihua.</p>
 </div>
 
