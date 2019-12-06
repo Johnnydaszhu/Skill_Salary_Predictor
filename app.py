@@ -18,15 +18,15 @@ sel_features = ['rating', '.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business In
 'Python', 'R', 'S3', 'SAS', 'SPSS', 'SQL', 'Scala', 'Scripting',
 'Shell Scripting', 'Software Development', 'Spark', 'Tableau', 'TensorFlow']
 
-# @app.route('/')
-# def home():
-#     return render_template('index.html')
-
-
 @app.route('/')
+def home():
+    return render_template('index_compressed.html')
+
+
+@app.route('/viz#allviz', methods=['POST','GET'])
 def predict():
-    rating = 3.6
-    inputs_list = ['Tableau','Python','MySQL']
+    rating = request.form.get('rating')
+    inputs_list = request.form.getlist('skills_selected')
 
     # rating = request.form.get('rating')
     # inputs_list = request.form.getlist('skills_selected')
@@ -108,9 +108,7 @@ def predict():
     single_skill_info_avg_importance = np.array(single_skill_info[['avg','importance','name',]]).tolist()
     skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
 
-    # dataforflask = pd.read_csv('static/data/2019-12-3NYC_df_noloc.csv')
-    # data_average_min = dataforflask['min'].mean
-    # data_average_max = dataforflask['max'].mean
+
     data_average_min = 58115
     data_average_max = 90512
 
@@ -155,15 +153,15 @@ def predict():
           0.,  1.,  0.,  0.,  1.,  0.,  0.,  0.,  1.]
 
 
-    return render_template('viz.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min),Suggest_Skills=format(Suggest_Skills),
-                           Suggest_Skills_Skills=format(Suggest_Skills_Skills),Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
-                           max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary),min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
-                           inputs_list=inputs_list,rating=format(rating),single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max),single_skill_info_max2=format(single_skill_info_max2),
-                           single_skill_info_avg=format(single_skill_info_avg),single_skill_info_min=format(single_skill_info_min),single_skill_info_importance=format(single_skill_info_importance),
-                           single_skill_info_avg_importance=format(single_skill_info_avg_importance),skill_info_avg_importance=format(skill_info_avg_importance),single_skill_info_names=format(single_skill_info_names),
-                           data_average_min=format(data_average_min),data_average_max=format(data_average_max),
-                           hist_x=hist_x,hist_min=hist_min,hist_max=hist_max,
-                           y_pred_min=format(y_pred_min),y_min=format(y_min),y_max=format(y_max),y_pred_max=format(y_pred_max))
+    return render_template('viz_compressed.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min), Suggest_Skills=format(Suggest_Skills),
+                           Suggest_Skills_Skills=format(Suggest_Skills_Skills), Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
+                           max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary), min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
+                           inputs_list=inputs_list, rating=format(rating), single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max), single_skill_info_max2=format(single_skill_info_max2),
+                           single_skill_info_avg=format(single_skill_info_avg), single_skill_info_min=format(single_skill_info_min), single_skill_info_importance=format(single_skill_info_importance),
+                           single_skill_info_avg_importance=format(single_skill_info_avg_importance), skill_info_avg_importance=format(skill_info_avg_importance), single_skill_info_names=format(single_skill_info_names),
+                           data_average_min=format(data_average_min), data_average_max=format(data_average_max),
+                           hist_x=hist_x, hist_min=hist_min, hist_max=hist_max,
+                           y_pred_min=format(y_pred_min), y_min=format(y_min), y_max=format(y_max), y_pred_max=format(y_pred_max))
 
 
 if __name__ == '__main__':
