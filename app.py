@@ -20,7 +20,7 @@ sel_features = ['rating', '.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business In
 
 @app.route('/')
 def home():
-    return render_template('index_compressed.html')
+    return render_template('index.html')
 
 
 @app.route('/viz#allviz', methods=['POST','GET'])
@@ -153,7 +153,7 @@ def predict():
           0.,  1.,  0.,  0.,  1.,  0.,  0.,  0.,  1.]
 
 
-    return render_template('viz_compressed.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min), Suggest_Skills=format(Suggest_Skills),
+    return render_template('viz.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min), Suggest_Skills=format(Suggest_Skills),
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills), Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary), min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list, rating=format(rating), single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max), single_skill_info_max2=format(single_skill_info_max2),
