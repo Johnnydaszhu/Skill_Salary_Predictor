@@ -18,15 +18,18 @@ sel_features = ['rating', '.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business In
 'Python', 'R', 'S3', 'SAS', 'SPSS', 'SQL', 'Scala', 'Scripting',
 'Shell Scripting', 'Software Development', 'Spark', 'Tableau', 'TensorFlow']
 
+# @app.route('/')
+# def home():
+#     return render_template('index.html')
+
+
 @app.route('/')
-def home():
-    return render_template('index.html')
-
-
-@app.route('/viz#allviz', methods=['POST','GET'])
 def predict():
-    rating = request.form.get('rating')
-    inputs_list = request.form.getlist('skills_selected')
+    rating = 3.6
+    inputs_list = ['Tableau','Python','MySQL']
+
+    # rating = request.form.get('rating')
+    # inputs_list = request.form.getlist('skills_selected')
     print(inputs_list)
 
     def nyc_salary_with_skills(rating, inputs_list):
@@ -164,4 +167,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
