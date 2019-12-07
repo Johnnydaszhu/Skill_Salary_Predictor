@@ -218,8 +218,12 @@
                 var $tab1 = document.getElementById('tab1-container');
                 var $tab2 = document.getElementById('tab2-container');
 
-                /* 折线图 */
+
                 var tab1Option = {
+                    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 5;
+    },
                     xAxis: {
                         scale: true,
                         axisLabel: {formatter: '{value}'},
@@ -243,12 +247,19 @@
                     series: [{
                         type: 'scatter',
                         symbolSize: 3,
-
+                        animationDelay: function (idx) {
+                            // 越往后的数据延迟越大
+                            return idx * 1;
+                        },
                         data: {{ y_pred_min |safe}},
                     }, {
                         type: 'scatter',
                         symbolSize:3,
                         data: {{ y_min| safe}},
+                        animationDelay: function (idx) {
+                            // 越往后的数据延迟越大
+                            return idx * 1;
+                        },
 
                     }]
                 };
@@ -279,12 +290,19 @@
                     series: [{
                         type: 'scatter',
                         symbolSize: 3,
-
+                        animationDelay: function (idx) {
+                            // 越往后的数据延迟越大
+                            return idx * 1;
+                        },
                         data: {{ y_pred_max |safe}},
                     }, {
                         type: 'scatter',
                         symbolSize: 3,
                         data: {{ y_max| safe}},
+                        animationDelay: function (idx) {
+                            // 越往后的数据延迟越大
+                            return idx * 1;
+                        },
 
                     }]
                 };
@@ -306,6 +324,12 @@
                         echarts.dispose($tab2);
                         var tab2Table = echarts.init($tab2);
                         tab2Table.setOption(tab2Option);
+                    } else if (activeTab == "#tab1") {
+                        /* 释放图表实例，使实例不可用,不加上这个，会报错： */
+                        /* there is a chart instance     already initialized on the dom */
+                        echarts.dispose($tab1);
+                        var tab1Table = echarts.init($tab1);
+                        tab1Table.setOption(tab1Option);
                     }
                 });
             </script>
