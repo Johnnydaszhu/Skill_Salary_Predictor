@@ -58,7 +58,7 @@
             <div class="card mb-4 shadow-sm text-left" style="width:100%;" style="background-color: #F6F6F6">
                 <div class="card-header shadow-sm rounded"><strong>Choose and Predict: </strong></div>
                 <div class="card-body">
-                        Use Machine Learning to predict salary base on <strong style="color: crimson">
+                        Use Machine Learning to predict the annual salary base on <strong style="color: crimson">
                         Data Analyst skills</strong>
                         in job description !&nbsp <img class="float-right" src="static/info.svg" width="20" height="20"
                                                        data-html="true"
@@ -161,35 +161,35 @@
 <div class="text-left" id="allviz">
 
     <div class="card mb-4 shadow-sm" style="width:100%;height: 100%;" style="background-color: #F6F6F6">
-        <div class="card-header shadow-sm rounded"><strong>Getting Started</strong></div>
+        <div class="card-header shadow-sm rounded"><strong>How well is the prediction?</strong></div>
         <div class="card-body">
+            <p class="card-text">
+                 <strong>Notice:</strong>
+                    <br>
+                    The salary in this web means <a style="color: crimson">annual salary</a>
+                    <br><br>
+               The main idea of this project is to predict the salary base on skill. To make it more readable, I rank the salary from low to high.
+            </p>
 
             <div class="text-center">
-                <br>
                 <a class="btn btn-dark shadow-sm btn-sm" data-toggle="collapse" href="#collapseExample" role="button"
                    aria-expanded="false" aria-controls="collapseExample">
                     More Tech
                 </a>
             </div>
-            <br>
-
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
                     The salary dataset is mainly base on Glassdoor when you search New York Data Analyst only with
-                    salary included. And the skills were selected from each job description. <br><br>
+                    salary included. And the skills were selected from each job description. <br>
                     Therefore, the best use
                     case for this model is either helping HR propose a salary or A job seeker/ New Grad to find
-                    their marketing position and find new skills to learn.<br><br>
+                    their marketing position and find new skills to learn.<br>
                     We used an Xgboost Machine Learning Model to predict the minimum and maximum salary
-                    separately.<br>
-                    The graph below in this card view is showing the gap between the predicted salary and the actual
-                    one. <br><br>
-                    We could see the model performs better on predicting maximum. When predicting the minimum
-                    salary,
-                    it tends to predict higher on the low end and lower on the high end.
+                    separately.
+                    <br>You can see the model tends to predict higher on a low salary and lower on a higher salary.
                 </div>
             </div>
-            <br><br>
+            <br>
             <h6 class="card-title text-center"><strong style="color: crimson">Predicted</strong> VS <strong
                     style="color: #2F4554">Actual</strong></h6>
 
@@ -223,10 +223,10 @@
                     xAxis: {
                         scale: true,
                         axisLabel: {formatter: '{value}'},
-                        name: 'Salary ranks per job',
+                        name: 'Number of Jobs',
                         nameGap: 30,
                         nameLocation: 'middle',
-                        splitNumber: 5,
+                        splitNumber: 4,
 
                     },
                     grid: {
@@ -242,26 +242,26 @@
 
                     series: [{
                         type: 'scatter',
-                        symbolSize: 5,
+                        symbolSize: 3,
 
                         data: {{ y_pred_min |safe}},
                     }, {
                         type: 'scatter',
-                        symbolSize: 5,
+                        symbolSize:3,
                         data: {{ y_min| safe}},
 
                     }]
                 };
 
-                /* 饼图 */
+
                 var tab2Option = {
                     xAxis: {
                         scale: true,
                         axisLabel: {formatter: '{value}'},
-                        name: 'Salary ranks per job',
+                        name: 'Number of Jobs',
                         nameGap: 30,
                         nameLocation: 'middle',
-                        splitNumber: 5,
+                        splitNumber: 4,
 
                     },
                     grid: {
@@ -278,12 +278,12 @@
 
                     series: [{
                         type: 'scatter',
-                        symbolSize: 5,
+                        symbolSize: 3,
 
                         data: {{ y_pred_max |safe}},
                     }, {
                         type: 'scatter',
-                        symbolSize: 5,
+                        symbolSize: 3,
                         data: {{ y_max| safe}},
 
                     }]
@@ -318,7 +318,7 @@
         </div>
         <div class="card-body">
             <p class="card-text">
-                A histogram to show how minimum and maximum <strong style="color: crimson">salary distribute</strong> in
+                A histogram to show how minimum and maximum annual salary <strong style="color: crimson">distribute</strong> in
                 our dataset.
             </p>
             <div id="main 1" style="width:100%;height:400px; margin:auto"
@@ -414,8 +414,9 @@
         <div class="card-body">
             <p class="card-text">
                 This is a grand picture of how each skill matters in predicting salary among the <strong
-                    style="color: crimson">top 46</strong> skills. Simply saying, the
-                higher importance score, the greater this skill would impact the salary prediction.
+                    style="color: crimson">top</strong><strong
+                    style="color: crimson"> 46</strong> skills. The
+                higher importance, the greater this skill would impact the salary prediction.
             </p>
             <div id="main 4" style="width:100%;height:400px; margin:auto;"
                  style="background-color: #F6F6F6"></div>
@@ -505,7 +506,7 @@
         <div class="card-header shadow-sm rounded"><strong>What a high paid skill pair looks like? </strong></div>
         <div class="card-body">
             <p class="card-text">
-                This network graph shows how those high paid skills related.
+                This network graph shows how those high paid skills usually related. Bigger size means more connection.
                 Fun fact: You could <strong style="color: crimson">draw</strong> the skill to see it more clear.
             </p>
             <div id="main 5" style="width:100%;height:400px; margin:auto"
