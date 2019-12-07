@@ -23,11 +23,14 @@ def home():
     data_average_min = 58115
     data_average_max = 90512
 
-    prediction_com = pd.read_csv('static/data/prediction_com.csv')
-    y_min = np.array(prediction_com[['index', 'y_min']]).tolist()
-    y_pred_min = np.array(prediction_com[['index', 'y_pred_min']]).tolist()
-    y_max = np.array(prediction_com[['index', 'y_max']]).tolist()
-    y_pred_max = np.array(prediction_com[['index', 'y_pred_max']]).tolist()
+    # prediction_com = pd.read_csv('static/data/prediction_com.csv')
+    min_pre = pd.read_csv('static/data/min_pre.csv')
+    max_pre = pd.read_csv('static/data/max_pre.csv')
+
+    y_min = np.array(min_pre[['index', 'y_min']]).tolist()
+    y_pred_min = np.array(min_pre[['index', 'y_pred_min']]).tolist()
+    y_max = np.array(max_pre[['index', 'y_max']]).tolist()
+    y_pred_max = np.array(max_pre[['index', 'y_pred_max']]).tolist()
 
     hist_x = [14000., 16270., 18540., 20810., 23080., 25350., 27620.,
               29890., 32160., 34430., 36700., 38970., 41240., 43510.,
