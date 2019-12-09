@@ -78,6 +78,7 @@ def home():
 
 
 @app.route('/viz#allviz', methods=['POST','GET'])
+
 def predict():
     rating = request.form.get('rating')
     inputs_list = request.form.getlist('skills_selected')
@@ -105,6 +106,7 @@ def predict():
     single_skill = pd.DataFrame(skill_money_list).sort_values('salary', ascending=False)
 
     def nyc_salary_with_skills_and(rating, inputs_list):
+
 
         sample_list = [0] * (len(sel_features))
         input_x = pd.DataFrame([sample_list],
@@ -159,15 +161,12 @@ def predict():
     single_skill_info_avg_importance = np.array(single_skill_info[['avg','importance','name',]]).tolist()
     skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
 
-
-
     return render_template('viz.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min), Suggest_Skills=format(Suggest_Skills),
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills), Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary), min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list, rating=format(rating), single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max), single_skill_info_max2=format(single_skill_info_max2),
                            single_skill_info_avg=format(single_skill_info_avg), single_skill_info_min=format(single_skill_info_min), single_skill_info_importance=format(single_skill_info_importance),
                            single_skill_info_avg_importance=format(single_skill_info_avg_importance), skill_info_avg_importance=format(skill_info_avg_importance), single_skill_info_names=format(single_skill_info_names))
-
 
 if __name__ == '__main__':
     app.run()
