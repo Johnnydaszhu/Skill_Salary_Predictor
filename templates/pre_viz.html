@@ -46,7 +46,7 @@
 
 <div class="container-fluid">
 
-    <form action="{{ url_for('predict') }}" method="POST">
+    <form action="{{ url_for('predict') }}" method="POST" onsubmit="myButton.disabled = true; return true;">
         <div class="text-center mb-4">
             <a href="/">
                 <img src="../static/stationery3.png" class="img-fluid animated fadeInUp" alt="Responsive image"
@@ -140,7 +140,7 @@
                     </div>
                     <div class="text-center">
                         <br>
-                        <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit"
+                        <button class="btn btn-lg btn-primary btn-dark shadow p-2" id="btnFetch" type="submit" name="myButton"
                                 style="width: 200px;">Submit
                         </button>
                     </div>
