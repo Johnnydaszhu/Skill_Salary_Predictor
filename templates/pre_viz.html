@@ -553,9 +553,9 @@
                         series: [
                             {
                                 type: 'graph',
-                                layout: 'none',
+                                layout: 'force',
                                 bottom: 1,
-                                animation: false,
+                                animation: true,
                                 // progressiveThreshold: 700,
                                 edges: json.edges.map(function (edge) {
                                     return {
@@ -575,8 +575,6 @@
                                         }
                                     };
                                 }),
-                                type: 'graph',
-                                layout: 'force',
                                 roam: false,
                                 edgeSymbol: ['arrow'],
 
