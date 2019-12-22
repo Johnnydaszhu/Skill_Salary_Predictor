@@ -18,7 +18,6 @@ sel_features = ['rating', '.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business In
 'Python', 'R', 'S3', 'SAS', 'SPSS', 'SQL', 'Scala', 'Scripting',
 'Shell Scripting', 'Software Development', 'Spark', 'Tableau', 'TensorFlow']
 
-
 @app.route('/')
 def home():
     data_average_min = 58115
@@ -67,15 +66,15 @@ def home():
                 0., 1., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0.,
                 0., 1., 0., 0., 1., 0., 0., 0., 1.]
 
-    skill_info = pd.read_csv('static/data/single_skill_info.csv', index_col=0).round(3)
+    skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0).round(3)
     single_skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
     skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
 
 
-    return render_template('pre_viz.html', data_average_min=format(data_average_min), data_average_max=format(data_average_max),
-                           y_min=format(y_min), y_max=format(y_max), y_pred_min=format(y_pred_min), y_pred_max=format(y_pred_max),
-                           hist_min=format(hist_min), hist_max=format(hist_max), hist_x=format(hist_x),
-                           skill_info_avg_importance=format(skill_info_avg_importance), single_skill_info_avg_importance=format(single_skill_info_avg_importance))
+    return render_template('pre_viz.html',data_average_min=format(data_average_min),data_average_max=format(data_average_max),
+                           y_min=format(y_min),y_max=format(y_max),y_pred_min=format(y_pred_min),y_pred_max=format(y_pred_max),
+                           hist_min=format(hist_min),hist_max=format(hist_max),hist_x=format(hist_x),
+                           skill_info_avg_importance=format(skill_info_avg_importance),single_skill_info_avg_importance=format(single_skill_info_avg_importance))
 
 
 @app.route('/viz#allviz', methods=['POST','GET'])
@@ -151,7 +150,7 @@ def predict():
     min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
     max_Suggest_Skills_SkillsSalary = round(list(Suggest_Skills['Salary_Increase'])[-1],0)
 
-    skill_info = pd.read_csv('static/data/single_skill_info.csv', index_col=0).round(3)
+    skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0).round(3)
     single_skill_info = skill_info[skill_info['name'].isin(inputs_list)]
     single_skill_info_names = list(single_skill_info['name'])
     single_skill_info_max = single_skill_info[['name','max']].to_dict('records')
@@ -168,3 +167,6 @@ def predict():
                            inputs_list=inputs_list, rating=format(rating), single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max), single_skill_info_max2=format(single_skill_info_max2),
                            single_skill_info_avg=format(single_skill_info_avg), single_skill_info_min=format(single_skill_info_min), single_skill_info_importance=format(single_skill_info_importance),
                            single_skill_info_avg_importance=format(single_skill_info_avg_importance), skill_info_avg_importance=format(skill_info_avg_importance), single_skill_info_names=format(single_skill_info_names))
+
+if __name__ == '__main__':
+    app.run(threaded=True)
