@@ -169,4 +169,4 @@ def predict():
                            single_skill_info_avg_importance=format(single_skill_info_avg_importance), skill_info_avg_importance=format(skill_info_avg_importance), single_skill_info_names=format(single_skill_info_names))
 
 if __name__ == '__main__':
-    app.run(threaded=True)
+    app.run()
