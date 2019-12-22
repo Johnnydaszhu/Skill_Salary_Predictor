@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
 import pickle
+from scipy import stats
 app = Flask(__name__)
 
 xgb_model_min_loaded = pickle.load(open('static/model/min_xgb.pickle', "rb"))
@@ -20,10 +21,19 @@ sel_features = ['rating', '.Net', 'AI', 'AWS', 'Azure', 'Big Data', 'Business In
 
 @app.route('/')
 def home():
+
+    return render_template('pre_viz.html')
+
+
+@app.route('/viz#allviz', methods=['POST','GET'])
+
+def predict():
+    rating = 3.6
+    inputs_list = request.form.getlist('skills_selected')
+
     data_average_min = 58115
     data_average_max = 90512
 
-    # prediction_com = pd.read_csv('static/data/prediction_com.csv')
     min_pre = pd.read_csv('static/data/min_pre.csv')
     max_pre = pd.read_csv('static/data/max_pre.csv')
 
@@ -65,23 +75,6 @@ def home():
                 1., 2., 0., 0., 2., 2., 1., 0., 2., 1., 2., 0., 1.,
                 0., 1., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0.,
                 0., 1., 0., 0., 1., 0., 0., 0., 1.]
-
-    skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0).round(3)
-    single_skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
-    skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
-
-
-    return render_template('pre_viz.html',data_average_min=format(data_average_min),data_average_max=format(data_average_max),
-                           y_min=format(y_min),y_max=format(y_max),y_pred_min=format(y_pred_min),y_pred_max=format(y_pred_max),
-                           hist_min=format(hist_min),hist_max=format(hist_max),hist_x=format(hist_x),
-                           skill_info_avg_importance=format(skill_info_avg_importance),single_skill_info_avg_importance=format(single_skill_info_avg_importance))
-
-
-@app.route('/viz#allviz', methods=['POST','GET'])
-
-def predict():
-    rating = request.form.get('rating')
-    inputs_list = request.form.getlist('skills_selected')
 
 
     def nyc_salary_with_skills(rating, inputs_list):
@@ -150,7 +143,10 @@ def predict():
     min_Suggest_Skills_SkillsSalary = list(Suggest_Skills['Salary_Increase'])[0]
     max_Suggest_Skills_SkillsSalary = round(list(Suggest_Skills['Salary_Increase'])[-1],0)
 
-    skill_info = pd.read_csv('static/data/single_skill_info.csv',index_col=0).round(3)
+    skill_info = pd.read_csv('static/data/single_skill_info.csv', index_col=0).round(3)
+    # single_skill_names = skill_info['name'].to_list()
+    # single_skill_avg = skill_info['avg'].to_list()
+
     single_skill_info = skill_info[skill_info['name'].isin(inputs_list)]
     single_skill_info_names = list(single_skill_info['name'])
     single_skill_info_max = single_skill_info[['name','max']].to_dict('records')
@@ -161,12 +157,21 @@ def predict():
     single_skill_info_avg_importance = np.array(single_skill_info[['avg','importance','name',]]).tolist()
     skill_info_avg_importance = np.array(skill_info[['avg','importance','name',]]).tolist()
 
+    prediction_com = pd.read_csv('static/data/prediction_com.csv')
+    y_avg = np.array(prediction_com[['y_avg']]).tolist()
+    salary_percentile = int(100 - stats.percentileofscore(y_avg, (salary_min+salary_max)/2))
+
     return render_template('viz.html', Max_Salary=format(salary_max), Min_Salary=format(salary_min), Suggest_Skills=format(Suggest_Skills),
                            Suggest_Skills_Skills=format(Suggest_Skills_Skills), Suggest_Skills_SkillsSalary=format(Suggest_Skills_SkillsSalary),
                            max_Suggest_Skills_SkillsSalary=format(max_Suggest_Skills_SkillsSalary), min_Suggest_Skills_SkillsSalary=format(min_Suggest_Skills_SkillsSalary),
                            inputs_list=inputs_list, rating=format(rating), single_skill_info=single_skill_info, single_skill_info_max=format(single_skill_info_max), single_skill_info_max2=format(single_skill_info_max2),
                            single_skill_info_avg=format(single_skill_info_avg), single_skill_info_min=format(single_skill_info_min), single_skill_info_importance=format(single_skill_info_importance),
-                           single_skill_info_avg_importance=format(single_skill_info_avg_importance), skill_info_avg_importance=format(skill_info_avg_importance), single_skill_info_names=format(single_skill_info_names))
+                           single_skill_info_avg_importance=format(single_skill_info_avg_importance), skill_info_avg_importance=format(skill_info_avg_importance), single_skill_info_names=format(single_skill_info_names),
+                           data_average_min=format(data_average_min), data_average_max=format(data_average_max),
+                           y_min=format(y_min), y_max=format(y_max), y_pred_min=format(y_pred_min),
+                           y_pred_max=format(y_pred_max),
+                           hist_min=format(hist_min), hist_max=format(hist_max), hist_x=format(hist_x),salary_percentile=format(salary_percentile)
+                           )
 
 if __name__ == '__main__':
     app.run()
