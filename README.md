@@ -7,11 +7,13 @@ On the tech side, it allowed me to explore the process to present the **data vis
 Echarts.js(JavaScript) and deployed a **Machine Learning** model online.
 
 ![homepage](https://github.com/Johnnydaszhu/Skill_Salary_Predictor/raw/master/static/stationery3.png)
+![screenshots](https://github.com/Johnnydaszhu/Skill_Salary_Predictor/raw/master/screenshots.jpg)
 
 
+### Milestones 
+![Milestones](https://github.com/Johnnydaszhu/Skill_Salary_Predictor/raw/master/milestone.png)
 
 ### Prerequisites
-
 ```
 Click==7.0
 config==0.4.2
@@ -31,7 +33,6 @@ Werkzeug==0.16.0
 xgboost==0.90
 ```
 
-![screenshots](https://github.com/Johnnydaszhu/Skill_Salary_Predictor/raw/master/screenshots.jpg)
 
 ### Running the project
 
