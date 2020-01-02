@@ -31,6 +31,8 @@ Werkzeug==0.16.0
 xgboost==0.90
 ```
 
+![screenshots](https://github.com/Johnnydaszhu/Skill_Salary_Predictor/raw/master/screenshots.jpg)
+
 ### Running the project
 
 This project was developed through Pycharm, you could easily rebuild it by using requirements.txt
