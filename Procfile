@@ -1,1 +1,1 @@
-web: gunicorn app:app --max-requests --workers=5 --threads=2 1200
+web: gunicorn app:app --workers=5 --threads=2
