@@ -10,6 +10,7 @@ Echarts.js(JavaScript) and deployed a **Machine Learning** model online.
 ![screenshots](https://github.com/Johnnydaszhu/Skill_Salary_Predictor/raw/master/screenshots.jpg)
 
 
+
 ### Milestones 
 ![Milestones](https://github.com/Johnnydaszhu/Skill_Salary_Predictor/raw/master/milestone.png)
 
@@ -37,3 +38,6 @@ xgboost==0.90
 ### Running the project
 
 This project was developed through Pycharm, you could easily rebuild it by using requirements.txt
+
+### Comprehensive Summery 
+Released on Medium
