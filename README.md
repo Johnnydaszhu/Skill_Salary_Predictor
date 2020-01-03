@@ -1,6 +1,7 @@
 # NYC Data Analyst Salary Predator
 
 [https://skillsalary.herokuapp.com/](https://skillsalary.herokuapp.com/)
+[Detailed explanation at Medium](https://medium.com/@johnnydaszhu/nyc-data-analyst-salary-prediction-flask-web-app-13ee453da3aa?sk=b065e8e52a1fde5cf7e5d62d0448f1a6)
 
 The goal of this project is to build a web app to predict salary and know what to learn next as a data analyst in NYC.
 On the tech side, it allowed me to explore the process to present the **data visualization** on the website through Flask, Python, 
